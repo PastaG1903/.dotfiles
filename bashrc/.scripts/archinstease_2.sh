@@ -37,9 +37,10 @@ cp /boot/EFI/Arch_GRUB/grubx64.efi /boot/EFI/BOOT/BOOTX64.EFI
 # systemctl enable NetworkManager bluetooth cups sshd
 # systemctl enable sddm
 
-read -p "Let's make you a user. What should it be? " neimu
+printf "Let's make you a user. What should it be?\n"
+read neimu
 useradd -m -G wheel $neimu
-echo "What should be the password? "
+printf "\nWhat should be the password?\n"
 passwd $neimu
 
 touch /etc/sudoers.d/00_$neimu
