@@ -1,0 +1,1 @@
+fastfetch hypr i3 kdedefaults kitty leovim waybar xfce4 yazi nvim

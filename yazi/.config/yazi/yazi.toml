@@ -1,0 +1,7 @@
+[manager]
+ratio = [1,2,5]
+[plugin]
+pre_exit = "yazi -p"
+[preview]
+max_width = 800
+wrap = "yes"
