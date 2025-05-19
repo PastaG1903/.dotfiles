@@ -67,7 +67,7 @@ else
   read kernels
 
   if [ "$kernels" = "" ]; then
-	  kernels="linux"
+    kernels="linux"
   fi
 
   printf "What packages do you want to include? (default: none)\n\n"
@@ -81,5 +81,5 @@ else
 
   genfstab -U /mnt >>/mnt/etc/fstab
 
-  arch-chroot /mnt
+  printf "./archinstease_2.sh" | arch-chroot /mnt
 fi
