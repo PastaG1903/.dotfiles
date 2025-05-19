@@ -48,7 +48,7 @@ GRUB_COLOR_HIGHLIGHT="light-cyan/light-blue"
 
 # Uncomment to get a beep at GRUB start
 #GRUB_INIT_TUNE="320 440 3 392 1 329 1 392 1 261 3 523 3"
-#GRUB_INIT_TUNE="480 261 2 329 4 370 2 494 8"
+GRUB_INIT_TUNE="480 262 2 330 4 370 2 494 8"
 #GRUB_INIT_TUNE="320 440 3 392 1 329 1 392 1 261 3 523 3"
 
 # Uncomment to make GRUB remember the last selection. This requires
