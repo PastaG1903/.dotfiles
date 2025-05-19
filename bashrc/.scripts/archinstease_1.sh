@@ -28,7 +28,7 @@ else
   printf "\nWhat size do you want for SWAP? (e.g. 4G, 8G)\n"
   read swapsize
 
-  if [ $sephome = "y" ]; then
+  if [ "$sephome" = "y" ]; then
     printf "What size do you want for ROOT? (e.g. 20G, 50G)\n"
     read rootsize
     printf "g\nn\n\n\n+$espsize\nn\n\n\n+$swapsize\nn\n\n\n+$rootsize\nn\n\n\n\nt\n1\n1\nt\n2\nswap\nt\n3\n23\nt\n4\n23\nw\n" | fdisk /dev/$target
@@ -48,12 +48,6 @@ else
     efip=$target"1"
   fi
 
-  if [ "$sephome" = "y" ]; then
-    mkfs.ext4 /dev/$house
-    mkdir /mnt/home
-    mount /dev/$house /mnt/home
-  fi
-
   mkfs.ext4 /dev/$rootp
   mkswap /dev/$suap
   mkfs.fat -F 32 /dev/$efip
@@ -62,6 +56,12 @@ else
   mkdir /mnt/boot
   mount /dev/$efip /mnt/boot
   swapon /dev/$suap
+
+  if [ "$sephome" = "y" ]; then
+    mkfs.ext4 /dev/$house
+    mkdir /mnt/home
+    mount /dev/$house /mnt/home
+  fi
 
   printf "What kernels would you like from the following? Please separate by spaces (default: linux)\n\nlinux\nlinux-lts\nlinux-rt\nlinux-rt-lts\nlinux-zen\n\n"
   read kernels
