@@ -101,5 +101,7 @@ else
 
   rm /mnt/mnt/archinstease_2.sh
 
-  clear && printf "The installation is now complete.\nFeel free to use arch-chroot to tune up your installation before rebooting.\nOtherwise, feel free to [reboot now]."
+  clear
+  
+  printf "The installation is now complete.\nFeel free to use arch-chroot to tune up your installation before rebooting.\nOtherwise, feel free to [reboot now]."
 fi
