@@ -9,13 +9,10 @@ echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 
 mkinitcpio -P
 
-printf "What should be the hostname for this installation?\n"
-read hostneimu
 touch /etc/hostname
-echo $hostneimu >> /etc/hostname
+echo $1 >> /etc/hostname
 
-printf "What should the root password be?\n"
-passwd
+printf "$2\n$2\n" | passwd
 
 pacman -S --noconfirm --needed grub efibootmgr
 
@@ -37,14 +34,12 @@ cp /boot/EFI/Arch_GRUB/grubx64.efi /boot/EFI/BOOT/BOOTX64.EFI
 # systemctl enable NetworkManager bluetooth cups sshd
 # systemctl enable sddm
 
-printf "Let's make you a user. What should it be?\n"
-read neimu
-useradd -m -G wheel $neimu
-printf "\nWhat should be the password?\n"
-passwd $neimu
+useradd -m -G wheel $3
 
-touch /etc/sudoers.d/00_$neimu
-echo "$neimu ALL=(ALL) ALL" >> /etc/sudoers.d/00_$neimu
-chmod 0440 /etc/sudoers.d/00_$neimu
+printf "$4\n$4\n" | passwd
 
-echo "$neimu has been granted the rank of sudoer "
+touch /etc/sudoers.d/00_$3
+echo "$3 ALL=(ALL) ALL" >> /etc/sudoers.d/00_$3
+chmod 0440 /etc/sudoers.d/00_$3
+
+echo "$3 has been granted the rank of sudoer "

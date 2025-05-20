@@ -81,5 +81,19 @@ else
 
   genfstab -U /mnt >>/mnt/etc/fstab
 
-  printf "./archinstease_2.sh" | arch-chroot /mnt
+  printf "\nWhat should be the hostname for this installation?\n"
+  read hostneimu
+
+  printf "\nWhat should the root password be?\n"
+  read pasvordo
+
+  printf "\nLet's make you a user. What should it be?\n"
+  read neimu
+
+  printf "\nWhat should be the password?\n"
+  read passvordo
+
+  mv /mount/archinstease_2.sh /mnt/mnt
+
+  printf "/mnt/archinstease_2.sh $hostneimu $pasvordo $neimu $passvordo" | arch-chroot /mnt
 fi
