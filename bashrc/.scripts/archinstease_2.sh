@@ -10,7 +10,7 @@ echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 mkinitcpio -P
 
 touch /etc/hostname
-echo $1 >> /etc/hostname
+echo "$1" >> /etc/hostname
 
 printf "$2\n$2\n" | passwd
 
@@ -34,9 +34,9 @@ cp /boot/EFI/Arch_GRUB/grubx64.efi /boot/EFI/BOOT/BOOTX64.EFI
 # systemctl enable NetworkManager bluetooth cups sshd
 # systemctl enable sddm
 
-useradd -m -G wheel $3
+useradd -m -G wheel "$3"
 
-printf "$4\n$4\n" | passwd
+printf "$4\n$4\n" | passwd "$3"
 
 touch /etc/sudoers.d/00_$3
 echo "$3 ALL=(ALL) ALL" >> /etc/sudoers.d/00_$3
