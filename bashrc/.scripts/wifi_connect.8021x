@@ -1,0 +1,9 @@
+[Security]
+EAP-Method=PEAP
+EAP-Identity=your_username
+EAP-PEAP-Phase2-Identity=your_username
+EAP-PEAP-Phase2-Password=your_password
+EAP-PEAP-Phase2-Method=MSCHAPV2
+
+[Settings]
+AutoConnect=true
