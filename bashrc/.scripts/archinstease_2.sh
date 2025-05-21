@@ -43,3 +43,4 @@ echo "$3 ALL=(ALL) ALL" >> /etc/sudoers.d/00_$3
 chmod 0440 /etc/sudoers.d/00_$3
 
 echo "$3 has been granted the rank of sudoer "
+sleep 5

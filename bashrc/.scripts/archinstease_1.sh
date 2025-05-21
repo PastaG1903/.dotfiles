@@ -70,12 +70,12 @@ else
     kernels="linux"
   fi
 
-  printf "The following packages will be installed:\nbase\nkernels: $kernels\nlinux-firmware\nsudo\nvim\nnetworkmanager\n"
+  printf "The following packages will be installed:\nbase\nkernels: $kernels\nlinux-firmware\nsudo\nvim\niwd\nopenssh\nman-pages"
 
   printf "What other packages do you want to include? (leave blank for none)\n\n"
   read packages
 
-  pacstrap -K /mnt base $kernels linux-firmware openssh sudo networkmanager vim $packages
+  pacstrap -K /mnt base base-devel $kernels linux-firmware openssh sudo iwd vim man-pages $packages
 
   # pacstrap /mnt tmux fastfetch btop cups git base-devel yazi iwd dhcpcd neovim man-pages pulseaudio blueman xorg
 
