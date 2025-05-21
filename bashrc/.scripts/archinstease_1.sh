@@ -103,5 +103,5 @@ else
 
   clear
   
-  printf "The installation is now complete.\nFeel free to use arch-chroot to tune up your installation before rebooting.\nOtherwise, feel free to [reboot now]."
+  printf "\nThe installation is now complete.\nFeel free to use arch-chroot to tune up your installation before rebooting.\nOtherwise, feel free to [reboot now]."
 fi
