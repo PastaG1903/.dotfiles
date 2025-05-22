@@ -17,7 +17,17 @@ else
   printf "What is the shown name of the device?\n"
   read target
 
-  timedatectl set-timezone America/Monterrey
+  continents=$(printf "America/\nEurope/\nAsia/\nAustralia/\nAfrica/")
+  parentplace=$(gum filter $continents --header "Choose your timezone:")
+  place=$(gum filter $(lsd -1F /usr/share/zoneinfo/$parentplace) --header "Choose your timezone:")
+  if [ "${place: -1}" = "/" ]; then
+      subplace=$(gum filter $(lsd -1F /usr/share/zoneinfo/$parentplace$place) --header "Choose your timezone:")
+      place=$place$subplace
+  fi
+
+  timezon=$parentplace$place
+
+  timedatectl set-timezone $timezon
 
   echo "Do you want a separate home partition? [y/N] "
   read sephome
@@ -75,11 +85,12 @@ else
   printf "What other packages do you want to include? (leave blank for none)\n\n"
   read packages
 
-  pacstrap -K /mnt base base-devel $kernels linux-firmware openssh sudo iwd vim networkmanager man-pages $packages
+  processor=$(gum choose "intel\namd")"-ucode"
+
+  pacstrap -K /mnt base base-devel $kernels linux-firmware openssh sudo iwd vim networkmanager man-pages $packages $processor
 
   # pacstrap /mnt tmux fastfetch btop cups git base-devel yazi iwd dhcpcd neovim man-pages pulseaudio blueman xorg
 
-  pacstrap /mnt intel-ucode # replace with amd-ucode if needed
 
   genfstab -U /mnt >>/mnt/etc/fstab
 
@@ -97,7 +108,7 @@ else
 
   mv /mount/archinstease_2.sh /mnt/mnt
 
-  printf "/mnt/archinstease_2.sh $hostneimu $pasvordo $neimu $passvordo" | arch-chroot /mnt
+  printf "/mnt/archinstease_2.sh $hostneimu $pasvordo $neimu $passvordo $timezon" | arch-chroot /mnt
 
   rm /mnt/mnt/archinstease_2.sh
 

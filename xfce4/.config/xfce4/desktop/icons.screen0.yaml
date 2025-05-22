@@ -15,21 +15,21 @@ configs:
     "/home/mavap/Desktop/Drives":
       row: 1
       col: 0
-    "/home/mavap/Desktop/yay":
-      row: 0
-      col: 1
-    "/home/mavap":
-      row: 0
-      col: 0
     "/home/mavap/Desktop/steam.desktop":
       row: 1
+      col: 1
+    "/home/mavap/Desktop/full_vaps.png":
+      row: 2
+      col: 1
+    "/home/mavap/Desktop/yay":
+      row: 0
       col: 1
     "/home/mavap/Desktop/Screensaver":
       row: 2
       col: 0
-    "/home/mavap/Desktop/full_vaps.png":
-      row: 2
-      col: 1
+    "/home/mavap":
+      row: 0
+      col: 0
 - level: 1
   monitors:
   - id: "9e126e3ddbfc945f2358e882e36f3c6c55eadd73"
@@ -80,12 +80,12 @@ configs:
     "/home/mavap/Desktop/brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop":
       row: 0
       col: 12
-    "/home/mavap/Desktop/steam.desktop":
-      row: 2
-      col: 12
     "/home/mavap/Desktop/4913":
       row: 0
       col: 2
+    "/home/mavap/Desktop/steam.desktop":
+      row: 2
+      col: 12
     "/home/mavap/Desktop/archlinux_en_all_nopic_2022-12.zim":
       row: 4
       col: 2
