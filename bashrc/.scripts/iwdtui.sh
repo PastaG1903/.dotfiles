@@ -3,10 +3,11 @@
 options=$(printf "Add\nRemove\nList")
 option=$(gum choose $options)
 
-if [ "$option" = "Add" ];
+if [ "$option" = "Add" ]; then
   devices=$(printf "station list" | iwctl | grep con | awk '{print $2}')
-  device=$(gum choose $devs --header "What device do you want to connect?")
-  networks=$(printf "station $device scan\nstation $device get-networks" | iwctl)
+  device=$(gum choose $devices --header "What device do you want to connect?")
+  printf "station $device scan" | iwctl
+  networks=$(iwctl station $device get-networks | awk 'NR > 5 {print $1}')
   network=$(gum choose $networks --header "What network do you want to go to?")
   enterprise=$(gum choose $(printf 'Yes\nNo') --header "Is it WPA & WPA2 Enterprise?")
   
