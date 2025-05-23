@@ -112,6 +112,12 @@ else
 
   rm /mnt/mnt/archinstease_2.sh
 
+  git clone https://github.com/PastaG1903/.dotfiles
+
+  mv ./.dotfiles/bashrc/.scripts/iwdtui /mnt/usr/bin
+
+  rm -r ./.dotfiles
+
   clear
   
   printf "\nThe installation is now complete.\nFeel free to use arch-chroot to tune up your installation before rebooting.\nOtherwise, feel free to [reboot now]."
