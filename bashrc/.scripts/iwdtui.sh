@@ -8,15 +8,9 @@ while true; do
   if [ "$option" = "Add" ]; then
     devices=$(printf "station list" | iwctl | grep con | awk '{print $2}')
     device=$(gum choose $devices --header "What device do you want to connect?")
-    if [ "$device" = "nothing selected" ]; then
-      break
-    fi
     printf "station $device scan" | iwctl
-    networks=$(iwctl station $device get-networks | awk 'NR > 5 {print $1}')
+    networks=$(iwctl station $device get-networks | sed -r 's/\x1B\[[0-9;]*[mK]//g' | awk 'BEGIN { start = 0 } /^[-]+$/ { start++; next } NF > 0 { print $1 }' | tail -n +3)
     network=$(gum choose $networks --header "What network do you want to go to?")
-    if [ "$network" = "nothing selected" ]; then
-      break
-    fi
     enterprise=$(gum choose $(printf 'WPA-PSK\nWPA-Enterprise\nOther') --header "How is the network secured?")
     if [ "$enterprise" = "nothing selected" ]; then
       break
@@ -72,6 +66,18 @@ while true; do
     echo "You should be now connected to $network"
 
   fi
+
+  if [ "$option" = "Remove" ]; then
+    networks=$(sudo lsd -1F /var/lib/iwd/ | grep -v /)
+    ntr=$(gum choose $networks --header "What network do you want to remove?")
+    sudo rm /var/lib/iwd/ntr
+  fi
+
+  if [ "$option" = "List" ]; then
+    networks=$(sudo lsd -1F /var/lib/iwd/ | grep -v /)
+    printf $networks
+  fi
+
   if [ "$option" = "Exit" ]; then
     break
   fi
