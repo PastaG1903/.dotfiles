@@ -27,7 +27,7 @@ while true; do
       sudo mv ./$network.psk /var/lib/iwd
     
     elif [ "$enterprise" = "WPA-Enterprise" ]; then
-      auths=$(gum choose $(printf 'PWD\nPEAP') --header "What kind of authentication does it use?")
+      auths=$(gum choose $(printf 'PWD\nPEAP\nTTLS') --header "What kind of authentication does it use?")
       echo "[Security]" > "$network".8021x
       echo "EAP-Method=$auths" >> "$network".8021x
       identity=$(gum input --header "What is your identity given by your organization? i.e. username, email")
@@ -50,6 +50,21 @@ while true; do
         mask=$(gum input --header "Please write the server domain mask (if any)")
         if [ "$mask" != "" ]; then
           echo "EAP-PEAP-ServerDomainMask=$mask" >> "$network".8021x
+        fi
+      fi
+
+      if [ "$auths" = "TTLS" ]; then
+        echo "EAP-TTLS-Phase2-Method=Tunneled-PAP" >> "$network".8021x
+        echo "EAP-TTLS-Phase2-Identity=$identity" >> "$network".8021x
+        password=$(gum input --header "What is the password for $network?")
+        echo "EAP-TTLS-Phase2-Password=$password" >> "$network".8021x
+        cacert=$(gum input --header "Please write the path to the CA certificate. Leave blank if none")
+        if [ "$cacert" != "" ]; then
+          echo "EAP-TTLS-CACert=$cacert" >> "$network".8021x
+        fi
+        mask=$(gum input --header "Please write the server domain mask (if any)")
+        if [ "$mask" != "" ]; then
+          echo "EAP-TTLS-ServerDomainMask=$mask" >> "$network".8021x
         fi
       fi
 
