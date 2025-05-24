@@ -8,23 +8,32 @@ while true; do
   if [ "$option" = "Add" ]; then
     devices=$(printf "station list" | iwctl | grep con | awk '{print $2}')
     device=$(gum choose $devices --header "What device do you want to connect?")
+    if [ "$device" = "" ]; then
+      break
+    fi
     printf "station $device scan" | iwctl
     networks=$(iwctl station $device get-networks | sed -r 's/\x1B\[[0-9;]*[mK]//g' | awk 'BEGIN { start = 0 } /^[-]+$/ { start++; next } NF > 0 { print $1 }' | tail -n +3)
-    network=$(gum choose $networks --header "What network do you want to go to?")
-    enterprise=$(gum choose $(printf 'WPA-PSK\nWPA-Enterprise\nOther') --header "How is the network secured?")
-    if [ "$enterprise" = "nothing selected" ]; then
+    network=$(gum choose $networks --header "What network do you want to connect to?")
+    if [ "$network" = "" ]; then
+      break
+    fi
+   
+    enterprise=$(gum choose $(printf 'WPA-PSK\nWPA-Enterprise\nOpen') --header "How is the network secured? WPA-PSK are protected only by a password. WPA-Enterprise require additional fileds, such as a username. Open networks are not protected.")
+    if [ "$enterprise" = "" ]; then
       break
 
-    elif [ "$enterprise" = "Other" ]; then
-      password=$(gum input --header "What is the password for $network?")
-      iwctl station $device connect $Network -p $password
+    elif [ "$enterprise" = "Open" ]; then
+      iwctl station $device connect $Network
 
     elif [ "$enterprise" = "WPA-PSK" ]; then
       touch $network.psk
       echo "[Security]" > "$network".psk
       passp=$(gum input --header "What is the passphrase?")
       echo "Passphrase=$passp" >> "$network".psk
-      sudo mv ./$network.psk /var/lib/iwd
+      sudo mv ./$network.psk /var/lib/iwd/
+      
+      echo "You should be now connected to $network"
+
     
     elif [ "$enterprise" = "WPA-Enterprise" ]; then
       auths=$(gum choose $(printf 'PWD\nPEAP\nTTLS') --header "What kind of authentication does it use?")
@@ -73,27 +82,40 @@ while true; do
       echo "AutoConnect=true" >> "$network".8021x
 
       sudo mv ./$network.8021x /var/lib/iwd
-      
+
+      echo "You should be now connected to $network"
+     
     fi
-
-    iwctl station $device connect $network
-
-    echo "You should be now connected to $network"
 
   fi
 
   if [ "$option" = "Remove" ]; then
-    networks=$(sudo lsd -1F /var/lib/iwd/ | grep -v /)
+    networks=$(sudo ls -1 /var/lib/iwd/ -I hotspot)
     ntr=$(gum choose $networks --header "What network do you want to remove?")
-    sudo rm /var/lib/iwd/ntr
+    if [ "$ntr" = "" ]; then
+      break
+    fi
+    sudo rm /var/lib/iwd/$ntr
+    echo "The network stored in $ntr has been forgotten"
   fi
 
   if [ "$option" = "List" ]; then
-    networks=$(sudo lsd -1F /var/lib/iwd/ | grep -v /)
-    printf $networks
+    networks=$(sudo ls -1 /var/lib/iwd/ -I hotspot)
+    networks=$(printf "Disconnect\n""$networks""\nExit")
+    station=$(iwctl station list | grep connected | grep disconnected | awk '{print $2}')
+    condis=$(gum choose $networks --header "You can choose to connect to another known network or to disconnect.")
+    if [ "$condis" = "" ] || [ "$condis" = "Exit" ]; then
+      break
+    elif [ "$condis" = "Disconnect" ]; then
+       iwctl station $station disconnect
+    else
+       iwctl station $station disconnect
+       iwctl station $station connect $condis
+       echo "You should now be connected to $condis"
+    fi
   fi
 
-  if [ "$option" = "Exit" ]; then
+  if [ "$option" = "Exit" ] || [ "$option" = "" ]; then
     break
   fi
 done
