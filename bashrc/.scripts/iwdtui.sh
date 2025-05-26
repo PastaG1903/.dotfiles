@@ -100,7 +100,7 @@ while true; do
   fi
 
   if [ "$option" = "List" ]; then
-    networks=$(sudo ls -1 /var/lib/iwd/ -I hotspot)
+    networks=$(sudo ls -1 /var/lib/iwd/ -I hotspot | sed 's/\.[^.]*$//')
     networks=$(printf "Disconnect\n""$networks""\nExit")
     station=$(iwctl station list | grep connected | grep disconnected | awk '{print $2}')
     condis=$(gum choose $networks --header "You can choose to connect to another known network or to disconnect.")
