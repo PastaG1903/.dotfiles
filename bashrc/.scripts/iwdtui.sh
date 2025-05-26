@@ -84,9 +84,7 @@ while true; do
       sudo mv ./$network.8021x /var/lib/iwd
 
       echo "You should be now connected to $network"
-     
     fi
-
   fi
 
   if [ "$option" = "Remove" ]; then
