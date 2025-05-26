@@ -63,6 +63,9 @@ alias matlab="/home/mavap/Downloads/MATLAB/bin/matlab"
 
 alias lvim='NVIM_APPNAME="leovim" nvim'
 
+alias sysser="/home/mavap/.dotfiles/bashrc/.scripts/syssertui.sh"
+alias iwdtui="/home/mavap/.dotfiles/bashrc/.scripts/iwdtui.sh"
+
 alias jekyllserve="bundle exec jekyll serve"
 export PATH="/home/mavap/.local/share/gem/ruby/3.3.0/bin:$PATH"
 export TEXMFCNF=$HOME/texmf/web2c:
