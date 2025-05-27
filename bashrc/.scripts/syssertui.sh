@@ -9,11 +9,16 @@ while true; do
   fi
   isactive=$(systemctl status $service".service" | grep Active | awk '{print $2}')
   isenabled=$(systemctl list-unit-files | grep $service".service" | awk '{print $2}')
-  printf "\n$service is $isenabled and $isactive\n\n"
-  actions=$(printf "enable\nstart\nrestart\nreload\ndisable\nstop\n")
-  action=$(gum choose $actions --header "What do you want to do to $service? Note: 'reload' is to reload configs")
+  #printf "\n$service is $isenabled and $isactive\n\n"
+  actions=$(printf "enable\nstart\nrestart\ndisable\nstop\nLogs")
+  action=$(gum choose $actions --header "What do you want to do to $service? $service is $isenabled and $isactive")
   while true; do
     if [ "$action" = "" ]; then
+      break
+    elif [ "$action" = "Logs" ]; then
+      printf "$(systemctl status $service)\n"
+      printf "Press Enter to continue\n"
+      read enter
       break
     fi
     sudo systemctl $action $service
