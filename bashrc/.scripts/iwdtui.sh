@@ -23,7 +23,7 @@ while true; do
       break
 
     elif [ "$enterprise" = "Open" ]; then
-      iwctl station $device connect $Network
+      iwctl station $device connect $network
 
     elif [ "$enterprise" = "WPA-PSK" ]; then
       touch $network.psk
