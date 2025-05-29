@@ -2,7 +2,7 @@
 
 while true; do
 
-  if [ "$(pacman -Q | grep iwd)" = "" ]; then
+  if [ "$(pacman -Q | iwd)" = "" ]; then
     printf "This TUI is meant to be used to manage internet connections using iwd package.\nHowever, it seems you don't have it installed.\nIf you want to use iwd to connect to the internet, please install the package."
     break
   fi

@@ -1,0 +1,1 @@
+/home/mavap/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh
