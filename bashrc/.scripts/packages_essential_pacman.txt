@@ -1,6 +1,7 @@
 linux
 linux-lts
 linux-firmware
+archiso
 base
 base-devel
 bash
@@ -10,6 +11,7 @@ brightnessctl
 btop
 cups
 cups-pdf
+csvlens
 dhcpcd
 discord
 efibootmgr
@@ -22,12 +24,13 @@ git
 github-cli
 gnome-boxes
 gnome-disk-utility
+gum
 grub
 hypridle
 hyprland
 hyprshot
 imagej
-interl-media-driver
+intel-media-driver
 intel-ucode
 keyd
 kitty
@@ -38,6 +41,8 @@ lsd
 man-db
 man-pages
 mendeley-reference-manager
+mesa
+mesa-utils
 mpv
 neovim
 networkmanager
@@ -74,6 +79,7 @@ vim
 vulkan-radeon
 vulkan-intel
 waybar
+wayland
 wget
 wireless_tools
 wpa_supplicant
