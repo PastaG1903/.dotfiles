@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 ratio = [1,2,5]
 [plugin]
 pre_exit = "yazi -p"
