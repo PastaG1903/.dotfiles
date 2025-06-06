@@ -1,5 +1,7 @@
 linux
+linux-headers
 linux-lts
+linux-lts-headers
 linux-firmware
 archiso
 base
@@ -32,6 +34,7 @@ hyprshot
 imagej
 intel-media-driver
 intel-ucode
+amd-ucode
 keyd
 kitty
 less
