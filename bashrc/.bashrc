@@ -59,7 +59,7 @@ alias umoun-fenrir="umount /home/mavap/Desktop/Drives/Fenrir/"
 alias FM="cd /home/mavap/Desktop/Drives/FlashMich/"
 
 #PROGRAMS & UTILS ALIASES
-alias matlab="/home/mavap/Downloads/MATLAB/bin/matlab"
+alias matlab="/home/mavap/Documents/MATLAB/bin/matlab"
 
 alias lvim='NVIM_APPNAME="leovim" nvim'
 
