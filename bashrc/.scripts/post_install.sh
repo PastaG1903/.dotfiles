@@ -8,3 +8,7 @@ services=(bluetooth cups dhcpcd keyd NetworkManager sshd tlp zerotier-one wpa_su
 
 for service in $services; do
   sudo systemctl enable --now "$service"
+
+./pyvenv.sh
+
+../../restow.sh
