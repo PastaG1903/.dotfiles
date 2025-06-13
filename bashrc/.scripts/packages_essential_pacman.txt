@@ -35,6 +35,7 @@ imagej
 intel-media-driver
 intel-ucode
 amd-ucode
+jdk21-openjdk
 keyd
 kitty
 less

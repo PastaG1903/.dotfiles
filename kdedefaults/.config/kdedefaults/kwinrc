@@ -1,4 +1,4 @@
 [org.kde.kdecoration2]
 NoPlugin=false
-library=org.kde.breeze
+library=org.kde.oxygen
 theme=Breeze
