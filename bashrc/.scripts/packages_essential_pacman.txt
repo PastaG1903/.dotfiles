@@ -49,6 +49,7 @@ mesa
 mesa-utils
 mpv
 neovim
+neovim-lspconfig
 networkmanager
 onedrivegui
 onlyoffice-bin
