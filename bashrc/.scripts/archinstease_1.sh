@@ -29,23 +29,6 @@ else
 
   timedatectl set-timezone $timezon
 
-  echo "Do you want a separate home partition? [y/N] "
-  read sephome
-
-  printf "\n\nWhat size do you want for ESP? (e.g. 1G, 512M)\n"
-  read espsize
-
-  printf "\nWhat size do you want for SWAP? (e.g. 4G, 8G)\n"
-  read swapsize
-
-  if [ "$sephome" = "y" ]; then
-    printf "What size do you want for ROOT? (e.g. 20G, 50G)\n"
-    read rootsize
-    printf "g\nn\n\n\n+$espsize\nn\n\n\n+$swapsize\nn\n\n\n+$rootsize\nn\n\n\n\nt\n1\n1\nt\n2\nswap\nt\n3\n23\nt\n4\n23\nw\n" | fdisk /dev/$target
-  else
-    printf "g\nn\n\n\n+$espsize\nn\n\n\n+$swapsize\nn\n\n\n\nt\n1\n1\nt\n2\nswap\nt\n3\n23\nw\n" | fdisk /dev/$target
-  fi
-
   if [ "$target" = "nvme0n1" ]; then
     house=$target"p4"
     rootp=$target"p3"
@@ -58,19 +41,83 @@ else
     efip=$target"1"
   fi
 
-  mkfs.ext4 /dev/$rootp
-  mkswap /dev/$suap
-  mkfs.fat -F 32 /dev/$efip
+  options=$(printf "Yes\nNo")
+  sephome=$(gum choose $options --header "Do you want a separate home partition? Default: No")
+  if [ "$sephome" != "Yes" ]; then
+    sephome="No"
+  fi
 
-  mount /dev/$rootp /mnt
-  mkdir /mnt/boot
-  mount /dev/$efip /mnt/boot
-  swapon /dev/$suap
+  printf "\n\nWhat size do you want for ESP? (e.g. 1G, 512M)\n"
+  read espsize
 
-  if [ "$sephome" = "y" ]; then
+  swapops=$(printf "Partition\nSwapfile\nzram")
+  swapornot=$(gum choose swapops --header "Please choose your swap choice. If you don't want swap, you can select zram or none")
+
+  if [ "$swapornot" != "zram" ] || [ "$swapornot" != "" ]; then
+    printf "\nWhat size do you want for $swapornot? (e.g. 4G, 8G)\n"
+    read swapsize
+  fi
+
+
+  if [ "$sephome" = "Yes" ] && [ "$swapornot" = "Partition" ]; then
+    printf "What size do you want for ROOT? (e.g. 20G, 50G)\n"
+    read rootsize
+    printf "g\nn\n\n\n+$espsize\nn\n\n\n+$swapsize\nn\n\n\n+$rootsize\nn\n\n\n\nt\n1\n1\nt\n2\nswap\nt\n3\n23\nt\n4\n23\nw\n" | fdisk /dev/$target
+
+    mkfs.fat -F 32 /dev/$efip
+    mkswap /dev/$suap
+    mkfs.ext4 /dev/$rootp
     mkfs.ext4 /dev/$house
+
+    swapon /dev/$suap
+    mount /dev/$rootp /mnt
+    mkdir /mnt/boot
+    mount /dev/$efip /mnt/boot
     mkdir /mnt/home
     mount /dev/$house /mnt/home
+
+  elif [ "$sephome" = "No" ] && [ "$swapornot" = "Partition" ]; then
+    printf "g\nn\n\n\n+$espsize\nn\n\n\n+$swapsize\nn\n\n\n\nt\n1\n1\nt\n2\nswap\nt\n3\n23\nw\n" | fdisk /dev/$target
+
+    mkfs.fat -F 32 /dev/$efip
+    mkswap /dev/$suap
+    mkfs.ext4 /dev/$rootp
+
+    swapon /dev/$suap
+    mount /dev/$rootp /mnt
+    mkdir /mnt/boot
+    mount /dev/$efip /mnt/boot
+
+  elif [ "$sephome" = "No" ] && [ "$swapornot" != "Partition" ]; then
+    printf "g\nn\n\n\n+$espsize\nn\n\n\n\nt\n1\n1\nt\n2\n23\nw\n" | fdisk /dev/$target
+
+    mkfs.fat -F 32 /dev/$efip
+    mkfs.ext4 /dev/$suap
+
+    mount /dev/$suap /mnt
+    mkdir /mnt/boot
+    mount /dev/$efip /mnt/boot
+
+  else
+    printf "What size do you want for ROOT? (e.g. 20G, 50G)\n"
+    read rootsize
+    printf "g\nn\n\n\n+$espsize\nn\n\n\n+$rootsize\nn\n\n\n\nt\n1\n1\nt\n2\n23\nt\n3\n23\nw\n" | fdisk /dev/$target
+
+    mkfs.fat -F 32 /dev/$efip
+    mkfs.ext4 /dev/$suap
+    mkfs.ext4 /dev/$rootp
+
+    mount /dev/$suap /mnt
+    mkdir /mnt/boot
+    mount /dev/$efip /mnt/boot
+    mkdir /mnt/home
+    mount /dev/$rootp /mnt/home
+
+  fi
+
+  if [ "$swapornot" = "Swapfile" ]; then
+    mkswap -U clear --size $swapsize --file /mnt/swapfile
+    swapon /mnt/swapfile
   fi
 
   printf "What kernels would you like from the following? Please separate by spaces (default: linux)\n\nlinux\nlinux-lts\nlinux-rt\nlinux-rt-lts\nlinux-zen\n\n"
@@ -90,7 +137,6 @@ else
   pacstrap -K /mnt base base-devel $kernels linux-firmware openssh sudo iwd vim networkmanager man-pages $packages $processor
 
   # pacstrap /mnt tmux fastfetch btop cups git base-devel yazi iwd dhcpcd neovim man-pages pulseaudio blueman xorg
-
 
   genfstab -U /mnt >>/mnt/etc/fstab
 
@@ -112,11 +158,10 @@ else
 
   rm /mnt/mnt/archinstease_2.sh
 
-  git clone https://github.com/PastaG1903/.dotfiles
-
-  mv ./.dotfiles/bashrc/.scripts/iwdtui /mnt/usr/bin
-
-  rm -r ./.dotfiles
+  if [ "$swapornot" = "zram" ]; then
+    pacstrap /mnt zram-generator
+    printf "[zram0]\nzram-size = min(ram / 2)\ncompression-algorithm = zstd" >> /mnt/etc/systemd/zram-generator.conf
+  fi
 
   clear
   
