@@ -144,7 +144,7 @@ else
   if [ "$swapornot" = "zram" ]; then
     pacstrap /mnt zram-generator
     printf "[zram0]\nzram-size = min(ram / 2)\ncompression-algorithm = zstd" >> /mnt/etc/systemd/zram-generator.conf
-    printf "systemctl daemon-reload && systemctl enable --now systemd-zram-setup@zram0.service" | arch-chroot /mnt
+    printf "systemctl enable systemd-zram-setup@zram0.service" | arch-chroot /mnt
   fi
 
   printf "\nWhat should be the hostname for this installation?\n"
