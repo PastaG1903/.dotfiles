@@ -53,7 +53,7 @@ else
   swapops=$(printf "Partition\nSwapfile\nzram\nNone")
   swapornot=$(gum choose $swapops --header "Please choose your swap choice. If you don't want swap, you can select zram or none")
 
-  if [ "$swapornot" != "zram" ] || [ "$swapornot" != "" ]; then
+  if [ "$swapornot" != "zram" ] || [ "$swapornot" = "None" ] || [ "$swapornot" = "" ]; then
     printf "\nWhat size do you want for $swapornot? (e.g. 4G, 8G)\n"
     read swapsize
   fi
@@ -144,7 +144,6 @@ else
   if [ "$swapornot" = "zram" ]; then
     pacstrap /mnt zram-generator
     printf "[zram0]\nzram-size = min(ram / 2)\ncompression-algorithm = zstd" >> /mnt/etc/systemd/zram-generator.conf
-    printf "systemctl enable systemd-zram-setup@zram0.service" | arch-chroot /mnt
   fi
 
   printf "\nWhat should be the hostname for this installation?\n"
