@@ -138,7 +138,13 @@ else
 
   # pacstrap /mnt tmux fastfetch btop cups git base-devel yazi iwd dhcpcd neovim man-pages pulseaudio blueman xorg
 
-  genfstab -U /mnt >>/mnt/etc/fstab
+  genfstab -U /mnt >> /mnt/etc/fstab
+
+  if [ "$swapornot" = "zram" ]; then
+    pacstrap /mnt zram-generator
+    printf "[zram0]\nzram-size = min(ram / 2)\ncompression-algorithm = zstd" >> /mnt/etc/systemd/zram-generator.conf
+    printf "systemctl daemon-reload && systemctl enable --now systemd-zram-setup@zram0.service" | arch-chroot /mnt
+  fi
 
   printf "\nWhat should be the hostname for this installation?\n"
   read hostneimu
@@ -157,12 +163,6 @@ else
   printf "/mnt/archinstease_2.sh $hostneimu $pasvordo $neimu $passvordo $timezon" | arch-chroot /mnt
 
   rm /mnt/mnt/archinstease_2.sh
-
-  if [ "$swapornot" = "zram" ]; then
-    pacstrap /mnt zram-generator
-    printf "[zram0]\nzram-size = min(ram / 2)\ncompression-algorithm = zstd" >> /mnt/etc/systemd/zram-generator.conf
-    printf "systemctl daemon-reload && systemctl enable --now systemd-zram-setup@zram0.service" | arch-chroot /mnt
-  fi
 
   clear
   
