@@ -127,12 +127,13 @@ else
     kernels="linux"
   fi
 
-  printf "The following packages will be installed:\nbase\nkernels: $kernels\nlinux-firmware\nsudo\nvim\niwd\nnetworkmanager\nopenssh\nman-pages"
+  printf "The following packages will be installed:\nbase\nkernels: $kernels\nlinux-firmware\nsudo\nvim\niwd\nnetworkmanager\nopenssh\nman-pages\n\n"
 
   printf "What other packages do you want to include? (leave blank for none)\n\n"
   read packages
 
-  processor=$(gum choose "intel\namd")"-ucode"
+  procs=$(printf "intel-ucode\namd-ucode")
+  processor=$(gum choose $procs --header "Please choose your processor microcode")
 
   pacstrap -K /mnt base base-devel $kernels linux-firmware openssh sudo iwd vim networkmanager man-pages $packages $processor
 
