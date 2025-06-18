@@ -50,8 +50,8 @@ else
   printf "\n\nWhat size do you want for ESP? (e.g. 1G, 512M)\n"
   read espsize
 
-  swapops=$(printf "Partition\nSwapfile\nzram")
-  swapornot=$(gum choose swapops --header "Please choose your swap choice. If you don't want swap, you can select zram or none")
+  swapops=$(printf "Partition\nSwapfile\nzram\nNone")
+  swapornot=$(gum choose $swapops --header "Please choose your swap choice. If you don't want swap, you can select zram or none")
 
   if [ "$swapornot" != "zram" ] || [ "$swapornot" != "" ]; then
     printf "\nWhat size do you want for $swapornot? (e.g. 4G, 8G)\n"
