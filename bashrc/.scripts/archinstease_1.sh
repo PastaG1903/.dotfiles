@@ -143,7 +143,7 @@ else
 
   if [ "$swapornot" = "zram" ]; then
     pacstrap /mnt zram-generator
-    printf "[zram0]\nzram-size = min(ram / 2)\ncompression-algorithm = zstd" >> /mnt/etc/systemd/zram-generator.conf
+    printf "[zram0]\nzram-size = ram / 2\ncompression-algorithm = zstd" >> /mnt/etc/systemd/zram-generator.conf
   fi
 
   printf "\nWhat should be the hostname for this installation?\n"
