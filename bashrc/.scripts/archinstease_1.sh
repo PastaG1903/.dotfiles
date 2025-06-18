@@ -19,9 +19,9 @@ else
 
   continents=$(printf "America/\nEurope/\nAsia/\nAustralia/\nAfrica/")
   parentplace=$(gum filter $continents --header "Choose your timezone:")
-  place=$(gum filter $(lsd -1F /usr/share/zoneinfo/$parentplace) --header "Choose your timezone:")
+  place=$(gum filter $(ls -1F /usr/share/zoneinfo/$parentplace) --header "Choose your timezone:")
   if [ "${place: -1}" = "/" ]; then
-      subplace=$(gum filter $(lsd -1F /usr/share/zoneinfo/$parentplace$place) --header "Choose your timezone:")
+      subplace=$(gum filter $(ls -1F /usr/share/zoneinfo/$parentplace$place) --header "Choose your timezone:")
       place=$place$subplace
   fi
 
