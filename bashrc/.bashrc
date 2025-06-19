@@ -57,9 +57,6 @@ alias umount-gna="umount ~/Desktop/Drives/Gna/"
 alias mount-fenrir="sshfs shay@172.26.203.58:home/shay/ ~/Desktop/Drives/Fenrir/"
 alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 
-#PACMAN ALIASES
-alias = pacman-install="sudo pacman -S"
-
 #PROGRAMS & UTILS ALIASES
 alias matlab="~/Documents/MATLAB/bin/matlab"
 
