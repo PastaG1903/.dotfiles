@@ -27,6 +27,7 @@ alias pbp="cd ~/OneDrive_Personal/The\ PastaGuy\'s\ Files/PBP"
 alias syg="cd ~/.VAPS/.sys/"
 alias la="ls -a"
 alias lsd='lsd -1FX --group-dirs last'
+alias ls="ls -1FX"
 alias nvimc='nvim --clean'
 alias clc="clear"
 PS1='[\u@\h \W]\$ '
@@ -50,6 +51,7 @@ alias keymod="sudo nvim /etc/keyd/keyd.conf && sudo keyd reload"
 alias xlogout="xfce4-session-logout"
 alias suspend="systemctl suspend"
 alias display-on="hyprclt dispatch dpms on"
+alias tlpconf="sudo nvim /etc/tlp.conf && sudo systemctl restart tlp"
 
 #MOUNTING & UMOUNTING DRIVES ALIASES
 alias mount-gna="sshfs shay@10.147.17.30:/home/shay/ ~/Desktop/Drives/Gna/"
@@ -59,8 +61,6 @@ alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 
 #PROGRAMS & UTILS ALIASES
 alias matlab="~/Documents/MATLAB/bin/matlab"
-
-alias lvim='NVIM_APPNAME="leovim" nvim'
 
 alias sysser="~/.dotfiles/bashrc/.scripts/WIND_TUIs/syssertui.sh"
 alias iwdtui="~/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh"
