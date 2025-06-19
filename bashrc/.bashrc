@@ -38,9 +38,10 @@ alias ZTO="sudo systemctl restart zerotier-one sshd"
 #alias gna="ssh shay@172.26.138.199"
 alias gna="ssh shay@10.147.17.30"
 alias fenrir="ssh shay@172.26.203.58"
-alias gna_ip="echo 'Gna ip: 172.26.138.199'"
-alias fenrir_ip="echo 'Fenrir ip: 172.26.203.58'"
-alias gallus_ip="echo 'Gallus ip: 172.26.183.158'"
+#alias gna_ip="echo 'Gna ip: 172.26.138.199'"
+alias gna_ip="echo '10.147.17.30'"
+alias fenrir_ip="echo '172.26.203.58'"
+alias gallus_ip="echo '172.26.183.158'"
 
 alias grub-make-config="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
