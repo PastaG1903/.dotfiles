@@ -1,8 +1,8 @@
 [General]
-ColorScheme=Oxygen
+ColorScheme=BreezeLight
 
 [Icons]
-Theme=oxygen
+Theme=breeze
 
 [KDE]
-widgetStyle=oxygen
+widgetStyle=Breeze

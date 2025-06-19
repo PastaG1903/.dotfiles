@@ -11,9 +11,9 @@ for elem in $list; do
 	stow "$elem"
 done
 
-if [ "$@" = "--remove"]; then
-	sudo rm /etc/default/grub
-fi
+#if [ "$@" = "--remove" ]; then
+	#sudo rm /etc/default/grub
+#fi
 
 sudo stow --target=/etc/default/ grub
 

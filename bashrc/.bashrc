@@ -51,23 +51,23 @@ alias suspend="systemctl suspend"
 alias display-on="hyprclt dispatch dpms on"
 
 #MOUNTING & UMOUNTING DRIVES ALIASES
-alias mount-gna="sshfs shay@172.26.138.199:/home/shay/ /home/mavap/Desktop/Drives/Gna/"
-alias umount-gna="umount /home/mavap/Desktop/Drives/Gna/"
-alias mount-fenrir="sshfs shay@172.26.203.58:home/shay/ /home/mavap/Desktop/Drives/Fenrir/"
-alias umoun-fenrir="umount /home/mavap/Desktop/Drives/Fenrir/"
+alias mount-gna="sshfs shay@172.26.138.199:/home/shay/ ~/Desktop/Drives/Gna/"
+alias umount-gna="umount ~/Desktop/Drives/Gna/"
+alias mount-fenrir="sshfs shay@172.26.203.58:home/shay/ ~/Desktop/Drives/Fenrir/"
+alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 
-alias FM="cd /home/mavap/Desktop/Drives/FlashMich/"
+alias FM="cd ~/Desktop/Drives/FlashMich/"
 
 #PROGRAMS & UTILS ALIASES
-alias matlab="/home/mavap/Documents/MATLAB/bin/matlab"
+alias matlab="~/Documents/MATLAB/bin/matlab"
 
 alias lvim='NVIM_APPNAME="leovim" nvim'
 
-alias sysser="/home/mavap/.dotfiles/bashrc/.scripts/WIND_TUIs/syssertui.sh"
-alias iwdtui="/home/mavap/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh"
+alias sysser="~/.dotfiles/bashrc/.scripts/WIND_TUIs/syssertui.sh"
+alias iwdtui="~/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh"
 
 alias jekyllserve="bundle exec jekyll serve"
-export PATH="/home/mavap/.local/share/gem/ruby/3.3.0/bin:$PATH"
+export PATH="~/.local/share/gem/ruby/3.3.0/bin:$PATH"
 export TEXMFCNF=$HOME/texmf/web2c:
 
 yazi() {
