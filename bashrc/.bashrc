@@ -34,7 +34,8 @@ eval "$(zoxide init bash)"
 
 alias ZTO="sudo systemctl restart zerotier-one sshd"
 
-alias gna="ssh shay@172.26.138.199"
+#alias gna="ssh shay@172.26.138.199"
+alias gna="ssh shay@10.147.17.30"
 alias fenrir="ssh shay@172.26.203.58"
 alias gna_ip="echo 'Gna ip: 172.26.138.199'"
 alias fenrir_ip="echo 'Fenrir ip: 172.26.203.58'"
@@ -51,12 +52,13 @@ alias suspend="systemctl suspend"
 alias display-on="hyprclt dispatch dpms on"
 
 #MOUNTING & UMOUNTING DRIVES ALIASES
-alias mount-gna="sshfs shay@172.26.138.199:/home/shay/ ~/Desktop/Drives/Gna/"
+alias mount-gna="sshfs shay@10.147.17.30:/home/shay/ ~/Desktop/Drives/Gna/"
 alias umount-gna="umount ~/Desktop/Drives/Gna/"
 alias mount-fenrir="sshfs shay@172.26.203.58:home/shay/ ~/Desktop/Drives/Fenrir/"
 alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 
-alias FM="cd ~/Desktop/Drives/FlashMich/"
+#PACMAN ALIASES
+alias = pacman-install="sudo pacman -S"
 
 #PROGRAMS & UTILS ALIASES
 alias matlab="~/Documents/MATLAB/bin/matlab"
