@@ -264,6 +264,9 @@ toggle do not disturb=none,,Toggle do not disturb
 [services][kitty.desktop]
 _launch=Ctrl+Alt+X
 
+[services][org.kde.dolphin.desktop]
+_launch=none
+
 [services][org.kde.krunner.desktop]
 RunClipboard=Meta+Ctrl+Space
 _launch=Ctrl+Space\tSearch\tAlt+F2
@@ -272,6 +275,9 @@ _launch=Ctrl+Space\tSearch\tAlt+F2
 RecordRegion=none
 RectangularRegionScreenShot=Meta+Shift+S
 _launch=Print
+
+[services][thunar.desktop]
+_launch=Meta+E
 
 [wacomtablet]
 Map to fullscreen=Meta+Ctrl+F,Meta+Ctrl+F,Map to fullscreen
