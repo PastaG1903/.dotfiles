@@ -60,10 +60,13 @@ openshot
 os-prober
 pacman-contrib
 partitionmanager
-pavucontrol
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-pulse
+pipewire-jack
 plasma
 plasma-meta
-pulseaudio
 python-pip
 qutebrowser
 sl
