@@ -44,6 +44,7 @@ alias fenrir_ip="echo '172.26.203.58'"
 alias gallus_ip="echo '172.26.183.158'"
 
 alias ping="ping -a"
+alias pingna="ping -a $(gna_ip)"
 
 alias grub-make-config="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
