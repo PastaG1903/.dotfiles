@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+#set -o vi
+
 export NVIM_APPNAME="leovim"
 export EDITOR="nvim"
 
