@@ -38,6 +38,8 @@ eval "$(zoxide init zsh)"
 
 alias ZTO="sudo systemctl restart zerotier-one sshd"
 
+alias cmounted="ps aux | grep sshfs"
+
 #alias gna="ssh shay@172.26.138.199"
 alias gna="ssh shay@10.147.17.30"
 alias fenrir="ssh shay@172.26.203.58"
@@ -47,6 +49,7 @@ alias fenrir_ip="echo '172.26.203.58'"
 alias gallus_ip="echo '172.26.183.158'"
 
 alias ping_gna="ping -a $(gna_ip)"
+alias ping="ping -a"
 #alias ping_gna="ping $(gna_ip) | while read line; do canberra-gtk-play -i bell; echo "$line"; done"
 
 alias grub-make-config="sudo grub-mkconfig -o /boot/grub/grub.cfg"
