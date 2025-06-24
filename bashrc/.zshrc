@@ -5,13 +5,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+PROMPT='[%n@%m: %1~]$ '
+setopt no_beep
 #set -o vi
 
 export NVIM_APPNAME="leovim"
 export EDITOR="nvim"
 
 alias zshrc="nvim ~/.zshrc"
-alias brc="nvim ~/.zshrc && source ~/.zshrc"
+alias zrc="nvim ~/.zshrc && source ~/.zshrc"
 alias kcl="printf '\033c'"
 
 alias wander="cd /run/media/mavap/WANDER/"
@@ -32,7 +34,6 @@ alias lsd='lsd -1FX --group-dirs last'
 alias ls="ls -1FX"
 alias nvimc='nvim --clean'
 alias clc="clear"
-PROMPT='[\u@\h \W]\$ '
 eval "$(zoxide init zsh)"
 
 alias ZTO="sudo systemctl restart zerotier-one sshd"
@@ -45,8 +46,8 @@ alias gna_ip="echo '10.147.17.30'"
 alias fenrir_ip="echo '172.26.203.58'"
 alias gallus_ip="echo '172.26.183.158'"
 
-alias ping="ping -a"
-alias pingna="ping -a $(gna_ip)"
+alias ping_gna="ping -a $(gna_ip)"
+#alias ping_gna="ping $(gna_ip) | while read line; do canberra-gtk-play -i bell; echo "$line"; done"
 
 alias grub-make-config="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 

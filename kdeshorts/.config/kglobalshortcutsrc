@@ -218,8 +218,8 @@ Increase Keyboard Brightness=Keyboard Brightness Up,Keyboard Brightness Up,Incre
 Increase Screen Brightness=Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness
 Increase Screen Brightness Small=Shift+Monitor Brightness Up,Shift+Monitor Brightness Up,Increase Screen Brightness by 1%
 PowerDown=Power Down,Power Down,Power Down
-PowerOff=Power Off,Power Off,Power Off
-Sleep=Sleep,Sleep,Suspend
+PowerOff=Power Off\tCtrl+Alt+P,Power Off,Power Off
+Sleep=Meta+S\tSleep,Sleep,Suspend
 Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight
 Turn Off Screen=none,none,Turn Off Screen
 _k_friendly_name=Power Management
@@ -251,7 +251,7 @@ repeat_action=none,,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
 show-barcode=none,,Show Barcode…
 show-on-mouse-pos=Meta+V,Meta+V,Show Clipboard Items at Mouse Position
-stop current activity=Meta+S,Meta+S,Stop Current Activity
+stop current activity=none,Meta+S,Stop Current Activity
 switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
@@ -270,6 +270,9 @@ _launch=Ctrl+Space\tSearch\tAlt+F2
 RecordRegion=none
 RectangularRegionScreenShot=Meta+Shift+S
 _launch=Print
+
+[services][org.wezfurlong.wezterm.desktop]
+_launch=Ctrl+Alt+Shift+X
 
 [services][thunar.desktop]
 _launch=Meta+E
