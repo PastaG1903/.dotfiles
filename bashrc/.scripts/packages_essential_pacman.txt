@@ -76,6 +76,7 @@ sshfs
 steam
 stow
 sudo
+system-config-printer
 texlive
 timeshift
 tldr
