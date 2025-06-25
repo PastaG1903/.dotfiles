@@ -1,4 +1,4 @@
-#
+﻿#
 # ~/.zshrc
 #
 
@@ -76,8 +76,9 @@ alias sysser="~/.dotfiles/bashrc/.scripts/WIND_TUIs/syssertui.sh"
 alias iwdtui="~/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh"
 
 alias jekyllserve="bundle exec jekyll serve"
-export PATH="~/.local/share/gem/ruby/3.3.0/bin:$PATH"
-export TEXMFCNF=$HOME/texmf/web2c:
+export PATH="$HOME/WANDER/ORCA/orca:$PATH"
+export LD_LIBRARY_PATH="$HOME/WANDER/ORCA/orca/lib/:$LD_LIBRARY_PATH"
+alias mount_WANDER="sudo mount /dev/sda1 ~/WANDER/"
 
 yazi() {
     local tmp="$(mktemp)"
