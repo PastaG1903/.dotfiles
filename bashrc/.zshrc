@@ -38,7 +38,7 @@ eval "$(zoxide init zsh)"
 
 alias ZTO="sudo systemctl restart zerotier-one sshd"
 
-alias cmounted="ps aux | grep sshfs"
+alias checkmounted="ps aux | grep sshfs"
 
 #alias gna="ssh shay@172.26.138.199"
 alias gna="ssh shay@10.147.17.30"
@@ -79,6 +79,7 @@ alias jekyllserve="bundle exec jekyll serve"
 export PATH="$HOME/WANDER/ORCA/orca:$PATH"
 export LD_LIBRARY_PATH="$HOME/WANDER/ORCA/orca/lib/:$LD_LIBRARY_PATH"
 alias mount_WANDER="sudo mount /dev/sda1 ~/WANDER/"
+alias umount_WANDER="sudo umount ~/WANDER/"
 
 yazi() {
     local tmp="$(mktemp)"
