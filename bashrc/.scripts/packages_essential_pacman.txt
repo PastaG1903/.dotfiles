@@ -75,6 +75,7 @@ spotify-launcher
 sshfs
 steam
 stow
+stress-ng
 sudo
 system-config-printer
 texlive

@@ -93,4 +93,4 @@ yazi() {
 
 ###  ###
 alias ff="fastfetch"
-fastfetch
+kcl && fastfetch
