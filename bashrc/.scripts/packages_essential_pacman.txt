@@ -93,6 +93,7 @@ waybar
 wayland
 wget
 wireless_tools
+wofi
 wpa_supplicant
 xautomation
 xclip
