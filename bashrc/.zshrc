@@ -75,6 +75,8 @@ alias matlab="~/Documents/MATLAB/bin/matlab"
 alias sysser="~/.dotfiles/bashrc/.scripts/WIND_TUIs/syssertui.sh"
 alias iwdtui="~/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh"
 
+alias pomodoro="~/.dotfiles/bashrc/pomodoro.sh"
+
 alias jekyllserve="bundle exec jekyll serve"
 export PATH="$HOME/WANDER/ORCA/orca:$PATH"
 export LD_LIBRARY_PATH="$HOME/WANDER/ORCA/orca/lib/:$LD_LIBRARY_PATH"
