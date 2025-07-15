@@ -6,7 +6,7 @@
   <property name="last-separator-position" type="int" value="162"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
   <property name="last-details-view-visible-columns" type="string" value="THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE"/>
-  <property name="last-details-view-column-widths" type="string" value="50,50,137,50,137,467,50,50,432,50,50,69,50,221"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,142,50,137,467,50,50,1120,50,50,72,50,423"/>
   <property name="last-window-maximized" type="bool" value="true"/>
   <property name="last-show-hidden" type="bool" value="false"/>
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_DATE_MODIFIED"/>
@@ -32,4 +32,5 @@
   <property name="shortcuts-icon-emblems" type="bool" value="true"/>
   <property name="misc-image-preview-mode" type="string" value="THUNAR_IMAGE_PREVIEW_MODE_EMBEDDED"/>
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_24"/>
+  <property name="default-view" type="string" value="ThunarCompactView"/>
 </channel>
