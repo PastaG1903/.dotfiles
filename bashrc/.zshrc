@@ -19,6 +19,8 @@ alias kcl="printf '\033c'"
 alias wander="cd /run/media/mavap/WANDER/"
 alias dots="cd ~/.dotfiles"
 
+alias lsblk="lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,LABEL"
+
 alias open="thunar &"
 alias y="yazi"
 alias py="python"
