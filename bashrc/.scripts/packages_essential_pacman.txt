@@ -21,10 +21,12 @@ evince
 fastfetch
 fprint
 freecad
+fuzzel
 fzf
 gimp
 git
 github-cli
+gnome
 gnome-boxes
 gnome-disk-utility
 gum
@@ -43,6 +45,7 @@ less
 librecad
 libreoffice-still
 lsd
+mako
 man-db
 man-pages
 mendeley-reference-manager
@@ -52,6 +55,7 @@ mpv
 neovim
 neovim-lspconfig
 networkmanager
+niri
 onedrivegui
 onlyoffice-bin
 ookla-speedtest-bin
@@ -65,8 +69,6 @@ pipewire-alsa
 pipewire-audio
 pipewire-pulse
 pipewire-jack
-plasma
-plasma-meta
 python-pip
 qutebrowser
 sl
@@ -77,6 +79,7 @@ steam
 stow
 stress-ng
 sudo
+swaybg
 system-config-printer
 texlive
 timeshift
@@ -93,13 +96,13 @@ waybar
 wayland
 wget
 wireless_tools
-wofi
 wpa_supplicant
 xautomation
 xclip
 xdotool
 xorg
 xfce4
+xwayland-satellite
 yazi
 zerotier-one
 zathura
