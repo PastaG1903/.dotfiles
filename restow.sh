@@ -11,10 +11,9 @@ for elem in $list; do
 	stow "$elem"
 done
 
-if [ "$@" = "-rgrub" ]; then
-	sudo rm /etc/default/grub
+if [ "$@" = "-rmetc" ]; then
+	sudo rm /etc/default/grub /etc/keyd/
 	sudo stow --target=/etc/default/ grub
+	sudo stow --target=/etc/ keyd
 fi
 
-sudo rm /etc/keyd/
-sudo stow --target=/etc/ keyd
