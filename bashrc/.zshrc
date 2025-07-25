@@ -60,7 +60,7 @@ alias grub-make-config="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias pyenv="source ~/.venvs/bin/activate"
 
 alias caps2hyper="setxkbmap -option caps:hyper"
-alias keymod="sudo nvim /etc/keyd/keyd.conf && sudo keyd reload"
+alias keymod="sudo vim /etc/keyd/keyd.conf && sudo keyd reload"
 alias xlogout="xfce4-session-logout"
 alias suspend="systemctl suspend"
 alias display-on="hyprclt dispatch dpms on"
