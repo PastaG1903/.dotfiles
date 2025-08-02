@@ -1,0 +1,15 @@
+#!/bin/bash
+
+files=$(ls ~/.dotfiles/keyd/keyd/ | grep \\.)
+
+cd ~/.dotfiles/keyd/keyd/
+
+for file in $files; do
+    newname=$(echo $file | sed "s/\.[^\.]*$//")
+    mv $file $newname
+done
+
+mv $1 $1".conf"
+
+cd ~/.dotfiles/ && sudo stow -R keyd --target=/etc/
+sudo keyd reload

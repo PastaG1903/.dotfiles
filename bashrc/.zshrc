@@ -75,6 +75,8 @@ alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 #PROGRAMS & UTILS ALIASES
 alias matlab="~/Documents/MATLAB/bin/matlab"
 
+alias chkeyd="~/.dotfiles/keydconf"
+
 alias sysser="~/.dotfiles/bashrc/.scripts/WIND_TUIs/syssertui.sh"
 alias iwdtui="~/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh"
 

@@ -1,0 +1,11 @@
+[ids]
+
+*
+
+[main]
+
+capslock = leftcontrol
+space = lettermod(alpha,space,150,200)
+
+[alpha]
+; = C-A-t
