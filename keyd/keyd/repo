@@ -1,0 +1,12 @@
+[ids]
+
+*
+
+[main]
+
+capslock = leftcontrol
+space = lettermod(alpha,space,150,200)
+rightmouse = leftmouse
+
+[alpha]
+; = C-A-t

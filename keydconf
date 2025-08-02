@@ -9,7 +9,12 @@ for file in $files; do
     mv $file $newname
 done
 
-mv $1 $1".conf"
+if [ "$1" == "" ]; then
+    mv keyd keyd.conf
+else
+    mv $1 $1".conf"
+fi
+
 
 cd ~/.dotfiles/ && sudo stow -R keyd --target=/etc/
 sudo keyd reload
