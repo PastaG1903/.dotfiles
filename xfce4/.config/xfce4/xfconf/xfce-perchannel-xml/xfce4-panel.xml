@@ -214,7 +214,6 @@
       <property name="known-players" type="string" value=";Brave;brave-browser;Chromium;firefox;firefox.instance_1_452;qutebrowser;spotify;vlc"/>
       <property name="volume-step" type="int" value="1"/>
     </property>
-    <property name="plugin-23" type="string" value="xfce4-clipman-plugin"/>
     <property name="plugin-24" type="string" value="separator"/>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-11" type="string" value="separator"/>

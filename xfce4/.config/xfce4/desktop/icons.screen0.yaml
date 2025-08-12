@@ -25,20 +25,20 @@ configs:
     "/home/mavap/Desktop/Drives":
       row: 1
       col: 0
-    "/home/mavap":
-      row: 0
-      col: 0
-    "/home/mavap/Desktop/steam.desktop":
-      row: 1
-      col: 1
     "/home/mavap/Desktop/full_vaps.png":
       row: 2
       col: 1
+    "/home/mavap/Desktop/yay":
+      row: 0
+      col: 1
+    "/home/mavap":
+      row: 0
+      col: 0
     "/home/mavap/Desktop/Screensaver":
       row: 2
       col: 0
-    "/home/mavap/Desktop/yay":
-      row: 0
+    "/home/mavap/Desktop/steam.desktop":
+      row: 1
       col: 1
 - level: 0
   monitors:
@@ -80,9 +80,9 @@ configs:
     "/home/mavap/Desktop/Unconfirmed 591516.crdownload":
       row: 2
       col: 2
-    "/home/mavap/Desktop/steam.desktop":
-      row: 2
-      col: 12
+    "/home/mavap/Desktop/4913":
+      row: 0
+      col: 2
     "/home/mavap/Desktop/brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop":
       row: 0
       col: 12
@@ -125,9 +125,9 @@ configs:
     "/home/mavap/Desktop/full_vaps.png":
       row: 4
       col: 0
-    "/home/mavap/Desktop/4913":
-      row: 0
-      col: 2
+    "/home/mavap/Desktop/steam.desktop":
+      row: 2
+      col: 12
     "/home/mavap/Desktop/Activation Instructions.txt":
       row: 0
       col: 2
@@ -218,3 +218,25 @@ configs:
     "/home/mavap/Desktop/devdocs_en_latex_2025-01.zim":
       row: 3
       col: 2
+- level: 0
+  monitors:
+  - id: "bbb2978c2f71d51be42566dc38fce2bb4e05332a"
+    display_name: "Lenovo Group Limited 0x403A (eDP-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1200
+  icons:
+    "/home/elpis/Desktop/Drives":
+      row: 2
+      col: 0
+    "/home/elpis/Desktop/full_vaps.png":
+      row: 3
+      col: 0
+    "/home/elpis/Desktop/steam.desktop":
+      row: 1
+      col: 0
+    "/home/elpis":
+      row: 0
+      col: 0

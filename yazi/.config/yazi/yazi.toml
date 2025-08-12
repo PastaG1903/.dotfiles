@@ -1,7 +1,24 @@
 [mgr]
 ratio = [1,2,5]
+
 [plugin]
 pre_exit = "yazi -p"
+
 [preview]
 max_width = 800
 wrap = "yes"
+
+[opener]
+evince = [
+{ run = 'evince "$@"', desc = "Evince" },
+]
+ristretto = [
+{ run = 'ristretto "$@"', desc = "Ristretto" },
+]
+
+[open]
+prepend_rules = [
+{ name = "*.pdf", use = "evince" },
+{ name = "*.png", use = "ristretto" },
+{ name = "*.jpg", use = "ristretto" },
+]
