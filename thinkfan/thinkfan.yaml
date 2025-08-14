@@ -1,0 +1,17 @@
+sensors:
+  - chip: thinkpad-isa-0000
+    ids: [ CPU, temp3, temp6, temp7 ]
+  - hwmon: /sys/class/hwmon
+    name: thinkpad
+    indices: [1]
+  - tpacpi: /proc/acpi/ibm/thermal
+
+fans:
+  - tpacpi: /proc/acpi/ibm/fan
+
+levels:
+  - ["level auto", 0, 40]
+  - [2, 40, 45]
+  - [4, 45, 55]
+  - [6, 55, 65]
+  - ["level full-speed", 65, 255]
