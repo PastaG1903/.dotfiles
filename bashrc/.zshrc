@@ -9,6 +9,8 @@ PROMPT='[%n@%m: %1~]$ '
 setopt no_beep
 #set -o vi
 
+bindkey -v
+
 autoload -Uz compinit
 if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.m+24) ]]; then
   compinit
@@ -82,6 +84,8 @@ alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 
 #PROGRAMS & UTILS ALIASES
 alias matlab="~/Documents/MATLAB/bin/matlab"
+
+alias stirlingpdf="java -jar /opt/Stirling-PDF/Stirling-PDF.jar"
 
 alias chkeyd="~/.dotfiles/keydconf"
 
