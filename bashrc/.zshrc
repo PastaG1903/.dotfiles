@@ -9,6 +9,13 @@ PROMPT='[%n@%m: %1~]$ '
 setopt no_beep
 #set -o vi
 
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.m+24) ]]; then
+  compinit
+else
+  compinit -C  # Skip compaudit completely if recent cache exists
+fi
+
 export NVIM_APPNAME="leovim"
 export EDITOR="nvim"
 

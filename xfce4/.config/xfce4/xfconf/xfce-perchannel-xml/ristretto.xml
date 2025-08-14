@@ -6,7 +6,7 @@
       <property name="position" type="string" value="left"/>
     </property>
     <property name="height" type="uint" value="1113"/>
-    <property name="width" type="uint" value="1900"/>
+    <property name="width" type="uint" value="945"/>
     <property name="toolbar" type="empty">
       <property name="show" type="bool" value="true"/>
     </property>

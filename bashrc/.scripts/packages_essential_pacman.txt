@@ -16,6 +16,8 @@ cups-pdf
 csvlens
 dhcpcd
 discord
+distrobox
+docker
 efibootmgr
 evince
 fastfetch
