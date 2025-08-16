@@ -12,7 +12,7 @@ for elem in $list; do
 done
 
 if [ "$@" = "-nohome" ]; then
-	sudo cp ./grub/grub /etc/default/grub
+	sudo stow --target=/etc/default/ grub
 	sudo stow --target=/etc/ keyd
 	sudo cp ./thinkfan/thinkfan.hook /usr/lib/systemd/system-sleep/thinkfan
 	sudo cp ./thinkfan/thinkfan.yaml /etc/thinkfan.yaml

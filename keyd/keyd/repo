@@ -6,7 +6,9 @@
 
 capslock = leftcontrol
 space = lettermod(alpha,space,150,200)
-rightmouse = leftmouse
+
+comma = leftmouse
+dot = rightmouse
 
 [alpha]
 ; = C-A-t
