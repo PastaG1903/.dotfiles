@@ -11,11 +11,11 @@ else
   iwctl
   echo ""
 
-  lsblk
+  lsblk -o NAME,SIZE -d | sed 's/loop.*\|sr.*//'
   echo""
 
-  printf "What is the shown name of the device?\n"
-  read target
+  printf "What is the shown name of the device to install in?\n"
+  target=$(gum choose $(lsblk -o NAME -d | sed 's/loop.*\|sr.*\|NAME//' | sed '/^$/d'))
 
   continents=$(printf "America/\nEurope/\nAsia/\nAustralia/\nAfrica/")
   parentplace=$(gum filter $continents --header "Choose your timezone:")
