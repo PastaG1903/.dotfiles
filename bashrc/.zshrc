@@ -85,9 +85,9 @@ alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 #PROGRAMS & UTILS ALIASES
 alias matlab="~/Documents/MATLAB/bin/matlab"
 
-alias debian="distrobox enter debian"
+alias debian-start="distrobox enter debian"
+alias debian-stop="distrobox stop debian"
 alias stirlingpdf="java -jar /opt/Stirling-PDF/Stirling-PDF.jar"
-alias stop-debian="distrobox stop debian"
 
 alias chkeyd="~/.dotfiles/keydconf"
 
