@@ -9,9 +9,15 @@ for file in $files; do
     mv $file $newname
 done
 
-newconf=$(gum choose $(ls ~/.dotfiles/keyd/keyd/))
+newconf=$(gum choose $(ls ~/.dotfiles/keyd/keyd/ | grep -v mouse) "None" --header "Choose keyboard profile")
+if [ "$newconf" != "None" ]; then
+    mv $newconf $newconf".conf"
+fi
 
-mv $newconf $newconf".conf"
+newconf=$(gum choose $(ls ~/.dotfiles/keyd/keyd/ | grep -v kb) "None" --header "Choose mouse profile")
+if [ "$newconf" != "None" ]; then
+    mv $newconf $newconf".conf"
+fi
 
 cd ~/.dotfiles/ && sudo stow -R keyd --target=/etc/
 sudo keyd reload

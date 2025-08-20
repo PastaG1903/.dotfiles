@@ -41,7 +41,7 @@ input {
 
     mouse {
         // off
-        natural-scroll
+        // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "no-scroll"
@@ -381,8 +381,8 @@ binds {
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    Shift+WheelScrollRight allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+" "--limit=1"; }
-    Shift+WheelScrollLeft allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
+    Ctrl+Shift+WheelScrollUp allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01+" "--limit=1"; }
+    Ctrl+Shift+WheelScrollDown allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
 
 
     XF86AudioPlay { spawn "playerctl" "--player=spotify" "play-pause"; }
