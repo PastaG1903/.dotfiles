@@ -392,9 +392,10 @@ binds {
     // Example brightness key mappings for brightnessctl.
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+1%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "1%-"; }
-
     Shift+WheelScrollUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+1%"; }
     Shift+WheelScrollDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "1%-"; }
+    Ctrl+Mod+Alt+WheelScrollUp allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SOURCE@" "0.01+" "--limit=1"; }
+    Ctrl+Mod+Alt+WheelScrollDown allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SOURCE@" "0.01-" ; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
