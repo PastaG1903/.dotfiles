@@ -394,7 +394,7 @@ binds {
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "1%-"; }
     Shift+WheelScrollUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+1%"; }
     Shift+WheelScrollDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "1%-"; }
-    Ctrl+Mod+Alt+WheelScrollUp allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SOURCE@" "0.01+" "--limit=1"; }
+    Ctrl+Mod+Alt+WheelScrollUp allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SOURCE@" "0.01+" ; }
     Ctrl+Mod+Alt+WheelScrollDown allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SOURCE@" "0.01-" ; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
