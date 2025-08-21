@@ -1,6 +1,6 @@
 [ids]
-
-*
+#m:046d
+32c2:0012
 
 [main]
 
@@ -9,8 +9,3 @@ mouse2 = layer(shift)
 leftmouse = rightmouse
 rightmouse = leftmouse
 
-capslock = leftcontrol
-middlemouse = lettermod(alpha,space,150,200)
-
-[alpha]
-space = C-A-t
