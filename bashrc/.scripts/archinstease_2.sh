@@ -16,7 +16,7 @@ printf "$2\n$2\n" | passwd
 
 pacman -S --noconfirm --needed grub efibootmgr
 
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch_GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch_GRUB --removable --disable-shim-lock --modules="tpm"
 grub-mkconfig -o /boot/grub/grub.cfg
 
 mkdir -p /boot/EFI/BOOT

@@ -31,11 +31,13 @@ middlemouse = toggle(gamma)
 [alpha:M]
 leftmouse = C-insert
 rightmouse = S-insert
+middlemouse = M-q
 
 #------------------------------------------------------------------------------#
 [beta:S]
 leftmouse = C-A-o
 rightmouse = M-r
+middlemouse = C-space
 
 [alpha+beta:C]
 

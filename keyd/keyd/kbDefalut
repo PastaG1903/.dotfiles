@@ -19,7 +19,7 @@ k = lettermod(alt,k,150,200)
 l = lettermod(shift,l,150,200)
 ; = lettermod(control,;,150,200)
 
-f23 = layer(copilot)
+leftshift+leftmeta+f23 = layer(copilot)
 
 [sl:S]
 rightshift = capslock
@@ -27,7 +27,7 @@ rightshift = capslock
 [sr:S]
 leftshift = capslock
 
-[copilot:C-A]
+[copilot:C-A-S-M]
 
 [capslock:C]
 

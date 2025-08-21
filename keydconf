@@ -10,12 +10,12 @@ for file in $files; do
 done
 
 newconf=$(gum choose $(ls ~/.dotfiles/keyd/keyd/ | grep -v mouse) "None" --header "Choose keyboard profile")
-if [ "$newconf" != "None" ]; then
+if [ "$newconf" != "None" ] || [ "$newconf" != "" ]; then
     mv $newconf $newconf".conf"
 fi
 
 newconf=$(gum choose $(ls ~/.dotfiles/keyd/keyd/ | grep -v kb) "None" --header "Choose mouse profile")
-if [ "$newconf" != "None" ]; then
+if [ "$newconf" != "None" ] || [ "$newconf" != "" ]; then
     mv $newconf $newconf".conf"
 fi
 
