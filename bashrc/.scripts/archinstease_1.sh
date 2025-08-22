@@ -120,7 +120,7 @@ else
     swapon /mnt/swapfile
   fi
 
-  printf "What kernels would you like from the following? Please separate by spaces (default: linux)\n\nlinux\nlinux-lts\nlinux-rt\nlinux-rt-lts\nlinux-zen\n\n"
+  printf "What kernels would you like from the following? Please separate by spaces (default: linux)\n\nlinux\nlinux-lts\nlinux-rt\nlinux-rt-lts\nlinux-zen\nlinux-hardened\n\n"
   read kernels
 
   if [ "$kernels" = "" ]; then
@@ -166,5 +166,5 @@ else
 
   clear
   
-  printf "\nThe installation is now complete.\nFeel free to use arch-chroot to tune up your installation before rebooting.\nOtherwise, feel free to [reboot now]."
+  printf "\nThe installation is now complete.\nFeel free to use 'arch-chroot /mnt' to tune up your installation before rebooting.\nOtherwise, feel free to [reboot now]."
 fi

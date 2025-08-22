@@ -1,3 +1,5 @@
 gitcom.sh
 ./custom_archiso/
 ./bashrc/.scripts/windutils/
+./keyd/keyd/kbDavidDefault
+./keyd/keyd/mouseDavidDefault
