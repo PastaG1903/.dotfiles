@@ -17,19 +17,14 @@
         <value type="int" value="3"/>
         <value type="int" value="4"/>
         <value type="int" value="13"/>
-        <value type="int" value="23"/>
         <value type="int" value="6"/>
-        <value type="int" value="7"/>
         <value type="int" value="10"/>
         <value type="int" value="9"/>
         <value type="int" value="24"/>
-        <value type="int" value="19"/>
         <value type="int" value="33"/>
-        <value type="int" value="8"/>
         <value type="int" value="11"/>
         <value type="int" value="14"/>
         <value type="int" value="34"/>
-        <value type="int" value="5"/>
       </property>
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="mode" type="uint" value="0"/>
@@ -209,15 +204,9 @@
       </property>
       <property name="button-title" type="uint" value="3"/>
     </property>
-    <property name="plugin-7" type="string" value="pulseaudio">
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="known-players" type="string" value=";Brave;brave-browser;Chromium;firefox;firefox.instance_1_452;qutebrowser;spotify;vlc"/>
-      <property name="volume-step" type="int" value="1"/>
-    </property>
     <property name="plugin-24" type="string" value="separator"/>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-11" type="string" value="separator"/>
-    <property name="plugin-19" type="string" value="xfce4-time-out-plugin"/>
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="never-confirm-history-clear" type="bool" value="false"/>
@@ -238,45 +227,9 @@
       <property name="digital-time-format" type="string" value="%T"/>
     </property>
     <property name="plugin-34" type="string" value="showdesktop"/>
-    <property name="plugin-5" type="string" value="xkb"/>
     <property name="notes" type="empty">
       <property name="global" type="empty">
         <property name="version" type="string" value="1.11.2"/>
-      </property>
-    </property>
-    <property name="plugin-8" type="string" value="weather">
-      <property name="location" type="empty">
-        <property name="name" type="string" value="Monterrey, Nuevo León"/>
-        <property name="latitude" type="string" value="25.639784"/>
-        <property name="longitude" type="string" value="-100.293102"/>
-      </property>
-      <property name="msl" type="int" value="558"/>
-      <property name="timezone" type="string" value="America/Monterrey"/>
-      <property name="offset" type="string" value="-06:00"/>
-      <property name="cache-max-age" type="int" value="172800"/>
-      <property name="power-saving" type="bool" value="true"/>
-      <property name="units" type="empty">
-        <property name="temperature" type="int" value="0"/>
-        <property name="pressure" type="int" value="3"/>
-        <property name="windspeed" type="int" value="2"/>
-        <property name="precipitation" type="int" value="0"/>
-        <property name="altitude" type="int" value="0"/>
-        <property name="apparent-temperature" type="int" value="2"/>
-      </property>
-      <property name="round" type="bool" value="true"/>
-      <property name="single-row" type="bool" value="false"/>
-      <property name="tooltip-style" type="int" value="1"/>
-      <property name="forecast" type="empty">
-        <property name="layout" type="int" value="1"/>
-        <property name="days" type="int" value="5"/>
-      </property>
-      <property name="theme-dir" type="string" value="/usr/share/xfce4/weather/icons/simplistic"/>
-      <property name="scrollbox" type="empty">
-        <property name="show" type="bool" value="true"/>
-        <property name="animate" type="bool" value="true"/>
-        <property name="lines" type="int" value="1"/>
-        <property name="color" type="string" value="rgba(0,0,0,0)"/>
-        <property name="use-color" type="bool" value="false"/>
       </property>
     </property>
   </property>

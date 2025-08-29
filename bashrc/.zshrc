@@ -52,8 +52,11 @@ alias ZTO="sudo systemctl restart zerotier-one sshd"
 
 alias checkmounted="ps aux | grep -e sshfs"
 
-#alias gna="ssh shay@172.26.138.199"
-alias gna="ssh shay@10.147.17.30"
+alias hermes="ssh elpis@10.147.17.18"
+alias hermesip="echo 10.147.17.18"
+alias ping-hermes="ping -a 10.147.17.18"
+alias gna="ssh shay@172.26.138.199"
+# alias gna="ssh shay@10.147.17.30"
 alias fenrir="ssh shay@172.26.203.58"
 #alias gna_ip="echo 'Gna ip: 172.26.138.199'"
 alias gna_ip="echo '10.147.17.30'"
@@ -83,7 +86,8 @@ alias mount-fenrir="sshfs shay@172.26.203.58:home/shay/ ~/Desktop/Drives/Fenrir/
 alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 
 #PROGRAMS & UTILS ALIASES
-alias matlab="~/Documents/MATLAB/bin/matlab"
+#alias matlab="~/Documents/MATLAB/bin/matlab"
+alias matlab-debian="xwayland-run -- distrobox-enter debian -- sh -c 'openbox & env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfreetype.so.6 /home/elpis/Documents/MATLAB/bin/matlab -useStartupFolderPref -desktop' ; yes | debian-stop"
 
 alias debian-start="distrobox enter debian"
 alias debian-stop="distrobox stop debian"
@@ -97,8 +101,6 @@ alias iwdtui="~/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh"
 alias pomodoro="~/.dotfiles/bashrc/pomodoro.sh"
 
 alias jekyllserve="bundle exec jekyll serve"
-export PATH="$HOME/WANDER/ORCA/orca:$PATH"
-export LD_LIBRARY_PATH="$HOME/WANDER/ORCA/orca/lib/:$LD_LIBRARY_PATH"
 alias mount_WANDER="sudo mount /dev/sda1 ~/WANDER/"
 alias umount_WANDER="sudo umount ~/WANDER/"
 

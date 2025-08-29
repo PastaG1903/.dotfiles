@@ -1,0 +1,12 @@
+[ids]
+#m:046d
+32c2:0012
+
+[main]
+
+mouse1 = r
+mouse2 = z
+mouse1+mouse2 = f
+leftmouse = rightmouse
+rightmouse = leftmouse
+
