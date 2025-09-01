@@ -638,6 +638,13 @@ binds {
 }
 
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "swww-daemon"
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+    opacity 0.5
+}
 
 environment{
     DISPLAY ":0"

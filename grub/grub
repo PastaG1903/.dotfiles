@@ -43,7 +43,7 @@ GRUB_COLOR_NORMAL="green/black"
 GRUB_COLOR_HIGHLIGHT="light-green/green"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
-#GRUB_BACKGROUND="/path/to/wallpaper"
+GRUB_BACKGROUND="/home/elpis/Desktop/grub_wp.png"
 #GRUB_THEME="/path/to/gfxtheme"
 
 # Uncomment to get a beep at GRUB start
