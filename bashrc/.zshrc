@@ -90,6 +90,8 @@ alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 #PROGRAMS & UTILS ALIASES
 alias matlab-debian="xwayland-run -- distrobox-enter debian -- sh -c 'openbox & env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfreetype.so.6 /home/elpis/Documents/MATLAB/bin/matlab -useStartupFolderPref -desktop' ; yes | debian-stop"
 
+alias xwr="~/.dotfiles/bashrc/.scripts/xwr.sh"
+
 alias debian-start="distrobox enter debian"
 alias debian-stop="distrobox stop debian"
 alias stirlingpdf="java -jar /opt/Stirling-PDF/Stirling-PDF.jar"

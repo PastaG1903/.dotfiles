@@ -1,3 +1,3 @@
 #!/bin/bash
 
-xwayland-run -- sh -c 'openbox & $@'
+xwayland-run -- sh -c 'openbox & '$@
