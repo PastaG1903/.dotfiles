@@ -646,6 +646,6 @@ layer-rule {
     opacity 0.5
 }
 
-environment{
-    DISPLAY ":0"
-}
+// environment{
+//     DISPLAY ":0"
+// }

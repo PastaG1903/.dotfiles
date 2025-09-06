@@ -17,6 +17,6 @@ cd grub2-themes
 sudo ./install.sh -t tela -c 1920x1200 -b
 
 cd
-rm -r grub2-themes
+sudo rm -r grub2-themes
 
 ../../restow.sh

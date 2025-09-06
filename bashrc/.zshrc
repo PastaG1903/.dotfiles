@@ -62,6 +62,8 @@ alias fenrir="ssh shay@172.26.203.58"
 alias gna_ip="echo '10.147.17.30'"
 alias fenrir_ip="echo '172.26.203.58'"
 alias gallus_ip="echo '172.26.183.158'"
+alias prometheus="ssh mavap@10.147.17.247"
+alias prometheus_ip="echo 10.147.17.247"
 
 alias ping_gna="ping -a $(gna_ip)"
 alias ping="ping -a"
@@ -86,7 +88,6 @@ alias mount-fenrir="sshfs shay@172.26.203.58:home/shay/ ~/Desktop/Drives/Fenrir/
 alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 
 #PROGRAMS & UTILS ALIASES
-#alias matlab="~/Documents/MATLAB/bin/matlab"
 alias matlab-debian="xwayland-run -- distrobox-enter debian -- sh -c 'openbox & env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfreetype.so.6 /home/elpis/Documents/MATLAB/bin/matlab -useStartupFolderPref -desktop' ; yes | debian-stop"
 
 alias debian-start="distrobox enter debian"

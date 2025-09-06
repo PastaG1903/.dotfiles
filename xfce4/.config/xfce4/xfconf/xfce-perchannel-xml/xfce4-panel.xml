@@ -25,6 +25,8 @@
         <value type="int" value="11"/>
         <value type="int" value="14"/>
         <value type="int" value="34"/>
+        <value type="int" value="5"/>
+        <value type="int" value="7"/>
       </property>
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="mode" type="uint" value="0"/>
@@ -231,6 +233,11 @@
       <property name="global" type="empty">
         <property name="version" type="string" value="1.11.2"/>
       </property>
+    </property>
+    <property name="plugin-5" type="string" value="xkb"/>
+    <property name="plugin-7" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="known-players" type="string" value="spotify"/>
     </property>
   </property>
 </channel>

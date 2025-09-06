@@ -29,7 +29,7 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/mavap/Desktop/full_vaps.png"/>
+          <property name="last-image" type="string" value="/home/elpis/Desktop/grub_wp.png"/>
           <property name="backdrop-cycle-enable" type="bool" value="false"/>
           <property name="rgba1" type="array">
             <value type="double" value="0"/>
@@ -78,7 +78,7 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/mavap/Desktop/full_vaps.png"/>
+          <property name="last-image" type="string" value="/home/elpis/Desktop/grub_wp.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
