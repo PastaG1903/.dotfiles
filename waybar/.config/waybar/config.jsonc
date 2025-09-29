@@ -21,6 +21,7 @@
         "niri/window"
     ],
     "modules-right": [
+        "custom/overview",
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
@@ -40,6 +41,13 @@
         "custom/power"
     ],
     // Modules configuration
+    "custom/overview": {
+        "format": "{icon} {text} {icon}",
+        "on-click": "niri/toggle-overview",
+        "format-icons": {
+            "MENU": "*"
+        }
+    },
     "custom/menu": {
         "format": "{icon} {text} {icon}",
         "on-click": "fuzzel",

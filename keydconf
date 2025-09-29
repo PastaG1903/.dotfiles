@@ -4,20 +4,25 @@ files=$(ls ~/.dotfiles/keyd/keyd/ | grep \\.)
 
 cd ~/.dotfiles/keyd/keyd/
 
-for file in $files; do
-    newname=$(echo $file | sed "s/\.[^\.]*$//")
-    mv $file $newname
-done
+if [ "$1" = "-c" ]; then
+    ls | grep "conf"
+else 
 
-newconf=$(gum choose $(ls ~/.dotfiles/keyd/keyd/ | grep -v mouse) "None" --header "Choose keyboard profile")
-if [ "$newconf" != "None" ] || [ "$newconf" != "" ]; then
-    mv $newconf $newconf".conf"
+    for file in $files; do
+        newname=$(echo $file | sed "s/\.[^\.]*$//")
+        mv $file $newname
+    done
+
+    newconf=$(gum choose $(ls ~/.dotfiles/keyd/keyd/ | grep -v mouse) "None" --header "Choose keyboard profile")
+    if [ "$newconf" != "None" ] || [ "$newconf" != "" ]; then
+        mv $newconf $newconf".conf"
+    fi
+
+    newconf=$(gum choose $(ls ~/.dotfiles/keyd/keyd/ | grep -v kb) "None" --header "Choose mouse profile")
+    if [ "$newconf" != "None" ] || [ "$newconf" != "" ]; then
+        mv $newconf $newconf".conf"
+    fi
+
+    cd ~/.dotfiles/ && sudo stow -R keyd --target=/etc/
+    sudo keyd reload
 fi
-
-newconf=$(gum choose $(ls ~/.dotfiles/keyd/keyd/ | grep -v kb) "None" --header "Choose mouse profile")
-if [ "$newconf" != "None" ] || [ "$newconf" != "" ]; then
-    mv $newconf $newconf".conf"
-fi
-
-cd ~/.dotfiles/ && sudo stow -R keyd --target=/etc/
-sudo keyd reload

@@ -62,6 +62,7 @@ niri
 onedrivegui
 onlyoffice-bin
 ookla-speedtest-bin
+openbox
 openscad
 openshot
 os-prober
@@ -83,6 +84,7 @@ stow
 stress-ng
 sudo
 swaybg
+swww
 system-config-printer
 texlive
 timeshift
