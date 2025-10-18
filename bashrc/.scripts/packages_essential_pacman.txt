@@ -54,6 +54,7 @@ man-pages
 mendeley-reference-manager
 mesa
 mesa-utils
+ttf-miracode
 mpv
 neovim
 neovim-lspconfig
