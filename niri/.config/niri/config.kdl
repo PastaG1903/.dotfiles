@@ -656,6 +656,8 @@ binds {
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
 
+spawn-sh-at-startup "~/.dotfiles/bashrc/.scripts/tmux-startup.sh"
+
 layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true
