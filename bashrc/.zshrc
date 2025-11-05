@@ -25,7 +25,7 @@ alias zshrc="nvim ~/.zshrc"
 alias zrc="nvim ~/.zshrc && source ~/.zshrc"
 alias kcl="printf '\033c'"
 
-alias wander="cd /run/media/mavap/WANDER/"
+alias wander="cd /run/media/elpis/WANDER/"
 alias dots="cd ~/.dotfiles"
 
 alias lsblk="lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,LABEL"
@@ -89,8 +89,11 @@ alias umoun-fenrir="umount ~/Desktop/Drives/Fenrir/"
 
 #PROGRAMS & UTILS ALIASES
 alias matlab-debian="xwayland-run -- distrobox-enter debian -- sh -c 'openbox & env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfreetype.so.6 /home/elpis/Documents/MATLAB/bin/matlab -useStartupFolderPref -desktop' ; yes | debian-stop"
+alias matlab-debian-nodisplay="distrobox-enter debian -- sh -c 'env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfreetype.so.6 /home/elpis/Documents/MATLAB/bin/matlab -useStartupFolderPref -nodisplay' ; yes | debian-stop"
 
 alias xwr="~/.dotfiles/bashrc/.scripts/xwr.sh"
+
+alias sun-change-monitor="~/.dotfiles/bashrc/.scripts/sun-switch-monitor.sh"
 
 alias debian-start="distrobox enter debian"
 alias debian-stop="distrobox stop debian"

@@ -3,4 +3,5 @@
 cd $HOME
 
 tmux new-session -d -s main
-tmux send-keys -t main 'clear && sunshine &' enter
+tmux new-window -t main -n sunshine
+tmux send-keys -t main:sunshine 'clear && sunshine' enter
