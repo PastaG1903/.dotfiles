@@ -70,6 +70,6 @@ d = macro(home S-end C-x backspace)
 y = macro(home S-end C-c home)
 o = macro(end enter)
 macro(S-o) = macro(home enter Up)
-x = C-x
+x = delete
 u = macro(C-z)
 enter = compose

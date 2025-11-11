@@ -106,6 +106,8 @@ wireless_tools
 wpa_supplicant
 xautomation
 xclip
+xdg-desktop-portal
+xdg-desktop-portal-gnome
 xdotool
 xorg
 xfce4

@@ -82,6 +82,11 @@ button:hover {
     background-color: #ffffff;
     color: #000000;
 }
+#custom-overview {
+    padding: 5 10px;
+    background-color: #00dddd;
+    color: #000000;
+}
 
 #clock,
 #battery,

@@ -8,6 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/menu",
+        "custom/overview",
         "niri/workspaces",
         "niri/submap",
         "hyprland/workspaces",
@@ -21,7 +22,6 @@
         "niri/window"
     ],
     "modules-right": [
-        "custom/overview",
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
@@ -43,7 +43,9 @@
     // Modules configuration
     "custom/overview": {
         "format": "{icon} {text} {icon}",
-        "on-click": "niri/toggle-overview",
+        "on-click": "niri msg action toggle-overview",
+        "tooltip": "true",
+        "tooltip-format": "Toggle overview",
         "format-icons": {
             "MENU": "*"
         }
@@ -51,6 +53,8 @@
     "custom/menu": {
         "format": "{icon} {text} {icon}",
         "on-click": "fuzzel",
+        "tooltip": "true",
+        "tooltip-format": "Applications menu",
         "format-icons": {
             "MENU": "*"
         }

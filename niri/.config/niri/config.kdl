@@ -124,6 +124,19 @@ output "Samsung Electric Company S22F350 H4ZHC02955"{
     transform "normal"
     position x=0 y=-1080
 }
+output "Samsung Electric Company S22F350 H4ZHC02744"{
+    mode "1920x1080"
+    scale 1.0
+    transform "normal"
+    position x=0 y=-1080
+}
+output "Hewlett Packard HP V201 3CQ5033HPQ"{
+    mode "1600x900"
+    scale 1.0
+    transform "normal"
+    position x=-1600 y=0
+}
+
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
