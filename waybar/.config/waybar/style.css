@@ -87,6 +87,11 @@ button:hover {
     background-color: #00dddd;
     color: #000000;
 }
+#custom-partitionuse {
+    padding: 5 10px;
+    background-color: #25bbd9;
+    color: #000;
+}
 
 #clock,
 #battery,

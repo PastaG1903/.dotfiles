@@ -15,7 +15,7 @@
         "hyprland/submap",
 
         // "hyprland/scratchpad",
-        "custom/media",
+        "custom/media"
     ],
     "modules-center": [
         "hyprland/window",
@@ -27,7 +27,7 @@
         "pulseaudio",
         "backlight",
         "network",
-        "disk",
+        "custom/partitionuse",
         "cpu",
         "memory",
         "temperature",
@@ -43,7 +43,7 @@
     ],
     // Modules configuration
     "custom/overview": {
-        "format": "{icon} {text} {icon}",
+        "format": "󰕮",
         "on-click": "niri msg action toggle-overview",
         "tooltip": "true",
         "tooltip-format": "Toggle overview",
@@ -52,7 +52,7 @@
         }
     },
     "custom/menu": {
-        "format": "{icon} {text} {icon}",
+        "format": "󰍜",
         "on-click": "fuzzel",
         "tooltip": "true",
         "tooltip-format": "Applications menu",
@@ -244,7 +244,7 @@
         "on-click": "pavucontrol"
     },
     "custom/media": {
-        "format": "{icon} {}",
+        "format": "{icon} {text}",
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
@@ -252,7 +252,7 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
@@ -262,13 +262,15 @@
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
 			"shutdown": "shutdown now",
-			"reboot": "sudo reboot now",
+			"reboot": "reboot",
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/partitionuse": {
+        "exec": "$HOME/.config/waybar/disk-usage.sh",
+        "format": "{text}",
+        "restart-interval": "60",
+        "on-click": "baobab"
     }
-    // "disk": {
-    //     "format": "{percentage_free} remaining on {path} | {percentage_used} used",
-    //     "path": "/"
-    // }
 },
