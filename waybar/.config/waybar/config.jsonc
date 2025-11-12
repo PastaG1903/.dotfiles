@@ -11,6 +11,7 @@
         "custom/overview",
         "custom/maximize",
         "custom/half",
+        "custom/fullscreen",
         "niri/workspaces",
         "hyprland/workspaces",
         "hyprland/submap",
