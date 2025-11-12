@@ -3,6 +3,11 @@
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
+window.eDP-1 * { font-size: 15px; }
+
+tooltip * {
+    font-size: 15px;
+}
 
 window#waybar {
     background-color: rgba(43, 48, 59, 1);

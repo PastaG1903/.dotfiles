@@ -4,13 +4,12 @@
     // "position": "left", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 1, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "custom/menu",
         "custom/overview",
         "niri/workspaces",
-        "niri/submap",
         "hyprland/workspaces",
         "hyprland/submap",
 
@@ -29,7 +28,6 @@
         "network",
         "custom/partitionuse",
         "cpu",
-        "memory",
         "temperature",
         // "keyboard-state",
         // "power-profiles-daemon",
@@ -39,6 +37,7 @@
         "niri/language",
         "clock",
         "tray",
+        "custom/freqapps",
         "custom/power"
     ],
     // Modules configuration
@@ -88,9 +87,12 @@
         "disable-scroll": true,
         "all-outputs": false,
         "warp-on-scroll": false,
-        "format": "{icon}",
+        "format": "{icon}"
     },
-
+    "niri/window": {
+        "max-length": 20,
+        "format": "{app_id}"
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -168,7 +170,8 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": true
+        "tooltip": true,
+        "interval": 2
     },
     "memory": {
         "format": "{}% "
@@ -222,7 +225,8 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click-right": "kitty nmtui"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -256,7 +260,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : " ⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
@@ -267,10 +271,22 @@
 			"hibernate": "systemctl hibernate"
 		}
     },
+    "custom/freqapps": {
+        "format": " 󰀻 ",
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/apps_menu.xml",
+        "menu-actions": {
+            "kitty": "kitty",
+            "steam": "steam",
+            "firefox": "firefox",
+            "spotify": "spotify"
+        }
+    },
     "custom/partitionuse": {
         "exec": "$HOME/.config/waybar/disk-usage.sh",
-        "format": "{text}",
-        "restart-interval": "60",
-        "on-click": "baobab"
+        "return-type": "json",
+        "restart-interval": "2",
+        "on-click": "kitty btop",
+        "on-click-right": "baobab"
     }
 },

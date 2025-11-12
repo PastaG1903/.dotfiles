@@ -1,7 +1,7 @@
 linux
 linux-headers
-linux-lts
-linux-lts-headers
+linux-zen
+linux-zen-headers
 linux-firmware
 archiso
 base
@@ -29,14 +29,10 @@ fzf
 gimp
 git
 github-cli
-gnome
 gnome-boxes
 gnome-disk-utility
 gum
 grub
-hypridle
-hyprland
-hyprshot
 imagej
 intel-media-driver
 intel-ucode
@@ -67,6 +63,7 @@ openbox
 openscad
 openshot
 os-prober
+otf-font-awesome
 pacman-contrib
 partitionmanager
 pipewire
