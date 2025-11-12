@@ -22,11 +22,12 @@
         "niri/window"
     ],
     "modules-right": [
-        "mpd",
+        // "mpd",
         "idle_inhibitor",
         "pulseaudio",
         "backlight",
         "network",
+        "disk",
         "cpu",
         "memory",
         "temperature",
@@ -266,4 +267,8 @@
 			"hibernate": "systemctl hibernate"
 		}
     }
+    // "disk": {
+    //     "format": "{percentage_free} remaining on {path} | {percentage_used} used",
+    //     "path": "/"
+    // }
 },

@@ -4,16 +4,6 @@
 configs:
 - level: 1
   monitors:
-  - id: "9e126e3ddbfc945f2358e882e36f3c6c55eadd73"
-    display_name: "Sony SONY PJ 0x01010101 (HDMI-1)"
-    geometry:
-      x: 1366
-      y: 0
-      width: 1280
-      height: 800
-  icons: {}
-- level: 1
-  monitors:
   - id: "3deed6352bc579fe462c2dd610c355c0ec029f1b"
     display_name: "Hewlett Packard HP Z23n 6CM6260ZJF (HDMI-1)"
     geometry:
@@ -32,21 +22,56 @@ configs:
     "/home/mavap/Desktop/Drives":
       row: 1
       col: 0
+    "/home/mavap/Desktop/steam.desktop":
+      row: 1
+      col: 1
     "/home/mavap/Desktop/full_vaps.png":
       row: 2
       col: 1
     "/home/mavap/Desktop/yay":
       row: 0
       col: 1
-    "/home/mavap":
-      row: 0
-      col: 0
     "/home/mavap/Desktop/Screensaver":
       row: 2
       col: 0
-    "/home/mavap/Desktop/steam.desktop":
+    "/home/mavap":
+      row: 0
+      col: 0
+- level: 1
+  monitors:
+  - id: "9e126e3ddbfc945f2358e882e36f3c6c55eadd73"
+    display_name: "Sony SONY PJ 0x01010101 (HDMI-1)"
+    geometry:
+      x: 1366
+      y: 0
+      width: 1280
+      height: 800
+  icons: {}
+- level: 0
+  monitors:
+  - id: "bbb2978c2f71d51be42566dc38fce2bb4e05332a"
+    display_name: "Lenovo Group Limited 0x403A (eDP-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1200
+  icons:
+    "/home/elpis/Desktop/Drives":
+      row: 3
+      col: 0
+    "/home/elpis/Desktop/full_vaps.png":
+      row: 4
+      col: 0
+    "/home/elpis/Desktop/steam.desktop":
+      row: 2
+      col: 0
+    "/home/elpis":
+      row: 0
+      col: 0
+    "/home/elpis/Desktop/grub_wp.png":
       row: 1
-      col: 1
+      col: 0
 - level: 0
   monitors:
   - id: "21db3903c2a2b2838a384cfa6cbf4474465e84fe"
@@ -75,8 +100,8 @@ configs:
     "/home/mavap/Desktop/Carta Poder.pdf":
       row: 1
       col: 2
-    "/home/mavap/Desktop/archlinux_en_all_nopic_2022-12.zim":
-      row: 4
+    "/home/mavap/Desktop/Carta Poder.docx":
+      row: 2
       col: 2
     "/home/mavap/Desktop/SMC Plugin.lnk":
       row: 0
@@ -84,35 +109,35 @@ configs:
     "/home/mavap/Desktop/Sci-Fi":
       row: 0
       col: 1
-    "/home/mavap/Desktop/Unconfirmed 591516.crdownload":
-      row: 2
-      col: 2
-    "/home/mavap/Desktop/4913":
-      row: 0
-      col: 2
     "/home/mavap/Desktop/brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop":
       row: 0
       col: 12
-    "/home/mavap/Desktop/latex support for neovim.pdf":
+    "/home/mavap/Desktop/4913":
+      row: 0
+      col: 2
+    "/home/mavap/Desktop/steam.desktop":
+      row: 2
+      col: 12
+    "/home/mavap/Desktop/archlinux_en_all_nopic_2022-12.zim":
+      row: 4
+      col: 2
+    "/home/mavap/Desktop/IC Capture 2.5.lnk":
+      row: 4
+      col: 1
+    "/home/mavap/Desktop/Copia INE_Sedas_Berlanga_Marian.pdf.crdownload":
       row: 3
+      col: 2
+    "/home/mavap/Desktop/ClearPath MSP 2.0.desktop":
+      row: 0
       col: 2
     "/home/mavap":
       row: 0
       col: 0
-    "/home/mavap/Desktop/Copia INE_Sedas_Berlanga_Marian.pdf.crdownload":
-      row: 3
-      col: 2
-    "/home/mavap/Desktop/Avogadro":
-      row: 2
-      col: 2
     "/home/mavap/Desktop/vivaldi-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop":
       row: 3
       col: 0
-    "/home/mavap/Desktop/Screenshot_2025-02-11_12-36-07.png":
+    "/home/mavap/Desktop/Unconfirmed 591516.crdownload":
       row: 2
-      col: 2
-    "/home/mavap/Desktop/ClearPath MSP 2.0.desktop":
-      row: 0
       col: 2
     "/home/mavap/Desktop/IC Capture 2.5":
       row: 4
@@ -120,7 +145,7 @@ configs:
     "/home/mavap/Desktop/openSCAD_cheat_sheet.png":
       row: 4
       col: 0
-    "/home/mavap/Desktop/Carta Poder.docx":
+    "/home/mavap/Desktop/Screenshot_2025-02-11_12-36-07.png":
       row: 2
       col: 2
     "/home/mavap/Desktop/Unconfirmed 170340.crdownload":
@@ -132,27 +157,30 @@ configs:
     "/home/mavap/Desktop/full_vaps.png":
       row: 4
       col: 0
-    "/home/mavap/Desktop/steam.desktop":
-      row: 2
-      col: 12
     "/home/mavap/Desktop/Activation Instructions.txt":
       row: 0
       col: 2
-    "/home/mavap/Desktop/IC Capture 2.5.lnk":
-      row: 4
-      col: 1
-    "/home/mavap/Desktop/wikipedia_es_all_nopic_2024-05.zim":
-      row: 0
-      col: 2
-    "/home/mavap/Desktop/Administrative Tools":
-      row: 1
-      col: 2
-    "/home/mavap/Desktop/Unconfirmed 922918.crdownload":
-      row: 1
+    "/home/mavap/Desktop/latex support for neovim.pdf":
+      row: 3
       col: 2
     "/home/mavap/Desktop/lgacfancy":
       row: 1
       col: 1
+    "/home/mavap/Desktop/Avogadro":
+      row: 2
+      col: 2
+    "/home/mavap/Desktop/Administrative Tools":
+      row: 1
+      col: 2
+    "/home/mavap/Desktop/wikipedia_es_all_nopic_2024-05.zim":
+      row: 0
+      col: 2
+    "/home/mavap/Desktop/Unconfirmed 922918.crdownload":
+      row: 1
+      col: 2
+    "/home/mavap/Desktop/yay":
+      row: 3
+      col: 0
     "/home/mavap/Desktop/sqared_ring.dxf":
       row: 0
       col: 2
@@ -171,9 +199,6 @@ configs:
     "/home/mavap/Desktop/SMC Plugin.desktop":
       row: 2
       col: 2
-    "/home/mavap/Desktop/yay":
-      row: 3
-      col: 0
     "/home/mavap/Desktop/wikipedia_en_all_mini_2024-04.zim":
       row: 1
       col: 2
@@ -225,28 +250,3 @@ configs:
     "/home/mavap/Desktop/devdocs_en_latex_2025-01.zim":
       row: 3
       col: 2
-- level: 0
-  monitors:
-  - id: "bbb2978c2f71d51be42566dc38fce2bb4e05332a"
-    display_name: "Lenovo Group Limited 0x403A (eDP-1)"
-    geometry:
-      x: 0
-      y: 0
-      width: 1920
-      height: 1200
-  icons:
-    "/home/elpis/Desktop/Drives":
-      row: 3
-      col: 0
-    "/home/elpis":
-      row: 0
-      col: 0
-    "/home/elpis/Desktop/steam.desktop":
-      row: 2
-      col: 0
-    "/home/elpis/Desktop/full_vaps.png":
-      row: 4
-      col: 0
-    "/home/elpis/Desktop/grub_wp.png":
-      row: 1
-      col: 0
