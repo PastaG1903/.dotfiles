@@ -21,5 +21,11 @@
 			<property name="label"> Spotify</property>
 	</object>
     </child>
+    <child>
+	<object class="GtkMenuItem" id="discord">
+			<property name="label"> Discord</property>
+	</object>
+    </child>
+
   </object>
 </interface>

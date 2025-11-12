@@ -107,6 +107,11 @@ button:hover {
     background-color: #aaaaaa;
     color: #000;
 }
+#custom-fullscreen {
+    padding: 5 10px;
+    background-color: #14f;
+    color: #fff;
+}
 
 #clock,
 #battery,

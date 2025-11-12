@@ -281,7 +281,8 @@
             "kitty": "kitty",
             "steam": "steam",
             "firefox": "firefox",
-            "spotify": "spotify ; easyeffects"
+            "spotify": "spotify ; easyeffects",
+            "discord": "discord"
         }
     },
     "custom/partitionuse": {
@@ -298,6 +299,10 @@
     "custom/half": {
         "format": " 󰘞 ",
         "on-click": "niri msg action set-column-width '50%'"
+    },
+    "custom/fullscreen": {
+        "format": " 󰊓 ",
+        "on-click": "niri msg action fullscreen-window"
     }
 
 },
