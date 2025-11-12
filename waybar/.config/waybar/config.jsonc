@@ -9,6 +9,8 @@
     "modules-left": [
         "custom/menu",
         "custom/overview",
+        "custom/maximize",
+        "custom/half",
         "niri/workspaces",
         "hyprland/workspaces",
         "hyprland/submap",
@@ -279,7 +281,7 @@
             "kitty": "kitty",
             "steam": "steam",
             "firefox": "firefox",
-            "spotify": "spotify"
+            "spotify": "spotify ; easyeffects"
         }
     },
     "custom/partitionuse": {
@@ -288,5 +290,14 @@
         "restart-interval": "2",
         "on-click": "kitty btop",
         "on-click-right": "baobab"
+    },
+    "custom/maximize": {
+        "format": " 󰡎 ",
+        "on-click": "niri msg action expand-column-to-available-width"
+    },
+    "custom/half": {
+        "format": " 󰘞 ",
+        "on-click": "niri msg action set-column-width '50%'"
     }
+
 },
