@@ -321,7 +321,6 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "kitty"
-spawn-at-startup "waybar"
 spawn-at-startup "mako"
 
 hotkey-overlay {
@@ -598,6 +597,8 @@ binds {
     // Expel the bottom window from the focused column to the right.
     Mod+Period { expel-window-from-column; }
 
+    Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+
     Super+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
@@ -672,6 +673,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
 
 spawn-sh-at-startup "~/.dotfiles/bashrc/.scripts/tmux-startup.sh"
+spawn-sh-at-startup "waybar"
 
 layer-rule {
     match namespace="^wallpaper$"

@@ -7,40 +7,31 @@
     "spacing": 1, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/menu",
-        "custom/overview",
-        "custom/maximize",
-        "custom/half",
-        "custom/fullscreen",
+        "group/winmen",
         "niri/workspaces",
-        "hyprland/workspaces",
-        "hyprland/submap",
-
-        // "hyprland/scratchpad",
-        "custom/media"
+        "wlr/taskbar"
     ],
     "modules-center": [
-        "hyprland/window",
         "niri/window"
     ],
+    "fixed-center": false,
     "modules-right": [
         // "mpd",
+        "group/freqapps",
         "idle_inhibitor",
         "pulseaudio",
         "backlight",
         "network",
-        "custom/partitionuse",
-        "cpu",
+        "group/partitionuse",
+        // "cpu",
         "temperature",
         // "keyboard-state",
         // "power-profiles-daemon",
         "battery",
         // "battery#bat2",
-        "hyprland/language",
         "niri/language",
         "clock",
         "tray",
-        "custom/freqapps",
         "custom/power"
     ],
     // Modules configuration
@@ -275,35 +266,90 @@
 		}
     },
     "custom/freqapps": {
-        "format": " 󰀻 ",
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/apps_menu.xml",
-        "menu-actions": {
-            "kitty": "kitty",
-            "steam": "steam",
-            "firefox": "firefox",
-            "spotify": "spotify ; easyeffects",
-            "discord": "discord"
-        }
+        "format": " 󰀻 "
+    },
+    "group/partitionuse": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false,
+            "transition-duration": 250
+        },
+        "modules": [
+            "cpu",
+            "custom/partitionuse"
+        ]
+    },
+    "group/freqapps": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false,
+            "transition-duration": 250
+        },
+        "modules": [
+            "custom/freqapps",
+            "custom/kitty",
+            "custom/steam",
+            "custom/browser",
+            "custom/spotify",
+            "custom/discord"
+        ]
+    },
+    "group/winmen": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": true,
+            "transition-duration": 250
+        },
+        "modules": [
+            "custom/menu",
+            "custom/overview",
+            "custom/half",
+            "custom/maximize",
+            "custom/fullscreen"
+        ]
     },
     "custom/partitionuse": {
         "exec": "$HOME/.config/waybar/disk-usage.sh",
         "return-type": "json",
-        "restart-interval": "2",
         "on-click": "kitty btop",
         "on-click-right": "baobab"
     },
     "custom/maximize": {
         "format": " 󰡎 ",
-        "on-click": "niri msg action expand-column-to-available-width"
+        "on-click": "niri msg action expand-column-to-available-width",
+        "tooltip": true,
+        "tooltip-format": "Maximize window"
     },
     "custom/half": {
         "format": " 󰘞 ",
-        "on-click": "niri msg action set-column-width '50%'"
+        "on-click": "niri msg action set-column-width '50%'",
+        "tooltip": true,
+        "tooltip-format": "Resize window to half"
     },
     "custom/fullscreen": {
         "format": " 󰊓 ",
-        "on-click": "niri msg action fullscreen-window"
+        "on-click": "niri msg action fullscreen-window",
+        "tooltip": true,
+        "tooltip-format": "Window to fullscreen"
+    },
+    "custom/kitty": {
+        "format": "  ",
+        "on-click": "kitty"
+    },
+    "custom/steam": {
+        "format": "  ",
+        "on-click": "steam"
+    },
+    "custom/browser": {
+        "format": " 󰈹 ",
+        "on-click": "firefox"
+    },
+    "custom/spotify": {
+        "format": "  ",
+        "on-click": "spotify & easyeffects"
+    },
+    "custom/discord": {
+        "format": "  ",
+        "on-click": "discord"
     }
-
 },

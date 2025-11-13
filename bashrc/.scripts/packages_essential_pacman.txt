@@ -38,6 +38,7 @@ intel-media-driver
 intel-ucode
 amd-ucode
 jdk21-openjdk
+jq
 keyd
 kitty
 less
@@ -100,6 +101,7 @@ waybar
 wayland
 wget
 wireless_tools
+wl-mirror
 wpa_supplicant
 xautomation
 xclip

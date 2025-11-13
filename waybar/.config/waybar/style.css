@@ -112,6 +112,31 @@ button:hover {
     background-color: #14f;
     color: #fff;
 }
+#custom-spotify {
+    padding: 5 10px;
+    background-color: #1db954;
+    color: #000;
+}
+#custom-discord {
+    padding: 5 10px;
+    background-color: #7289da;
+    color: #fff;
+}
+#custom-kitty {
+    padding: 5 10px;
+    background-color: #000;
+    color: #fff;
+}
+#custom-steam {
+    padding: 5 10px;
+    background-color: #2a475e;
+    color: #fff;
+}
+#custom-browser {
+    padding: 5 10px;
+    background-color: #e66000;
+    color: #fff;
+}
 
 #clock,
 #battery,
