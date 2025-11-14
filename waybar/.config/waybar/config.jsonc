@@ -18,7 +18,6 @@
     "modules-right": [
         // "mpd",
         "group/freqapps",
-        "idle_inhibitor",
         "pulseaudio",
         "backlight",
         "network",
@@ -305,7 +304,8 @@
             "custom/overview",
             "custom/half",
             "custom/maximize",
-            "custom/fullscreen"
+            "custom/fullscreen",
+            "custom/mirror"
         ]
     },
     "custom/partitionuse": {
@@ -346,10 +346,33 @@
     },
     "custom/spotify": {
         "format": "  ",
-        "on-click": "spotify & easyeffects"
+        "on-click": "spotify-launcher & easyeffects &"
     },
     "custom/discord": {
         "format": "  ",
         "on-click": "discord"
+    },
+    "wlr/taskbar": {
+        "on-click": "activate",
+        "on-click-right": "close",
+        "format": "{icon}{short_state}"
+    },
+    "custom/mirror": {
+        "format": " 󱞟 ",
+        "on-click": "wl-mirror $(niri msg --json focused-output | jq -r .name)",
+        "tooltip": true,
+        "tooltip-format": "Mirror screen to window"
+    },
+    "custom/play-pause": {
+        "format": " 󰐎 ",
+        "on-click": "playerctl --player=spotify play-pause"
+    },
+    "custom/prev-track": {
+        "format": " 󰒮 ",
+        "on-click": "playerctl --player=spotify previous"
+    },
+    "custom/next-track": {
+        "format": " 󰒭 ",
+        "on-click": "playerctl --player=spotify next"
     }
 },

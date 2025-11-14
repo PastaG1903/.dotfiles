@@ -137,6 +137,11 @@ button:hover {
     background-color: #e66000;
     color: #fff;
 }
+#custom-mirror {
+    padding: 5 10px;
+    background-color: #bbbbbb;
+    color: #000;
+}
 
 #clock,
 #battery,
