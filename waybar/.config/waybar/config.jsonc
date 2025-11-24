@@ -18,7 +18,7 @@
     "modules-right": [
         // "mpd",
         "group/freqapps",
-        "pulseaudio",
+        "group/media",
         "backlight",
         "network",
         "group/partitionuse",
@@ -57,7 +57,8 @@
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },
     "niri/language": {
-        "format": "{short}"
+        "format": "{short}",
+        "on-click": "niri msg action switch-layout 'next'"
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -308,6 +309,19 @@
             "custom/mirror"
         ]
     },
+    "group/media": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false,
+            "transition-duration": 250
+        },
+        "modules": [
+            "pulseaudio",
+            "custom/prev-track",
+            "custom/play-pause",
+            "custom/next-track"
+        ]
+    },
     "custom/partitionuse": {
         "exec": "$HOME/.config/waybar/disk-usage.sh",
         "return-type": "json",
@@ -316,7 +330,7 @@
     },
     "custom/maximize": {
         "format": " 󰡎 ",
-        "on-click": "niri msg action expand-column-to-available-width",
+        "on-click": "niri msg action set-column-width 100%",
         "tooltip": true,
         "tooltip-format": "Maximize window"
     },
@@ -365,14 +379,14 @@
     },
     "custom/play-pause": {
         "format": " 󰐎 ",
-        "on-click": "playerctl --player=spotify play-pause"
+        "on-click": "playerctl play-pause"
     },
     "custom/prev-track": {
         "format": " 󰒮 ",
-        "on-click": "playerctl --player=spotify previous"
+        "on-click": "playerctl previous"
     },
     "custom/next-track": {
         "format": " 󰒭 ",
-        "on-click": "playerctl --player=spotify next"
+        "on-click": "playerctl next"
     }
 },

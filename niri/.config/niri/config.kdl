@@ -63,7 +63,7 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="100%"
+    focus-follows-mouse max-scroll-amount="100%"
 }
 
 // You can configure outputs by their name, which you can find
@@ -115,7 +115,7 @@ output "AccuScene Corporation Ltd ASL 0x01000000"{
     mode "1920x1080"
     scale 1.0
     transform "normal"
-    position x=1920 y=0
+    position x=-1920 y=0
 }
 
 output "Samsung Electric Company S22F350 H4ZHC02955"{
@@ -377,6 +377,10 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    open-maximized true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -432,9 +436,9 @@ binds {
     Ctrl+Shift+WheelScrollDown allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
 
 
-    XF86AudioPlay { spawn "playerctl" "--player=spotify" "play-pause"; }
-    XF86AudioPrev { spawn "playerctl" "--player=spotify" "previous"; }
-    XF86AudioNext { spawn "playerctl" "--player=spotify" "next"; }
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
 
     // Example brightness key mappings for brightnessctl.
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+1%"; }

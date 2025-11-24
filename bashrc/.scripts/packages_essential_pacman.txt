@@ -62,7 +62,6 @@ onlyoffice-bin
 ookla-speedtest-bin
 openbox
 openscad
-openshot
 os-prober
 otf-font-awesome
 pacman-contrib

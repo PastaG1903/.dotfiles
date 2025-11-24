@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Hollow Knight: Silksong Soundtrack
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/3928720
+Icon=steam_icon_3928720
+Terminal=false
+Type=Application
+Categories=Game;
