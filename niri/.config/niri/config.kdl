@@ -103,13 +103,12 @@ output "eDP-1" {
     position x=0 y=0
 }
 
-// output "HDMI-A-1"{
-//     mode "1920x1080"
-//     scale 1.0
-//     transform "normal"
-//     position x=-1920 y=0
-//     // position x=0 y=-1080
-// }
+output "HDMI-A-1"{
+    mode "1920x1080@60"
+    scale 1.0
+    transform "normal"
+    position x=-1920 y=0
+}
 
 output "AccuScene Corporation Ltd ASL 0x01000000"{
     mode "1920x1080"
@@ -131,7 +130,7 @@ output "Samsung Electric Company S22F350 H4ZHC02744"{
     position x=0 y=-1080
 }
 output "Hewlett Packard HP V201 3CQ5033HPQ"{
-    mode "1600x900"
+    mode "1600x900@60"
     scale 1.0
     transform "normal"
     position x=-1600 y=0
@@ -674,9 +673,11 @@ binds {
 }
 
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "swww-daemon"
+// spawn-at-startup "swww-daemon"
 
 spawn-sh-at-startup "~/.dotfiles/bashrc/.scripts/tmux-startup.sh"
+// spawn-sh-at-startup "waybar"
+spawn-sh-at-startup "qs -p ~/.config/quickshell/noctalia-shell/"
 
 layer-rule {
     match namespace="^wallpaper$"
@@ -687,3 +688,4 @@ layer-rule {
 // environment{
 //     DISPLAY ":0"
 // }
+include "./noctalia.kdl"

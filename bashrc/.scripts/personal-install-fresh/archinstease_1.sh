@@ -45,6 +45,8 @@ read passvordo
 
 mv /mount/archinstease_2.sh /mnt/mnt
 
+genfstab -U /mnt >> /mnt/etc/fstab
+
 printf "/mnt/archinstease_2.sh $hostneimu $pasvordo $neimu $passvordo $timezon" | arch-chroot /mnt
 
 rm /mnt/mnt/archinstease_2.sh

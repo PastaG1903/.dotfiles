@@ -8,7 +8,7 @@ for elem in $(lsd -1FX | grep /); do
 done
 
 for elem in $list; do
-	stow "$elem"
+	sudo stow "$elem"
 done
 
 if [ "$@" = "-nohome" ]; then
