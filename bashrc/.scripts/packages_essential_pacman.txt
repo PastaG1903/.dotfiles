@@ -114,7 +114,6 @@ xwayland-satellite
 yazi
 zerotier-one
 zathura
-zathura-pdf-poppler
 zathura-pdf-mupdf
 zip
 zotero
