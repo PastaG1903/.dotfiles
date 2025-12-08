@@ -1,9 +1,9 @@
 #!/bin/bash
 
 cd
-sudo pacman -S --needed --noconfirm $(cat ./packages_essential_pacman.txt)
+sudo pacman -S --needed --noconfirm $(cat ~/.dotfiles/bashrc/.scripts/packages_essential_pacman.txt)
 ./yay_install.sh
-yay -S --needed --noconfirm $(cat ./packages_essential_pacman.txt)
+yay -S --needed --noconfirm $(cat ~/.dotfiles/bashrc/.scripts/packages_essential_pacman.txt)
 
 services=(bluetooth cups dhcpcd keyd NetworkManager sshd tlp zerotier-one wpa_supplicant)
 
