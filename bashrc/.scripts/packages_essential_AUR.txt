@@ -1,0 +1,12 @@
+brave-bin
+imagej
+mendeley-reference-manager
+onedrivegui
+onlyoffice-bin
+ookla-speedtest-bin
+thinkfan
+ttf-miracode
+ttf-times-new-roman
+ventoy-bin
+webplotdigitizer-bin
+xwayland-run

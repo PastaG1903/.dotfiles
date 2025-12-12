@@ -10,9 +10,9 @@ base
 base-devel
 blueman
 bluez-utils
-brave-bin
 brightnessctl
 btop
+btrfs-progs
 cups
 cups-pdf
 csvlens
@@ -23,7 +23,8 @@ docker
 efibootmgr
 evince
 fastfetch
-fprint
+firefox
+fprintd
 freecad
 fuzzel
 fzf
@@ -34,7 +35,7 @@ gnome-boxes
 gnome-disk-utility
 gum
 grub
-imagej
+grub-btrfs
 intel-media-driver
 amd-ucode
 jq
@@ -47,7 +48,6 @@ lsd
 mako
 man-db
 man-pages
-mendeley-reference-manager
 mesa
 mesa-utils
 ttf-miracode
@@ -56,14 +56,12 @@ neovim
 neovim-lspconfig
 networkmanager
 niri
-onedrivegui
-onlyoffice-bin
-ookla-speedtest-bin
 openbox
 openscad
 os-prober
 otf-font-awesome
 pacman-contrib
+pavucontrol
 pipewire
 pipewire-alsa
 pipewire-audio
@@ -87,7 +85,6 @@ tldr
 tlp
 tmux
 unzip
-ventoy-bin
 vi
 vim
 vulkan-radeon
@@ -100,12 +97,11 @@ xclip
 xdg-desktop-portal
 xdg-desktop-portal-gnome
 xdotool
-xwayland-run
 xwayland-satellite
 yazi
 zerotier-one
 zathura
 zathura-pdf-mupdf
 zip
-zotero
 zoxide
+zram-generator
