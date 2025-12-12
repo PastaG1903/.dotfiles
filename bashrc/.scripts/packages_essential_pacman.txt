@@ -68,6 +68,7 @@ pipewire-audio
 pipewire-pulse
 python-pip
 qutebrowser
+quickshell
 sl
 smartmontools
 spotify-launcher
