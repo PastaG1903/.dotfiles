@@ -25,10 +25,9 @@ alias zshrc="nvim ~/.zshrc"
 alias zrc="nvim ~/.zshrc && source ~/.zshrc"
 alias kcl="printf '\033c'"
 
-alias wander="cd /run/media/elpis/WANDER/"
 alias dots="cd ~/.dotfiles"
 
-alias lsblk="lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,LABEL"
+alias lsblk="lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,UUID,LABEL"
 
 alias open="thunar &"
 alias y="yazi"
@@ -70,7 +69,7 @@ alias ping="ping -a"
 alias ping_phone="ping 172.26.63.165"
 #alias ping_gna="ping $(gna_ip) | while read line; do canberra-gtk-play -i bell; echo "$line"; done"
 
-alias grub-make-config="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias grub-make-config="sudo grub-mkconfig -o /boot/grub/grub.cfg ; sudo mv /boot/grub/grub.cfg.new /boot/grub/grub.cfg"
 
 alias pyenv="source ~/.venvs/bin/activate"
 
@@ -107,8 +106,11 @@ alias iwdtui="~/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh"
 alias pomodoro="~/.dotfiles/bashrc/pomodoro.sh"
 
 alias jekyllserve="bundle exec jekyll serve"
-alias mount_WANDER="sudo mount /dev/sda1 ~/WANDER/"
+alias mount_WANDER="sudo mount UUID=D3FD-EEEB ~/WANDER/"
 alias umount_WANDER="sudo umount ~/WANDER/"
+alias wander="cd ~/WANDER/"
+
+alias btrfs-snap="sudo ~/.dotfiles/bashrc/.scripts/btrfs-snapshot-create.sh"
 
 yazi() {
     local tmp="$(mktemp)"

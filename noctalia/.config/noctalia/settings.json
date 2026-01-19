@@ -152,6 +152,10 @@
                 },
                 {
                     "displayMode": "onhover",
+                    "id": "Bluetooth"
+                },
+                {
+                    "displayMode": "onhover",
                     "id": "WiFi"
                 },
                 {
@@ -161,7 +165,7 @@
                 },
                 {
                     "deviceNativePath": "",
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "id": "Battery",
                     "warningThreshold": 30
                 },
@@ -181,7 +185,6 @@
                     "drawerEnabled": true,
                     "id": "Tray",
                     "pinned": [
-                        "Discord"
                     ]
                 },
                 {
