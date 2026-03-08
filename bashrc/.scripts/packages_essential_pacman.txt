@@ -6,6 +6,7 @@ linux-rt
 linux-rt-headers
 linux-firmware
 archiso
+ardour
 base
 base-devel
 blueman
@@ -13,6 +14,7 @@ bluez-utils
 brightnessctl
 btop
 btrfs-progs
+carla
 cups
 cups-pdf
 csvlens
@@ -36,6 +38,7 @@ gnome-disk-utility
 gum
 grub
 grub-btrfs
+inotify-tools
 intel-media-driver
 amd-ucode
 jq
@@ -44,6 +47,7 @@ kitty
 less
 librecad
 libreoffice-still
+lmms
 lsd
 mako
 man-db
@@ -69,6 +73,7 @@ pipewire-pulse
 python-pip
 qutebrowser
 quickshell
+rocm-smi-lib
 sl
 smartmontools
 spotify-launcher
@@ -93,11 +98,11 @@ waybar
 wayland
 wget
 wireless_tools
+wl-clipboard
 wl-mirror
 xclip
 xdg-desktop-portal
 xdg-desktop-portal-gnome
-xdotool
 xwayland-satellite
 yazi
 zerotier-one

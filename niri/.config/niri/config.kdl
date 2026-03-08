@@ -328,6 +328,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "kitty"
 spawn-at-startup "mako"
+spawn-at-startup "easyeffects"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -442,9 +443,9 @@ binds {
     Ctrl+Shift+WheelScrollDown allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.01-"; }
 
 
-    XF86AudioPlay { spawn "playerctl" "play-pause"; }
-    XF86AudioPrev { spawn "playerctl" "previous"; }
-    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioPlay { spawn "playerctl" "-p" "spotify" "play-pause"; }
+    XF86AudioPrev { spawn "playerctl" "-p" "spotify"  "previous"; }
+    XF86AudioNext { spawn "playerctl" "-p" "spotify"  "next"; }
 
     // Example brightness key mappings for brightnessctl.
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+1%"; }
@@ -691,7 +692,31 @@ layer-rule {
     place-within-backdrop true
     opacity 0.75
 }
+recent-windows {
+    // off
+    debounce-ms 750
 
+    open-delay-ms 150
+
+    highlight {
+        active-color "#999999ff"
+        urgent-color "#ff9999ff"
+        padding 30
+        corner-radius 0
+    }
+
+    previews {
+        max-height 480
+        max-scale 0.5
+    }
+
+    binds {
+        Mod+Tab         { next-window; }
+        Mod+Shift+Tab   { previous-window; }
+        Mod+grave       { next-window     filter="app-id"; }
+        Mod+Shift+grave { previous-window filter="app-id"; }
+    }
+}
 // environment{
 //     DISPLAY ":0"
 // }

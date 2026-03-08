@@ -61,8 +61,8 @@ alias fenrir="ssh shay@172.26.203.58"
 alias gna_ip="echo '10.147.17.30'"
 alias fenrir_ip="echo '172.26.203.58'"
 alias gallus_ip="echo '172.26.183.158'"
-alias prometheus="ssh mavap@10.147.17.247"
-alias prometheus_ip="echo 10.147.17.247"
+alias prometheus="ssh shama@10.147.17.223"
+alias prometheus_ip="echo 10.147.17.223"
 
 alias ping_gna="ping -a $(gna_ip)"
 alias ping="ping -a"
@@ -106,11 +106,10 @@ alias iwdtui="~/.dotfiles/bashrc/.scripts/WIND_TUIs/iwdtui.sh"
 alias pomodoro="~/.dotfiles/bashrc/pomodoro.sh"
 
 alias jekyllserve="bundle exec jekyll serve"
-alias mount_WANDER="sudo mount UUID=D3FD-EEEB ~/WANDER/"
-alias umount_WANDER="sudo umount ~/WANDER/"
-alias wander="cd ~/WANDER/"
+alias wander="cd /run/media/elpis/WANDER/"
 
 alias btrfs-snap="sudo ~/.dotfiles/bashrc/.scripts/btrfs-snapshot-create.sh"
+alias snapper-snapshot="sudo snapper -c root create -c number --description $@"
 
 yazi() {
     local tmp="$(mktemp)"

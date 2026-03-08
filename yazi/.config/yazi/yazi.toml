@@ -15,10 +15,13 @@ evince = [
 ristretto = [
 { run = 'ristretto "$@"', desc = "Ristretto" },
 ]
+thunar = [
+{ run = 'thunar %S', desc = "View in Thunar" },
+]
 
 [open]
 prepend_rules = [
-{ name = "*.pdf", use = "evince" },
-{ name = "*.png", use = "ristretto" },
-{ name = "*.jpg", use = "ristretto" },
+{ url = "*.pdf", use = "evince" },
+{ url = "*.png", use = "ristretto" },
+{ url = "*.jpg", use = "ristretto" },
 ]
