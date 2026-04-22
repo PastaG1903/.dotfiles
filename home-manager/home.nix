@@ -15,10 +15,10 @@
   };
 
   home.file = {
-      ".config/niri".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/niri/.config/niri";
-      ".config/noctalia".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/noctalia/.config/noctalia";
-      ".config/yazi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/yazi/.config/yazi";
-      ".config/leovim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/leovim/.config/leovim";
+      ".config/niri".source = ./configs/niri;
+      ".config/noctalia".source = ./configs/noctalia;
+      ".config/yazi".source = ./configs/yazi;
+      ".config/leovim".source = ./configs/leovim;
     };
 
   programs.zathura = {
