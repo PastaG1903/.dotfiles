@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 # On the first install of this flake, run:
 # "nix run github:nix-community/home-manager -- switch --flake ~/.config/home-manager#username"
@@ -8,6 +8,42 @@
   home.homeDirectory = "/home/hestia";
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
+
+  home.packages = with pkgs; [
+    brave
+    discord
+    freecad
+    gimp
+    librecad
+    miracode
+    inkscape-with-extensions
+    onlyoffice-desktopeditors
+    openscad
+    qutebrowser
+    signal-desktop
+    spotify
+    swaybg
+    teams-for-linux
+    texliveFull
+    xwayland-satellite
+    waybar
+    zoom-us
+
+  ] ++ (with pkgs-unstable; [
+    musescore
+    muse-sounds-manager
+    noctalia-shell
+    steam
+
+    python314Packages.matplotlib
+    python314Packages.jupyter
+    python314Packages.numpy
+    python314Packages.pandas
+    python314Packages.sympy
+    python314Packages.notebook
+  ]);
 
   home.sessionVariables = {
     NVIM_APPNAME = "leovim";
@@ -49,6 +85,7 @@
     '';
 
     shellAliases = {
+      hms = "home-manager switch --flake ~/.dotfiles/home-manager#$USER";
       kcl = "printf '\033c'";
       dots = "cd ~/.dotfiles";
       lsblk = "lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,UUID,LABEL";
@@ -77,7 +114,7 @@
 
     font = {
       name = "Miracode";
-      package = pkgs.miracode;  # verify this package name in nixpkgs
+      package = pkgs.miracode;
       size = 15.0;
     };
 

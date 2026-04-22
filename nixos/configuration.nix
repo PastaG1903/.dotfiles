@@ -78,9 +78,7 @@
      bluez
      bluez-tools
      bluetui
-     brave
      btop-rocm
-     discord
      ddcutil
      docker
      easyeffects
@@ -90,61 +88,37 @@
      fuzzel
      gcc
      gh
-     gimp
      git
      gnome-boxes
-     inkscape-with-extensions
      jdk21_headless
      keyd
      kitty
      less
      libreoffice-fresh
      mesa
-     miracode
      nautilus
      nmap
      nodejs_20
-     onlyoffice-desktopeditors
      playerctl
      python314
-     qutebrowser
      rclone
      rocmPackages.rocm-smi
-     signal-desktop
      smartmontools
-     spotify
      sshfs
      stow
-     swaybg
      tealdeer
-     teams-for-linux
-     texliveFull
      thinkfan
      tlp
      tmux
      unzip
-     waybar
      wget
      xdg-desktop-portal
      xdg-desktop-portal-gnome
-     xwayland-satellite
      zathura
      zerotierone
      zip
-     zoom-us
      zoxide
      zram-generator
-
-     unstable.python314Packages.matplotlib
-     unstable.python314Packages.jupyter
-     unstable.python314Packages.numpy
-     unstable.python314Packages.pandas
-     unstable.python314Packages.notebook
-
-     unstable.musescore
-     unstable.muse-sounds-manager
-     unstable.noctalia-shell
-     unstable.steam
 
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
