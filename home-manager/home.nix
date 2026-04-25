@@ -55,6 +55,7 @@
       ".config/noctalia".source = ./configs/noctalia;
       ".config/yazi".source = ./configs/yazi;
       ".config/leovim".source = ./configs/leovim;
+
     };
 
   programs.zathura = {
@@ -115,7 +116,7 @@
     font = {
       name = "Miracode";
       package = pkgs.miracode;
-      size = 15.0;
+      size = 16.0;
     };
 
     settings = {
