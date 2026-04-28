@@ -24,7 +24,6 @@
     onlyoffice-desktopeditors
     openscad
     qutebrowser
-    sherlock-launcher
     signal-desktop
     spotify
     swaybg
