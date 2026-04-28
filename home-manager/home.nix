@@ -16,12 +16,15 @@
     discord
     freecad
     gimp
+    kitty
     librecad
+    libreoffice-still
     miracode
     inkscape-with-extensions
     onlyoffice-desktopeditors
     openscad
     qutebrowser
+    sherlock-launcher
     signal-desktop
     spotify
     swaybg
@@ -86,6 +89,7 @@
     '';
 
     shellAliases = {
+      flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
       hms = "home-manager switch --flake ~/.dotfiles/home-manager#$USER";
       kcl = "printf '\033c'";
       dots = "cd ~/.dotfiles";

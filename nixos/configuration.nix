@@ -85,16 +85,13 @@
      evince
      fastfetch
      firefox
-     fuzzel
      gcc
      gh
      git
      gnome-boxes
      jdk21_headless
      keyd
-     kitty
      less
-     libreoffice-fresh
      mesa
      nautilus
      nmap
@@ -184,6 +181,7 @@ services = {
   zerotierone.enable = true;
   printing.enable = true;
   gvfs.enable = true;
+  flatpak.enable = true;
 };
 
 xdg.portal.enable = true;
