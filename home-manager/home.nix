@@ -39,6 +39,7 @@
     muse-sounds-manager
     noctalia-shell
     steam
+    vicinae
 
     python314Packages.matplotlib
     python314Packages.jupyter
@@ -58,7 +59,7 @@
       ".config/noctalia".source = ./configs/noctalia;
       ".config/yazi".source = ./configs/yazi;
       ".config/leovim".source = ./configs/leovim;
-      ".config/sherlock".source = ./configs/sherlock;
+      ".config/vicinae".source = ./configs/vicinae;
 
     };
 

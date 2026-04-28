@@ -686,6 +686,7 @@ spawn-sh-at-startup "swaybg -i ~/Desktop/grub_wp.png"
 spawn-sh-at-startup "~/.dotfiles/bashrc/.scripts/tmux-startup.sh"
 // spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "noctalia-shell"
+spawn-sh-at-startup "vicinae server"
 
 layer-rule {
     match namespace="^wallpaper$"

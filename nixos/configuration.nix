@@ -173,8 +173,6 @@ fonts = {
 
 virtualisation.docker.enable = true;
 
-  # List services that you want to enable:
-
 services = {
   openssh.enable = true;
   blueman.enable = true;
@@ -184,7 +182,20 @@ services = {
   flatpak.enable = true;
 };
 
-xdg.portal.enable = true;
+xdg.portal = {
+  enable = true;
+  extraPortals = [
+    pkgs.xdg-desktop-portal-wlr
+    pkgs.xdg-desktop-portal-gtk
+  ];
+  config.niri.default = [ "wlr" "gtk" ];
+};
+
+services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  pulse.enable = true;
+};
 
 services.avahi = {
   enable = true;
