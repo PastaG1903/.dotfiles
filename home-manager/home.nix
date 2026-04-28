@@ -58,6 +58,7 @@
       ".config/noctalia".source = ./configs/noctalia;
       ".config/yazi".source = ./configs/yazi;
       ".config/leovim".source = ./configs/leovim;
+      ".config/sherlock".source = ./configs/sherlock;
 
     };
 
