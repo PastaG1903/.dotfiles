@@ -17,6 +17,9 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  
+  boot.kernelModules = [ "i2c-dev" "ddcci" ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
 
   nix.gc = {
     automatic = true;
@@ -59,7 +62,7 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "hestia";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "i2c" ];
     packages = with pkgs; [
     	swww
     ];
@@ -80,6 +83,7 @@
      bluetui
      btop-rocm
      ddcutil
+     ddcutil-service
      docker
      easyeffects
      evince
@@ -191,11 +195,11 @@ xdg.portal = {
   config.niri.default = [ "wlr" "gtk" ];
 };
 
-services.pipewire = {
-  enable = true;
-  alsa.enable = true;
-  pulse.enable = true;
-};
+# services.pipewire = {
+#   enable = true;
+#   alsa.enable = true;
+#   pulse.enable = true;
+# };
 
 services.avahi = {
   enable = true;

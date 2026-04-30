@@ -13,12 +13,12 @@
 
   home.packages = with pkgs; [
     brave
-    discord
     freecad
     gimp
     kitty
     librecad
     libreoffice-still
+    localsend
     miracode
     inkscape-with-extensions
     onlyoffice-desktopeditors
