@@ -23,7 +23,7 @@
 
   fileSystems = {
     "/".options = [ "compress=zstd" "noatime" ];
-    "home".options = [ "compress=zstd" "noatime" ];
+    "/home".options = [ "compress=zstd" "noatime" ];
     "/nix".options = [ "compress=zstd" "noatime" ];
   };
 
@@ -172,6 +172,7 @@ fonts = {
   };
 
   hardware = {
+    i2c.enable = true;
     bluetooth.enable = true;
     alsa = {
       cardAliases = {

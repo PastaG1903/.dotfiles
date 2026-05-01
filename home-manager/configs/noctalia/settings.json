@@ -255,7 +255,16 @@
                     "textColor": "none"
                 },
                 {
-                    "deviceNativePath": "/org/bluez/hci0/dev_EB_24_02_B0_6A_CF",
+                    "deviceNativePath": "/org/bluez/hci0/dev_5E_3D_E3_AB_5E_A6",
+                    "displayMode": "icon-always",
+                    "hideIfIdle": false,
+                    "hideIfNotDetected": true,
+                    "id": "Battery",
+                    "showNoctaliaPerformance": false,
+                    "showPowerProfiles": false
+                },
+                {
+                    "deviceNativePath": "/org/bluez/hci0/dev_EB_24_02_B0_6A_D0",
                     "displayMode": "icon-always",
                     "hideIfIdle": false,
                     "hideIfNotDetected": true,

@@ -211,8 +211,13 @@
       shellWrapperName = "y";
    };
 
-  programs.obs-studio = {
-      enable = true;
+  programs = { # general programs
+      obs-studio.enable = true;
+      gh.enable = true;
+    };
+
+  services = { # general services
+      easyeffects.enable = true;
     };
 
 }
