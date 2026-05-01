@@ -20,6 +20,7 @@
     libreoffice-still
     localsend
     miracode
+    neovim
     inkscape-with-extensions
     onlyoffice-desktopeditors
     openscad
@@ -209,5 +210,9 @@
       enable = true;
       shellWrapperName = "y";
    };
+
+  programs.obs-studio = {
+      enable = true;
+    };
 
 }

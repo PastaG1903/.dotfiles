@@ -21,6 +21,12 @@
   boot.kernelModules = [ "i2c-dev" "ddcci" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
 
+  fileSystems = {
+    "/".options = [ "compress=zstd" "noatime" ];
+    "home".options = [ "compress=zstd" "noatime" ];
+    "/nix".options = [ "compress=zstd" "noatime" ];
+  };
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
@@ -112,6 +118,7 @@
      tlp
      tmux
      unzip
+     vim
      wget
      xdg-desktop-portal
      xdg-desktop-portal-gnome
@@ -184,6 +191,7 @@ services = {
   printing.enable = true;
   gvfs.enable = true;
   flatpak.enable = true;
+  ddccontrol.enable = true;
 };
 
 xdg.portal = {
