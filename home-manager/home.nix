@@ -21,6 +21,7 @@
     localsend
     miracode
     neovim
+    nh
     inkscape-with-extensions
     onlyoffice-desktopeditors
     openscad

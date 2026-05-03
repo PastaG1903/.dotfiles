@@ -116,7 +116,7 @@
                     "icon": "rocket",
                     "id": "CustomButton",
                     "ipcIdentifier": "",
-                    "leftClickExec": "qs -c noctalia-shell ipc call launcher toggle",
+                    "leftClickExec": "vicinae toggle",
                     "leftClickUpdateText": false,
                     "maxTextLength": {
                         "horizontal": 10,
