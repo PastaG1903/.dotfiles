@@ -18,6 +18,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   
+  boot.kernelParams = [ "usbhid.quirks=0x2b89:0x64ec:0x0004" ];
   boot.kernelModules = [ "i2c-dev" "ddcci" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
 
@@ -375,8 +376,8 @@ services.keyd = {
 };
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 53317 8888 ];
+  networking.firewall.allowedUDPPorts = [ 53317 8888 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
