@@ -20,19 +20,23 @@
     libreoffice-still
     localsend
     miracode
+    mpv
     neovim
     nh
     inkscape-with-extensions
     onlyoffice-desktopeditors
     openscad
     qutebrowser
+    ripdrag
     signal-desktop
     spotify
     swaybg
     teams-for-linux
     texliveFull
+    tor-browser
     xwayland-satellite
     waybar
+    wl-clipboard
     zoom-us
 
   ] ++ (with pkgs-unstable; [
@@ -94,6 +98,7 @@
     shellAliases = {
       flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
       hms = "home-manager switch --flake ~/.dotfiles/home-manager#$USER";
+      wander = "cd ~/WANDER";
       kcl = "printf '\033c'";
       dots = "cd ~/.dotfiles";
       lsblk = "lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,UUID,LABEL";

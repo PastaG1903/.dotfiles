@@ -1,4 +1,14 @@
-[mgr]
-append_keymap = [
-  { on = "<C-h>", run = 'hidden --toggle'},
-]
+# [mgr]
+# prepend_keymap = [
+#   { on = "<S-y>", run = 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list' },
+# ]
+# append_keymap = [
+#   { on = "<C-h>", run = 'hidden --toggle'},
+# ]
+[[mgr.prepend_keymap]]
+on = "y"
+run = [ 'shell -- for path in $@; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ]
+
+[[mgr.prepend_keymap]]
+on = "<C-n>"
+run = '''shell 'ripdrag --and-exit --all "$@"' --confirm '''

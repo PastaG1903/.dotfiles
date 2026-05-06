@@ -194,6 +194,7 @@ services = {
   gvfs.enable = true;
   flatpak.enable = true;
   ddccontrol.enable = true;
+  fwupd.enable = true;
 };
 
 xdg.portal = {
