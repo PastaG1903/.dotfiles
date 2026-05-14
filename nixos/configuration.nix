@@ -314,10 +314,11 @@ services.keyd = {
 	  g = "pageup";
 	  f = "pagedown";
           x = "delete";
-          u = "undo";
+          u = "insert";
           o = "macro(end enter)";
 	  v = "macro(home S-end)";
-          S-o = "macro(home enter Up)";
+	  n = "macro(G-C n ~)";
+	  "'" = "macro(G-C)";
         };
       };
     };
