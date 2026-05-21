@@ -12,12 +12,15 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    ardour
     brave
     freecad
     gimp
     kitty
+    hydrogen
     librecad
     libreoffice-still
+    lmms
     localsend
     miracode
     mpv
