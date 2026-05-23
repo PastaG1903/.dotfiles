@@ -774,14 +774,14 @@
         "wifiDetailsViewMode": "grid"
     },
     "wallpaper": {
-        "automationEnabled": false,
+        "automationEnabled": true,
         "directory": "/home/hestia/Desktop",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
         ],
         "fillColor": "#000000",
-        "fillMode": "center",
+        "fillMode": "crop",
         "hideWallpaperFilenames": false,
         "monitorDirectories": [
         ],

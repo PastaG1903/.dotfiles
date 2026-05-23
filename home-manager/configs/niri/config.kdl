@@ -688,7 +688,7 @@ binds {
 
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swww-daemon"
-spawn-sh-at-startup "swaybg -i ~/Desktop/grub_wp.png"
+spawn-sh-at-startup "swaybg -i ~/Desktop/all-travelers.jpg"
 spawn-sh-at-startup "~/.dotfiles/bashrc/.scripts/tmux-startup.sh"
 // spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "noctalia-shell"
