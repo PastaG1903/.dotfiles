@@ -42,6 +42,18 @@
     wl-clipboard
     zoom-us
 
+    # for screen-toolkit noctalia plugin
+    grim
+    slurp
+    tesseract
+    imagemagick
+    zbar
+    ffmpeg
+    jq
+    wl-screenrec
+    hyprpicker
+
+
   ] ++ (with pkgs-unstable; [
     musescore
     muse-sounds-manager

@@ -1,6 +1,6 @@
 {
   "colorHistory": [],
-  "paletteColors": "",
+  "paletteColors": [],
   "installedLangs": [
     "eng"
   ],
@@ -23,5 +23,9 @@
   "ocrCapturePath": "",
   "qrResult": "",
   "qrCapturePath": "",
-  "translateResult": ""
+  "translateResult": "",
+  "x02ApiKey": "",
+  "x02Expiry": "7d",
+  "shareSkipPopover": false,
+  "searchEngineUrl": ""
 }

@@ -90,39 +90,7 @@
                     "useFixedWidth": false
                 },
                 {
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "generalTooltipText": "",
-                    "hideMode": "alwaysExpanded",
-                    "icon": "device-heart-monitor",
-                    "iconPosition": "left",
-                    "id": "CustomButton",
-                    "ipcIdentifier": "",
-                    "leftClickExec": "kitty btop",
-                    "leftClickUpdateText": false,
-                    "maxTextLength": {
-                        "horizontal": 10,
-                        "vertical": 10
-                    },
-                    "middleClickExec": "",
-                    "middleClickUpdateText": false,
-                    "parseJson": false,
-                    "rightClickExec": "",
-                    "rightClickUpdateText": false,
-                    "showExecTooltip": true,
-                    "showIcon": true,
-                    "showTextTooltip": true,
-                    "textCollapse": "",
-                    "textCommand": "",
-                    "textIntervalMs": 3000,
-                    "textStream": false,
-                    "wheelDownExec": "",
-                    "wheelDownUpdateText": false,
-                    "wheelExec": "",
-                    "wheelMode": "unified",
-                    "wheelUpExec": "",
-                    "wheelUpUpdateText": false,
-                    "wheelUpdateText": false
+                    "id": "plugin:tamagotchi"
                 }
             ],
             "left": [
@@ -162,6 +130,9 @@
                     "wheelUpdateText": false
                 },
                 {
+                    "id": "plugin:world-clock"
+                },
+                {
                     "clockColor": "none",
                     "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
@@ -193,20 +164,19 @@
                     "usePadding": false
                 },
                 {
-                    "compactMode": false,
-                    "hideMode": "visible",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 145,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "hover",
-                    "showAlbumArt": false,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": true,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "wave"
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Network",
+                    "textColor": "none"
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Bluetooth",
+                    "textColor": "none"
+                },
+                {
+                    "id": "plugin:network-indicator"
                 }
             ],
             "right": [
@@ -260,34 +230,12 @@
                     "textColor": "none"
                 },
                 {
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "Bluetooth",
-                    "textColor": "none"
-                },
-                {
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "Network",
-                    "textColor": "none"
-                },
-                {
                     "hideWhenZero": true,
                     "hideWhenZeroUnread": false,
                     "iconColor": "none",
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
                     "unreadBadgeColor": "primary"
-                },
-                {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
                 },
                 {
                     "blacklist": [
@@ -432,19 +380,6 @@
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
                     "showPowerProfiles": false
-                },
-                {
-                    "defaultSettings": {
-                        "debounceMs": 300,
-                        "enabled": true,
-                        "language": "auto",
-                        "maxEventsPerSecond": 20,
-                        "maxVisible": 4,
-                        "perWorkspace": false,
-                        "workspaceMaxVisible": {
-                        }
-                    },
-                    "id": "plugin:niri-auto-tile"
                 },
                 {
                     "id": "plugin:screen-toolkit"
