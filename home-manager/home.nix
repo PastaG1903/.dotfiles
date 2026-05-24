@@ -63,8 +63,8 @@
   };
 
   home.file = {
-      ".config/niri".source = ./configs/niri;
-      ".config/noctalia".source = ./configs/noctalia;
+      # ".config/niri".source = ./configs/niri;
+      # ".config/noctalia".source = ./configs/noctalia;
       ".config/yazi".source = ./configs/yazi;
       ".config/leovim".source = ./configs/leovim;
       ".config/vicinae".source = ./configs/vicinae;

@@ -232,13 +232,15 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        active-color "#5cdbbd"
 
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        inactive-color "#505050"
+        inactive-color "#111413"
+
+        urgent-color   "#ffb4ab"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -263,11 +265,11 @@ layout {
         off
 
         width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        active-color "#5cdbbd"
+        inactive-color "#111413"
 
         // Color of the border around windows that request your attention.
-        urgent-color "#9b0000"
+        urgent-color   "#ffb4ab"
 
         // Gradients can use a few different interpolation color spaces.
         // For example, this is a pastel rainbow gradient via in="oklch longer hue".
@@ -312,6 +314,16 @@ layout {
 
         // You can also change the shadow color and opacity.
         color "#0007"
+    }
+
+    tab-indicator {
+        active-color   "#5cdbbd"
+        inactive-color "#005142"
+        urgent-color   "#ffb4ab"
+    }
+
+    insert-hint {
+        color "#5cdbbd80"
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
@@ -687,8 +699,8 @@ binds {
 }
 
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "swww-daemon"
-spawn-sh-at-startup "swaybg -i ~/Desktop/all-travelers.jpg"
+// spawn-at-startup "swww-daemon"
+// spawn-sh-at-startup "swaybg -i ~/Desktop/all-travelers.jpg"
 spawn-sh-at-startup "~/.dotfiles/bashrc/.scripts/tmux-startup.sh"
 // spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "noctalia-shell"
@@ -697,7 +709,11 @@ spawn-sh-at-startup "vicinae server"
 layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true
-    opacity 0.75
+}
+
+layer-rule {
+    match namespace="^noctalia-overview*"
+    place-within-backdrop true
 }
 recent-windows {
     // off
@@ -706,8 +722,8 @@ recent-windows {
     open-delay-ms 150
 
     highlight {
-        active-color "#999999ff"
-        urgent-color "#ff9999ff"
+        active-color "#5cdbbd"
+        urgent-color "#ffb4ab"
         padding 30
         corner-radius 0
     }
