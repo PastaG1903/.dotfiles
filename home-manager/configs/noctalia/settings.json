@@ -445,6 +445,9 @@
                         }
                     },
                     "id": "plugin:niri-auto-tile"
+                },
+                {
+                    "id": "plugin:screen-toolkit"
                 }
             ]
         }
@@ -949,7 +952,7 @@
         "overviewEnabled": true,
         "overviewTint": 0,
         "panelPosition": "follow_bar",
-        "randomIntervalSec": 300,
+        "randomIntervalSec": 180,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
         "skipStartupTransition": false,
