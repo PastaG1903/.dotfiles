@@ -90,6 +90,16 @@
                     "useFixedWidth": false
                 },
                 {
+                    "defaultSettings": {
+                        "cleanliness": 100,
+                        "difficulty": 50,
+                        "energy": 100,
+                        "happiness": 100,
+                        "hunger": 100,
+                        "showDebug": false,
+                        "showPercentage": false,
+                        "volume": 0.5
+                    },
                     "id": "plugin:tamagotchi"
                 }
             ],
@@ -130,6 +140,28 @@
                     "wheelUpdateText": false
                 },
                 {
+                    "defaultSettings": {
+                        "rotationInterval": 5000,
+                        "showDate": true,
+                        "timeFormat": "HH:mm",
+                        "timezones": [
+                            {
+                                "enabled": true,
+                                "name": "New York",
+                                "timezone": "America/New_York"
+                            },
+                            {
+                                "enabled": true,
+                                "name": "London",
+                                "timezone": "Europe/London"
+                            },
+                            {
+                                "enabled": true,
+                                "name": "Tokyo",
+                                "timezone": "Asia/Tokyo"
+                            }
+                        ]
+                    },
                     "id": "plugin:world-clock"
                 },
                 {
@@ -164,6 +196,32 @@
                     "usePadding": false
                 },
                 {
+                    "defaultSettings": {
+                        "byteThresholdActive": 5000,
+                        "columnSpacing": 0,
+                        "customFontBold": false,
+                        "customFontItalic": false,
+                        "fontSizeModifier": 0.75,
+                        "iconSizeModifier": 1,
+                        "iconType": "caret",
+                        "layout": "vertical",
+                        "paddingLeft": 5,
+                        "paddingRight": 0,
+                        "rowSpacing": -8,
+                        "slots": [
+                            "txSpeed",
+                            "txIcon",
+                            "rxSpeed",
+                            "rxIcon"
+                        ],
+                        "useCustomColors": false,
+                        "useCustomFont": false
+                    },
+                    "id": "plugin:network-indicator"
+                }
+            ],
+            "right": [
+                {
                     "displayMode": "onhover",
                     "iconColor": "none",
                     "id": "Network",
@@ -175,11 +233,6 @@
                     "id": "Bluetooth",
                     "textColor": "none"
                 },
-                {
-                    "id": "plugin:network-indicator"
-                }
-            ],
-            "right": [
                 {
                     "displayMode": "onhover",
                     "iconColor": "none",
@@ -382,6 +435,24 @@
                     "showPowerProfiles": false
                 },
                 {
+                    "defaultSettings": {
+                        "colorHistory": [
+                        ],
+                        "detectedRecorder": "",
+                        "filenameFormat": "",
+                        "gifMaxSeconds": 30,
+                        "installedLangs": [
+                            "eng"
+                        ],
+                        "paletteColors": [
+                        ],
+                        "recordCopyToClipboard": false,
+                        "recordSkipConfirmation": false,
+                        "screenshotPath": "",
+                        "selectedOcrLang": "eng",
+                        "transAvailable": false,
+                        "videoPath": ""
+                    },
                     "id": "plugin:screen-toolkit"
                 }
             ]
@@ -701,7 +772,7 @@
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
         "enableMarkdown": true,
-        "enableMediaToast": true,
+        "enableMediaToast": false,
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 3,

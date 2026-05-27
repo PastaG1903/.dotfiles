@@ -104,6 +104,7 @@
      keyd
      less
      mesa
+     mokutil
      nautilus
      nmap
      nodejs_20
@@ -148,6 +149,9 @@ fonts = {
     inter
     eb-garamond
     cabin
+    mplus-outline-fonts.githubRelease
+    dina-font
+    proggyfonts
   ];
 };
 
@@ -200,17 +204,17 @@ services = {
 xdg.portal = {
   enable = true;
   extraPortals = [
-    pkgs.xdg-desktop-portal-wlr
     pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal-gnome
   ];
-  config.niri.default = [ "wlr" "gtk" ];
+  config.niri.default = [ "gtk" "gnome" ];
 };
 
-# services.pipewire = {
-#   enable = true;
-#   alsa.enable = true;
-#   pulse.enable = true;
-# };
+services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  pulse.enable = true;
+};
 
 services.avahi = {
   enable = true;
@@ -317,8 +321,6 @@ services.keyd = {
           u = "insert";
           o = "macro(end enter)";
 	  v = "macro(home S-end)";
-	  n = "macro(G-C n ~)";
-	  "'" = "macro(G-C)";
         };
       };
     };

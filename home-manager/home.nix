@@ -52,6 +52,8 @@
     jq
     wl-screenrec
     hyprpicker
+    python313
+    python313Packages.pygobject3
 
 
   ] ++ (with pkgs-unstable; [
