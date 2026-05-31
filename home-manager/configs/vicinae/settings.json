@@ -9,8 +9,13 @@
 // Learn more about configuration at https://docs.vicinae.com/config
 
 {
-   "imports":[
+   "$schema": "https://vicinae.com/schemas/config.json",
+   "imports": [
       "config.json"
    ],
-   "$schema": "https://vicinae.com/schemas/config.json"
+   "theme": {
+      "dark": {
+         "name": "noctalia"
+      }
+   }
 }

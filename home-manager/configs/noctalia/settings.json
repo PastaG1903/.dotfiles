@@ -560,13 +560,13 @@
                     {
                         "clockColor": "none",
                         "clockStyle": "minimal",
-                        "customFont": "",
+                        "customFont": "Miracode",
                         "format": "d MMMM yyyy",
                         "id": "Clock",
                         "roundedCorners": true,
                         "scale": 1.5517508758295881,
                         "showBackground": true,
-                        "useCustomFont": false,
+                        "useCustomFont": true,
                         "x": 280,
                         "y": 200
                     },
@@ -590,12 +590,69 @@
                         "useCustomFont": false,
                         "x": 40,
                         "y": 80
+                    },
+                    {
+                        "defaultSettings": {
+                            "roundedCorners": true,
+                            "showBackground": true
+                        },
+                        "id": "plugin:calendar-widget",
+                        "roundedCorners": true,
+                        "scale": 1.2075471698113207,
+                        "showBackground": true,
+                        "x": 1580,
+                        "y": 60
                     }
                 ]
             },
             {
                 "name": "DP-2",
                 "widgets": [
+                    {
+                        "clockColor": "none",
+                        "clockStyle": "analog",
+                        "customFont": "",
+                        "format": "HH:mm\\nd MMMM yyyy",
+                        "id": "Clock",
+                        "roundedCorners": true,
+                        "scale": 1.2,
+                        "showBackground": true,
+                        "useCustomFont": false,
+                        "x": 20,
+                        "y": 60
+                    },
+                    {
+                        "id": "Weather",
+                        "roundedCorners": true,
+                        "scale": 1.0311759663926106,
+                        "showBackground": true,
+                        "x": 240,
+                        "y": 60
+                    },
+                    {
+                        "clockColor": "none",
+                        "clockStyle": "minimal",
+                        "customFont": "",
+                        "format": "d MMMM yyyy",
+                        "id": "Clock",
+                        "roundedCorners": true,
+                        "scale": 1.484414463743041,
+                        "showBackground": true,
+                        "useCustomFont": false,
+                        "x": 240,
+                        "y": 160
+                    },
+                    {
+                        "defaultSettings": {
+                            "roundedCorners": true,
+                            "showBackground": true
+                        },
+                        "id": "plugin:calendar-widget",
+                        "scale": 1.1320754716981132,
+                        "showBackground": true,
+                        "x": 1600,
+                        "y": 60
+                    }
                 ]
             }
         ],
@@ -923,6 +980,22 @@
             {
                 "enabled": true,
                 "id": "niri"
+            },
+            {
+                "enabled": true,
+                "id": "btop"
+            },
+            {
+                "enabled": true,
+                "id": "kitty"
+            },
+            {
+                "enabled": true,
+                "id": "yazi"
+            },
+            {
+                "enabled": true,
+                "id": "vicinae"
             }
         ],
         "enableUserTheming": false
@@ -958,7 +1031,7 @@
         "overviewEnabled": true,
         "overviewTint": 0,
         "panelPosition": "follow_bar",
-        "randomIntervalSec": 180,
+        "randomIntervalSec": 60,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
         "skipStartupTransition": false,
