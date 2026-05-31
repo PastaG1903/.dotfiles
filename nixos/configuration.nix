@@ -71,7 +71,7 @@
     description = "hestia";
     extraGroups = [ "networkmanager" "wheel" "i2c" ];
     packages = with pkgs; [
-    	swww
+    	awww
     ];
   };
 
@@ -107,7 +107,7 @@
      mokutil
      nautilus
      nmap
-     nodejs_20
+     nodejs_26
      playerctl
      python314
      rclone
@@ -207,7 +207,7 @@ xdg.portal = {
     pkgs.xdg-desktop-portal-gtk
     pkgs.xdg-desktop-portal-gnome
   ];
-  config.niri.default = [ "gtk" "gnome" ];
+  config.niri.default = [ "gnome" "gtk" ];
 };
 
 services.pipewire = {

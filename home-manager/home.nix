@@ -29,6 +29,7 @@
     inkscape-with-extensions
     onlyoffice-desktopeditors
     openscad
+    pavucontrol
     qutebrowser
     ripdrag
     signal-desktop
