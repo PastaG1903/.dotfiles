@@ -94,7 +94,6 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    defaultKeymap = "viins";
 
     setOptions = [
       "NO_BEEP"
@@ -115,7 +114,7 @@
 
     shellAliases = {
       flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
-      hms = "home-manager switch --flake ~/.dotfiles/home-manager#$USER";
+      hms = "cd ~/.dotfiles/home-manager/ && nix flake update && home-manager switch --flake ~/.dotfiles/home-manager#$USER";
       wander = "cd ~/WANDER";
       kcl = "printf '\033c'";
       dots = "cd ~/.dotfiles";

@@ -88,19 +88,6 @@
                     "showText": true,
                     "textColor": "none",
                     "useFixedWidth": false
-                },
-                {
-                    "defaultSettings": {
-                        "cleanliness": 100,
-                        "difficulty": 50,
-                        "energy": 100,
-                        "happiness": 100,
-                        "hunger": 100,
-                        "showDebug": false,
-                        "showPercentage": false,
-                        "volume": 0.5
-                    },
-                    "id": "plugin:tamagotchi"
                 }
             ],
             "left": [
@@ -454,6 +441,10 @@
                         "videoPath": ""
                     },
                     "id": "plugin:screen-toolkit"
+                },
+                {
+                    "iconColor": "error",
+                    "id": "SessionMenu"
                 }
             ]
         }
@@ -483,7 +474,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "faithful",
+        "generationMethod": "vibrant",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "eDP-1",
@@ -771,7 +762,7 @@
     "idle": {
         "customCommands": "[]",
         "enabled": true,
-        "fadeDuration": 5,
+        "fadeDuration": 10,
         "lockCommand": "",
         "lockTimeout": 600,
         "resumeLockCommand": "",
@@ -987,15 +978,15 @@
             },
             {
                 "enabled": true,
-                "id": "kitty"
-            },
-            {
-                "enabled": true,
                 "id": "yazi"
             },
             {
                 "enabled": true,
                 "id": "vicinae"
+            },
+            {
+                "enabled": true,
+                "id": "kitty"
             }
         ],
         "enableUserTheming": false
