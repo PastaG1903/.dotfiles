@@ -32,8 +32,10 @@
     pavucontrol
     qutebrowser
     ripdrag
+    ristretto
     signal-desktop
     spotify
+    syncthing
     swaybg
     teams-for-linux
     texliveFull
@@ -77,14 +79,14 @@
     EDITOR = "nvim";
   };
 
-  home.file = {
+  # home.file = {
       # ".config/niri".source = ./configs/niri;
       # ".config/noctalia".source = ./configs/noctalia;
       # ".config/yazi".source = ./configs/yazi;
       # ".config/vicinae".source = ./configs/vicinae;
-      ".config/leovim".source = ./configs/leovim;
+      # ".config/leovim".source = ./configs/leovim;
 
-    };
+    # };
 
   programs.zathura = {
       enable = true;

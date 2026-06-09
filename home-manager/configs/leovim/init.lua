@@ -40,4 +40,4 @@ local plugins = {
 }
 
 require("lazy").setup(plugins)
-
+require("colors").setup()

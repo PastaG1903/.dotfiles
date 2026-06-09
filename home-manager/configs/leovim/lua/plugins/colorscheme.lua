@@ -1,10 +1,13 @@
 return {
   -- KANAGAWA
+  -- {
+  --   "eldritch-theme/eldritch.nvim",
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd("colorscheme eldritch")
+  --   end,
+  -- },
   {
-    "rebelot/kanagawa.nvim",
-    priority = 1000,
-    config = function()
-      vim.cmd("colorscheme kanagawa-wave")
-    end,
+    "RRethy/base16-nvim",
   },
 }
