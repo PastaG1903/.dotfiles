@@ -91,6 +91,7 @@
      btop-rocm
      ddcutil
      ddcutil-service
+     dnsmasq
      docker
      easyeffects
      evince
@@ -108,6 +109,7 @@
      nautilus
      nmap
      nodejs_26
+     phodav
      playerctl
      python314
      rclone
@@ -154,6 +156,20 @@ fonts = {
     proggyfonts
   ];
 };
+
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+	#      qemu = {
+	#        swtpm.enable = true;
+	# 	 ovmf.packages = [ pkgs.OVMFFull.fd ];
+	#      };
+    };
+    spiceUSBRedirection.enable = true;
+  };
+
+  users.groups.libvirtd.members = [ "hestia" ];
+  users.groups.kvm.members = [ "hestia" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -380,8 +396,8 @@ services.keyd = {
 };
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 53317 8888 ];
-  networking.firewall.allowedUDPPorts = [ 53317 8888 ];
+  networking.firewall.allowedTCPPorts = [ 53317 8888 8384];
+  networking.firewall.allowedUDPPorts = [ 53317 8888 8384];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
