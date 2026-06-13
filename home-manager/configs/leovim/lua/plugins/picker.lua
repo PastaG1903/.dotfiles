@@ -65,7 +65,7 @@ return {
             }
           end,
 
-          prompt_cursor = "▏",
+          prompt_caret = "▏",
           prompt_prefix = " ",
         },
       })

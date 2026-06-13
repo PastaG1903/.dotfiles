@@ -13,15 +13,18 @@
 
   home.packages = with pkgs; [
     ardour
+    bottles
     brave
     freecad
     gimp
+    gum
     kitty
     hydrogen
     librecad
     libreoffice-still
     lmms
     localsend
+    lsd
     miracode
     mpv
     neovim
@@ -137,54 +140,10 @@
       suspend = "systemctl suspend";
       xwr = "~/.dotfiles/bashrc/.scripts/xwr.sh";
       stirlingpdf = "sudo docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf";
+      sysser = "~/.dotfiles/extras/syssertui.sh";
       chkeyd = "~/.dotfiles/keydconf";
     };
   };
-
-  # programs.kitty = {
-  #   enable = true;
-  #
-  #   font = {
-  #     name = "Miracode";
-  #     package = pkgs.miracode;
-  #     size = 16.0;
-  #   };
-  #
-  #   settings = {
-  #     cursor_trail = 1;
-  #     bold_font = "auto";
-  #     italic_font = "auto";
-  #     bold_italic_font = "auto";
-  #   };
-
-    # theme colors inlined directly — replaces current-theme.conf
-    # extraConfig = ''
-    #   color0 #0f1513
-    #   color1 #00fa9b
-    #   color2 #a0a0ff
-    #   color3 #a5cfc2
-    #   color4 #40d9b2
-    #   color5 #ffb4a6
-    #   color6 #a5cfc2
-    #   color7 #dee4e0
-    #   color8 #86948e
-    #   color9 #ffb4ab
-    #   color10 #ffbaad
-    #   color11 #a5cfc2
-    #   color12 #00fa9b
-    #   color13 #ffb4a6
-    #   color14 #a5cfc2
-    #   color15 #dee4e0
-    #
-    #   cursor                #dee4e0
-    #   cursor_text_color     #0f1513
-    #   background            #0f1513
-    #   foreground            #dee4e0
-    #   selection_foreground  #bccac4
-    #   selection_background  #3d4945
-    #   url_color             #6bdec2
-    # '';
-  # };
 
   programs.fastfetch = {
     enable = true;
