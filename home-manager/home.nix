@@ -11,9 +11,15 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  home.pointerCursor = {
+    x11.enable = true;
+    gtk.enable = true;
+    package = pkgs.phinger-cursors;
+    name = "phinger-cursors-dark";
+  };
+
   home.packages = with pkgs; [
     ardour
-    beeper
     bottles
     brave
     freecad
@@ -67,6 +73,8 @@
   ] ++ (with pkgs-unstable; [
     musescore
     muse-sounds-manager
+
+    beeper
     noctalia-shell
     steam
     vicinae

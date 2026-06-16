@@ -742,7 +742,10 @@ recent-windows {
         Mod+Shift+grave { previous-window filter="app-id"; }
     }
 }
-// environment{
-//     DISPLAY ":0"
-// }
+
+cursor {
+    xcursor-theme "phinger-cursors-dark"
+    xcursor-size 29
+}
+
 include "./noctalia.kdl"
