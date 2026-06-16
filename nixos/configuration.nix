@@ -64,6 +64,13 @@
     enable = true;
     settings = {
       animation = "gameoflife";
+      gameoflife_entropy_interval = 0;
+      bigclock = "en";
+      bigclock_seconds = "true";
+      input_len = 40; # input boxes length
+      show_tty = "true";
+      vi_mode = "true";
+      vi_default_mode = "normal";
     };
   };
 
@@ -269,7 +276,7 @@
     PLATFORM_PROFILE_ON_AC="performance";
     PLATFORM_PROFILE_ON_BAT="low-power";
     START_CHARGE_THRESH_BAT0=40;
-    STOP_CHARGE_THRESH_BAT0=81;
+    STOP_CHARGE_THRESH_BAT0=80;
   };
   services.upower.enable = true;
 

@@ -1,7 +1,7 @@
 { config, pkgs, pkgs-unstable, ... }:
 
 # On the first install of this flake, run:
-# "nix run github:nix-community/home-manager -- switch --flake ~/.config/home-manager#username"
+# "nix run github:nix-community/home-manager -- switch --flake ~/.dotfiles/home-manager#username"
 
 {
   home.username = "hestia";
@@ -13,9 +13,11 @@
 
   home.packages = with pkgs; [
     ardour
+    beeper
     bottles
     brave
     freecad
+    gale
     gimp
     gum
     kitty
@@ -119,7 +121,8 @@
 
     shellAliases = {
       flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
-      hms = "cd ~/.dotfiles/home-manager/ && nix flake update && home-manager switch --flake ~/.dotfiles/home-manager#$USER";
+      hmu = "cd ~/.dotfiles/home-manager/ && nix flake update";
+      hms = "home-manager switch --flake ~/.dotfiles/home-manager#$USER";
       wander = "cd ~/WANDER";
       kcl = "printf '\033c'";
       dots = "cd ~/.dotfiles";
@@ -129,8 +132,8 @@
       lsd = "lsd -1FX --group-dirs last";
       ls = "ls -1FX";
       checkmounted = "ps aux | grep -e sshfs";
-      gna = "ssh -X shay@10.147.17.30";
-      gna_ip = "echo '10.147.17.30'";
+      gna = "ssh -Y shay@10.147.17.72";
+      gna_ip = "echo '10.147.17.72'";
       prometheus = "ssh shama@10.147.17.223";
       prometheus_ip = "echo 10.147.17.223";
       ping_gna = "ping -a $(gna_ip)";

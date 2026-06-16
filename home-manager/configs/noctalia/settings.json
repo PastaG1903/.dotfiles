@@ -422,6 +422,11 @@
                     "showPowerProfiles": false
                 },
                 {
+                    "iconColor": "none",
+                    "id": "KeepAwake",
+                    "textColor": "none"
+                },
+                {
                     "defaultSettings": {
                         "colorHistory": [
                         ],
