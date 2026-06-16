@@ -706,6 +706,7 @@ spawn-sh-at-startup "~/.dotfiles/bashrc/.scripts/tmux-startup.sh"
 // spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "noctalia-shell"
 spawn-sh-at-startup "vicinae server"
+spawn-sh-at-startup "wl-gammarelay-rs run"
 
 layer-rule {
     match namespace="^wallpaper$"

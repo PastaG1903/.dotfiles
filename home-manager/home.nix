@@ -54,6 +54,8 @@
     xwayland-satellite
     waybar
     wl-clipboard
+    wl-gammarelay-applet
+    wl-gammarelay-rs
     zoom-us
 
     # for screen-toolkit noctalia plugin
