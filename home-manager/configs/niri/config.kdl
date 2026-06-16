@@ -744,8 +744,8 @@ recent-windows {
 }
 
 cursor {
-    xcursor-theme "phinger-cursors-dark"
-    xcursor-size 29
+    xcursor-theme "Bibata-Original-Classic"
+    xcursor-size 32
 }
 
 include "./noctalia.kdl"

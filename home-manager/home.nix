@@ -14,8 +14,8 @@
   home.pointerCursor = {
     x11.enable = true;
     gtk.enable = true;
-    package = pkgs.phinger-cursors;
-    name = "phinger-cursors-dark";
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Original-Classic";
   };
 
   home.packages = with pkgs; [
