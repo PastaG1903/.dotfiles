@@ -94,37 +94,37 @@
     EDITOR = "nvim";
   };
 
-  xdg = {
-    enable = true;
-    userDirs = {
-      enable = true;
-      createDirectories = true;
-      setSessionVariables = false;
-    };
-  };
+  # xdg = {
+  #   enable = true;
+  #   userDirs = {
+  #     enable = true;
+  #     createDirectories = true;
+  #     setSessionVariables = false;
+  #   };
+  # };
 
-  xdg.configFile = {
-      "niri" = {
+  home.file = {
+      ".config/niri" = {
         source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/niri;
 	recursive = true;
       };
-      "noctalia" = {
+      ".config/noctalia" = {
         source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/noctalia;
 	recursive = true;
       };
-      "yazi" = {
+      ".config/yazi" = {
         source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/yazi;
 	recursive = true;
       };
-      "vicinae" = {
+      ".config/vicinae" = {
         source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/vicinae;
 	recursive = true;
       };
-      "kitty" = {
+      ".config/kitty" = {
         source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/kitty;
 	recursive = true;
       };
-      "leovim" = {
+      ".config/leovim" = {
         source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/leovim;
 	recursive = true;
       };

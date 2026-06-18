@@ -194,6 +194,8 @@
     zsh.enable = true;
     niri.enable = true;
     steam.enable = true;
+    steam.gamescopeSession.enable = true;
+    gamemode.enable = true;
     nix-ld.enable = true;
     zoom-us.enable = true;
     niri.useNautilus = true;
