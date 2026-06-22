@@ -56,6 +56,7 @@
     wl-clipboard
     wl-gammarelay-applet
     wl-gammarelay-rs
+    wl-mirror
     zoom-us
 
     # for screen-toolkit noctalia plugin
