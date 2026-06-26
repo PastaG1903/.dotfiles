@@ -1,7 +1,7 @@
-{ config, pkgs, pkgs-unstable, ... }:
+{ config, pkgs, unstable, static, ... }:
 
 # On the first install of this flake, run:
-# "nix run github:nix-community/home-manager -- switch --flake ~/.dotfiles/home-manager#username"
+# "nix run github:nix-community/home-manager -- switch --flake ~/.dotfiles#username"
 
 {
   home.username = "hestia";
@@ -49,7 +49,6 @@
     syncthing
     swaybg
     teams-for-linux
-    texliveFull
     tor-browser
     xwayland-satellite
     waybar
@@ -72,8 +71,7 @@
     python313
     python313Packages.pygobject3
 
-
-  ] ++ (with pkgs-unstable; [
+  ] ++ (with unstable; [
     musescore
     muse-sounds-manager
 
@@ -88,6 +86,9 @@
     python314Packages.pandas
     python314Packages.sympy
     python314Packages.notebook
+
+  ]) ++ (with static; [
+    texliveFull
   ]);
 
   home.sessionVariables = {
@@ -106,27 +107,27 @@
 
   home.file = {
       ".config/niri" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/niri;
+        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/niri;
 	recursive = true;
       };
       ".config/noctalia" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/noctalia;
+        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/noctalia;
 	recursive = true;
       };
       ".config/yazi" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/yazi;
+        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/yazi;
 	recursive = true;
       };
       ".config/vicinae" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/vicinae;
+        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/vicinae;
 	recursive = true;
       };
       ".config/kitty" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/kitty;
+        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/kitty;
 	recursive = true;
       };
       ".config/leovim" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/home-manager/configs/leovim;
+        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/leovim;
 	recursive = true;
       };
 
@@ -160,10 +161,9 @@
 
     shellAliases = {
       flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
-      hmu = "cd ~/.dotfiles/home-manager/ && nix flake update";
-      hms = "home-manager switch --flake ~/.dotfiles/home-manager#$USER";
+      hmu = "cd ~/.dotfiles && nix flake update";
+      hms = "home-manager switch --flake ~/.dotfiles#hestia";
       wander = "cd ~/WANDER";
-      kcl = "printf '\033c'";
       dots = "cd ~/.dotfiles";
       lsblk = "lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,UUID,LABEL";
       y = "yazi";
@@ -173,8 +173,6 @@
       checkmounted = "ps aux | grep -e sshfs";
       gna = "ssh -Y shay@10.147.17.72";
       gna_ip = "echo '10.147.17.72'";
-      prometheus = "ssh shama@10.147.17.223";
-      prometheus_ip = "echo 10.147.17.223";
       ping_gna = "ping -a $(gna_ip)";
       ping = "ping -a";
       pyenv = "source ~/.venvs/bin/activate";
@@ -222,6 +220,7 @@
         "memory"
         "swap"
         "disk"
+        "btrfs"
         "localip"
         "battery"
         "poweradapter"

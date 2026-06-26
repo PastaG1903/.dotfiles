@@ -6,7 +6,7 @@
 # keyd, tlp, thinkfan
 # The configurations can be accessed easily by searching for "<package> config"
 
-{ config, pkgs, lib, unstable, ... }:
+{ config, pkgs, lib, unstable, static, ... }:
 
 {
   imports =
@@ -42,7 +42,7 @@
     options = "--delete-older-than 15d";
   };
 
-  # zramSwap.enable = true;
+# zramSwap.enable = true;
   swapDevices = [{
     device = "/swap/swapfile";
     size  = 32*1024;
@@ -55,13 +55,10 @@
 # networking.proxy.default = "http://user:password@proxy:port/";
 # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-# Enable networking
-    networking.networkmanager.enable = true;
+  networking.networkmanager.enable = true;
 
-# Set your time zone.
   time.timeZone = "America/Mexico_City";
 
-# Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -99,65 +96,61 @@
 # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-# List packages installed in system profile. To search, run:
-# $ nix search wget
-
   environment.systemPackages = with pkgs; [
-      alsa-utils
-      appimage-run
-      brightnessctl
-      blueman
-      bluez
-      bluez-tools
-      bluetui
-      btop-rocm
-      cmatrix
-      ddcutil
-      ddcutil-service
-      dnsmasq
-      docker
-      easyeffects
-      evince
-      fastfetch
-      firefox
-      gcc
-      gh
-      git
-      gnome-boxes
-      jdk21_headless
-      keyd
-      less
-      mesa
-      mokutil
-      nautilus
-      nmap
-      nodejs_26
-      phodav
-      playerctl
-      python314
-      rclone
-      rocmPackages.rocm-smi
-      smartmontools
-      sshfs
-      stow
-      tealdeer
-      thinkfan
-      tlp
-      tmux
-      unzip
-      vim
-      wget
-      xdg-desktop-portal
-      xdg-desktop-portal-gnome
-      zathura
-      zerotierone
-      zip
-      zoxide
-      zram-generator
-
-#  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-#  wget
-      ];
+    alsa-utils
+    appimage-run
+    brightnessctl
+    blueman
+    bluez
+    bluez-tools
+    bluetui
+    btop-rocm
+    cmatrix
+    ddcutil
+    ddcutil-service
+    dnsmasq
+    docker
+    easyeffects
+    evince
+    fastfetch
+    firefox
+    gcc
+    gh
+    git
+    gnome-boxes
+    jdk21_headless
+    keyd
+    less
+    mesa
+    mokutil
+    nautilus
+    nmap
+    nodejs_26
+    phodav
+    playerctl
+    python314
+    rclone
+    rocmPackages.rocm-smi
+    smartmontools
+    sshfs
+    stow
+    tealdeer
+    thinkfan
+    tlp
+    tmux
+    unzip
+    vim
+    wget
+    xdg-desktop-portal
+    xdg-desktop-portal-gnome
+    zathura
+    zerotierone
+    zip
+    zoxide
+    zram-generator
+  ] ++ ( with static; [
+    pipewire
+  ]);
 
   fonts = {
     enableDefaultPackages = true;

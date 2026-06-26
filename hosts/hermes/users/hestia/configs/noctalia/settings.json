@@ -82,8 +82,8 @@
                     "colorizeIcons": false,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
-                    "maxWidth": 145,
-                    "scrollingMode": "hover",
+                    "maxWidth": 250,
+                    "scrollingMode": "always",
                     "showIcon": true,
                     "showText": true,
                     "textColor": "none",
@@ -746,7 +746,7 @@
         "shadowOffsetX": 0,
         "shadowOffsetY": 3,
         "showChangelogOnStartup": true,
-        "showHibernateOnLockScreen": false,
+        "showHibernateOnLockScreen": true,
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true,
         "smoothScrollEnabled": true,
@@ -1027,7 +1027,7 @@
         "overviewEnabled": true,
         "overviewTint": 0,
         "panelPosition": "follow_bar",
-        "randomIntervalSec": 60,
+        "randomIntervalSec": 120,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
         "skipStartupTransition": false,
@@ -1057,6 +1057,6 @@
         "wallhavenResolutionMode": "atleast",
         "wallhavenResolutionWidth": "",
         "wallhavenSorting": "relevance",
-        "wallpaperChangeMode": "alphabetical"
+        "wallpaperChangeMode": "random"
     }
 }
