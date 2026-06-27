@@ -3,26 +3,26 @@ local M = {}
 function M.setup()
   require('base16-colorscheme').setup {
     -- Backgrounds
-    base00 = '#112c2a',           -- Default background
-    base01 = '#1c4a46', -- Status bars, lighter bg
-    base02 = '#19433f', -- Selection bg
-    base03 = '#60756f',           -- Comments, invisibles
+    base00 = '#29141b',           -- Default background
+    base01 = '#45212c', -- Status bars, lighter bg
+    base02 = '#3e1e28', -- Selection bg
+    base03 = '#756167',           -- Comments, invisibles
 
     -- Foregrounds
-    base04 = '#afb6b4', -- Dark fg (status bars)
-    base05 = '#f2f3f3',         -- Default fg
-    base06 = '#f2f3f3',         -- Light fg
-    base07 = '#f2f3f3',      -- Lightest fg
+    base04 = '#b6afb1', -- Dark fg (status bars)
+    base05 = '#f3f2f2',         -- Default fg
+    base06 = '#f3f2f2',         -- Light fg
+    base07 = '#f3f2f2',      -- Lightest fg
 
     -- Accents
-    base08 = '#fd4663',              -- Variables, errors
-    base09 = '#6680cc',           -- Integers, constants
-    base0A = '#5cb8d6',          -- Classes, search bg
-    base0B = '#67e4c4',            -- Strings, diff inserted
-    base0C = '#96abe9', -- Regex, escape chars
-    base0D = '#93ecd5',  -- Functions, methods
-    base0E = '#96d4e9',-- Keywords, storage
-    base0F = '#900017',    -- Deprecated, embedded
+    base08 = '#a14361',              -- Variables, errors
+    base09 = '#ad66cc',           -- Integers, constants
+    base0A = '#d6725c',          -- Classes, search bg
+    base0B = '#e4678f',            -- Strings, diff inserted
+    base0C = '#d096e9', -- Regex, escape chars
+    base0D = '#ec93af',  -- Functions, methods
+    base0E = '#e9a596',-- Keywords, storage
+    base0F = '#3c111e',    -- Deprecated, embedded
   }
 end
 

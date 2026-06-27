@@ -20,9 +20,11 @@
 
   home.packages = with pkgs; [
     ardour
+    bat
     bottles
     brave
     freecad
+    fzf
     gale
     gimp
     gum
@@ -43,6 +45,7 @@
     pavucontrol
     qutebrowser
     ripdrag
+    ripgrep
     ristretto
     signal-desktop
     spotify
@@ -149,6 +152,8 @@
     initContent = ''
       PROMPT='[%n@%m: %1~]$ '
       fastfetch
+      eval "$(zoxide init zsh)"
+      source <(fzf --zsh)
       yazi() {
           local tmp="$(mktemp)"
           command yazi "$@" --cwd-file "$tmp"
@@ -163,6 +168,7 @@
       flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
       hmu = "cd ~/.dotfiles && nix flake update";
       hms = "home-manager switch --flake ~/.dotfiles#hestia";
+      fzf = "fzf --preview 'bat --style=numbers --color=always {}'";
       wander = "cd ~/WANDER";
       dots = "cd ~/.dotfiles";
       lsblk = "lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,UUID,LABEL";
@@ -174,6 +180,8 @@
       gna = "ssh -Y shay@10.147.17.72";
       gna_ip = "echo '10.147.17.72'";
       ping_gna = "ping -a $(gna_ip)";
+      ludovico = "ssh console@10.147.17.236";
+      ludovico_ip = "echo '10.147.17.236'";
       ping = "ping -a";
       pyenv = "source ~/.venvs/bin/activate";
       keymod = "sudo vim /etc/keyd/keyd.conf && sudo keyd reload";
@@ -181,7 +189,7 @@
       xwr = "~/.dotfiles/bashrc/.scripts/xwr.sh";
       stirlingpdf = "sudo docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf";
       sysser = "~/.dotfiles/extras/syssertui.sh";
-      chkeyd = "~/.dotfiles/keydconf";
+      # chkeyd = "~/.dotfiles/keydconf";
     };
   };
 
