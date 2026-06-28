@@ -4,6 +4,13 @@
 # "nix run github:nix-community/home-manager -- switch --flake ~/.dotfiles#username"
 
 {
+  imports = [
+    ./imports/cmd.nix
+    ./imports/music.nix
+    ./imports/zshrc.nix
+    ./imports/produce.nix
+  ];
+  
   home.username = "hestia";
   home.homeDirectory = "/home/hestia";
   home.stateVersion = "25.11";
@@ -19,36 +26,20 @@
   };
 
   home.packages = with pkgs; [
-    ardour
-    bat
     bottles
     brave
-    freecad
-    fzf
+    evince
+    firefox
     gale
     gimp
-    gum
-    kitty
-    hydrogen
-    librecad
-    libreoffice-still
-    lmms
     localsend
-    lsd
     miracode
     mpv
-    neovim
-    nh
-    inkscape-with-extensions
-    onlyoffice-desktopeditors
-    openscad
+    nautilus
     pavucontrol
     qutebrowser
-    ripdrag
-    ripgrep
     ristretto
     signal-desktop
-    spotify
     syncthing
     swaybg
     teams-for-linux
@@ -59,6 +50,7 @@
     wl-gammarelay-applet
     wl-gammarelay-rs
     wl-mirror
+    zathura
     zoom-us
 
     # for screen-toolkit noctalia plugin
@@ -75,29 +67,11 @@
     python313Packages.pygobject3
 
   ] ++ (with unstable; [
-    musescore
-    muse-sounds-manager
-
     beeper
     noctalia-shell
     steam
     vicinae
-
-    python314Packages.matplotlib
-    python314Packages.jupyter
-    python314Packages.numpy
-    python314Packages.pandas
-    python314Packages.sympy
-    python314Packages.notebook
-
-  ]) ++ (with static; [
-    texliveFull
   ]);
-
-  home.sessionVariables = {
-    NVIM_APPNAME = "leovim";
-    EDITOR = "nvim";
-  };
 
   # xdg = {
   #   enable = true;
@@ -140,58 +114,6 @@
       enable = true;
       extraConfig = "set selection-clipboard clipboard";
     };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-
-    setOptions = [
-      "NO_BEEP"
-    ];
-
-    initContent = ''
-      PROMPT='[%n@%m: %1~]$ '
-      fastfetch
-      eval "$(zoxide init zsh)"
-      source <(fzf --zsh)
-      yazi() {
-          local tmp="$(mktemp)"
-          command yazi "$@" --cwd-file "$tmp"
-          if [ -s "$tmp" ]; then
-              cd "$(cat "$tmp")"
-          fi
-          rm -f "$tmp"
-      }
-    '';
-
-    shellAliases = {
-      flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
-      hmu = "cd ~/.dotfiles && nix flake update";
-      hms = "home-manager switch --flake ~/.dotfiles#hestia";
-      fzf = "fzf --preview 'bat --style=numbers --color=always {}'";
-      wander = "cd ~/WANDER";
-      dots = "cd ~/.dotfiles";
-      lsblk = "lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS,UUID,LABEL";
-      y = "yazi";
-      la = "ls -a";
-      lsd = "lsd -1FX --group-dirs last";
-      ls = "ls -1FX";
-      checkmounted = "ps aux | grep -e sshfs";
-      gna = "ssh -Y shay@10.147.17.72";
-      gna_ip = "echo '10.147.17.72'";
-      ping_gna = "ping -a $(gna_ip)";
-      ludovico = "ssh console@10.147.17.236";
-      ludovico_ip = "echo '10.147.17.236'";
-      ping = "ping -a";
-      pyenv = "source ~/.venvs/bin/activate";
-      keymod = "sudo vim /etc/keyd/keyd.conf && sudo keyd reload";
-      suspend = "systemctl suspend";
-      xwr = "~/.dotfiles/bashrc/.scripts/xwr.sh";
-      stirlingpdf = "sudo docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf";
-      sysser = "~/.dotfiles/extras/syssertui.sh";
-      # chkeyd = "~/.dotfiles/keydconf";
-    };
-  };
 
   programs.fastfetch = {
     enable = true;
@@ -238,18 +160,9 @@
     };
   };
 
-  programs.yazi = {
-      enable = true;
-      shellWrapperName = "y";
-   };
-
   programs = { # general programs
       obs-studio.enable = true;
       gh.enable = true;
-    };
-
-  services = { # general services
-      easyeffects.enable = true;
     };
 
 }

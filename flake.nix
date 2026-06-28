@@ -41,12 +41,30 @@
       modules = [ ./hosts/hermes/configuration.nix ];
     };
 
+    nixosConfigurations.gna = nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = {
+        inherit inputs unstable static;
+      };
+      modules = [ ./hosts/gna/configuration.nix ];
+    };
+
+    nixosConfigurations.ludovico = nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = {
+        inherit inputs unstable static;
+      };
+      modules = [ ./hosts/ludovico/configuration.nix ];
+    };
+
     homeConfigurations.hestia = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = {
         inherit inputs unstable static;
       };
-      modules = [ ./hosts/hermes/users/hestia/home.nix ];
+      modules = [
+        ./hosts/hermes/users/hestia/home.nix
+      ];
     };
   };
 }

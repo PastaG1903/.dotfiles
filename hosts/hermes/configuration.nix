@@ -12,6 +12,8 @@
   imports =
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../pkgs/essentials.nix
+    ../../pkgs/fonts.nix
     ];
 
 # Bootloader.
@@ -36,12 +38,6 @@
     "/nix".options = [ "compress=zstd" "noatime" ];
   };
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 15d";
-  };
-
 # zramSwap.enable = true;
   swapDevices = [{
     device = "/swap/swapfile";
@@ -60,8 +56,6 @@
   time.timeZone = "America/Mexico_City";
 
   i18n.defaultLocale = "en_US.UTF-8";
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 # Configure keymap in X11
   services.xserver.xkb = {
@@ -89,12 +83,7 @@
     shell = pkgs.zsh;
     description = "hestia";
     extraGroups = [ "networkmanager" "wheel" "i2c" ];
-    packages = with pkgs; [
-    ];
   };
-
-# Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
     alsa-utils
@@ -104,85 +93,26 @@
     bluez
     bluez-tools
     bluetui
-    btop-rocm
     cmatrix
     ddcutil
     ddcutil-service
-    dnsmasq
-    docker
     easyeffects
-    evince
-    fastfetch
-    firefox
-    gcc
-    gh
-    git
     gnome-boxes
     jdk21_headless
     keyd
-    less
     mesa
     mokutil
-    nautilus
-    nmap
     nodejs_26
     phodav
     playerctl
-    python314
-    rclone
-    rocmPackages.rocm-smi
-    smartmontools
-    sshfs
-    stow
-    tealdeer
     thinkfan
     tlp
-    tmux
-    unzip
-    vim
-    wget
     xdg-desktop-portal
     xdg-desktop-portal-gnome
-    zathura
-    zerotierone
-    zip
-    zoxide
     zram-generator
   ] ++ ( with static; [
     pipewire
   ]);
-
-  fonts = {
-    enableDefaultPackages = true;
-    packages = with pkgs; [
-      corefonts
-	adwaita-fonts
-	lmodern
-	noto-fonts
-	noto-fonts-cjk-sans
-	noto-fonts-cjk-serif
-	noto-fonts-emoji-blob-bin
-	liberation_ttf
-	aileron
-	inter
-	eb-garamond
-	cabin
-	mplus-outline-fonts.githubRelease
-	dina-font
-	proggyfonts
-    ];
-  };
-
-  virtualisation = {
-    libvirtd = {
-      enable = true;
-#      qemu = {
-#        swtpm.enable = true;
-# 	 ovmf.packages = [ pkgs.OVMFFull.fd ];
-#      };
-    };
-    spiceUSBRedirection.enable = true;
-  };
 
   users.groups.libvirtd.members = [ "hestia" ];
   users.groups.kvm.members = [ "hestia" ];
@@ -196,12 +126,10 @@
 # };
 
   programs = {
-    zsh.enable = true;
     niri.enable = true;
     steam.enable = true;
     steam.gamescopeSession.enable = true;
     gamemode.enable = true;
-    nix-ld.enable = true;
     zoom-us.enable = true;
     niri.useNautilus = true;
     nautilus-open-any-terminal = {
@@ -219,7 +147,7 @@
     bluetooth.enable = true;
     alsa = {
       cardAliases = {
-	soundy = { driver = "snd_hda_intel"; id = 1; };
+        soundy = { driver = "snd_hda_intel"; id = 1; };
       };
     };
     graphics.enable = true;
@@ -227,12 +155,8 @@
     steam-hardware.enable = true;
   };
 
-  virtualisation.docker.enable = true;
-
   services = {
-    openssh.enable = true;
     blueman.enable = true;
-    zerotierone.enable = true;
     printing.enable = true;
     gvfs.enable = true;
     flatpak.enable = true;
@@ -266,10 +190,10 @@
     enable = true;
     levels = [
       ["level auto" 0 40]
-	[2 40 45]
-	  [4 45 55]
-	    [6 55 65]
-	      ["level full-speed" 65 255]
+      [2 40 45]
+      [4 45 55]
+      [6 55 65]
+      ["level full-speed" 65 255]
     ];
   };
 

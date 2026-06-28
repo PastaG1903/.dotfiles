@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../pkgs/essentials.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -91,27 +92,8 @@
   environment.systemPackages = with pkgs; [
     bluez
     bluez-tools
-    btop-rocm
-    fastfetch
-    gcc
-    gh
     jdk21_headless
-    less
-    neovim
-    nh
-    nmap
-    python314
-    rocmPackages.rocm-smi
-    smartmontools
-    sshfs
-    tealdeer
     tlp
-    tmux
-    unzip
-    vim
-    wget
-    zerotierone
-    zip
     zram-generator
   ];
 
