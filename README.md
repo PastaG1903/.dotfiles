@@ -28,7 +28,7 @@ sudo nix --experimental-features "nix-command flakes" run github:nix-community/d
 ### System installation
 
 > [!NOTE]
-> Please go to [this section](https://github.com/PastaG1903/.dotfiles/nixos/hosts/README.md) for host-specific considerations.
+> Please go to [this section](https://github.com/PastaG1903/.dotfiles/blob/nixos/hosts/README.md) for host-specific considerations.
 
 At this point, all the partitions and subvolumes will be mounted under /mnt.
 
