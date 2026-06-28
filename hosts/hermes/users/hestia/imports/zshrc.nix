@@ -26,8 +26,8 @@
 
     shellAliases = {
       flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
-      hmu = "cd ~/.dotfiles && nix flake update";
-      hms = "home-manager switch --flake ~/.dotfiles#hestia";
+      flake-update = "cd ~/.dotfiles && nix flake update && cd -";
+      hms = "cd ~/.dotfiles && nh home switch . -c hestia && cd -";
       fzf = "fzf --preview 'bat --style=numbers --color=always {}'";
       wander = "cd ~/WANDER";
       dots = "cd ~/.dotfiles";

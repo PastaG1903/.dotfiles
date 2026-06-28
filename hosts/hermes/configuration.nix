@@ -10,7 +10,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
     ./hardware-configuration.nix
     ../../pkgs/essentials.nix
     ../../pkgs/fonts.nix
@@ -21,7 +21,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.kernelParams = [ "usbhid.quirks=0x2b89:0x64ec:0x0004" 
-    "resume_offset=61744384" # run btrfs inspect-internal map-swapfile /swap/swapfile to get the correct offset
+    "resume_offset=61744384" # run "btrfs inspect-internal map-swapfile /swap/swapfile" to get the correct offset
     "zswap.enabled=1"
     "zswap.compressor=zstd"
     "zswap.max_pool_percent=20"
@@ -46,10 +46,6 @@
 
   networking.hostName = "hermes"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-# Configure network proxy if necessary
-# networking.proxy.default = "http://user:password@proxy:port/";
-# networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   networking.networkmanager.enable = true;
 
@@ -117,14 +113,6 @@
   users.groups.libvirtd.members = [ "hestia" ];
   users.groups.kvm.members = [ "hestia" ];
 
-# Some programs need SUID wrappers, can be configured further or are
-# started in user sessions.
-# programs.mtr.enable = true;
-# programs.gnupg.agent = {
-#   enable = true;
-#   enableSSHSupport = true;
-# };
-
   programs = {
     niri.enable = true;
     steam.enable = true;
@@ -168,7 +156,7 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-	pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-gnome
     ];
     config.niri.default = [ "gnome" "gtk" ];
   };
