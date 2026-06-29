@@ -2,8 +2,9 @@ return {
   -- Highlight, edit, and navigate code
   "nvim-treesitter/nvim-treesitter",
   -- dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
+  dependencies = { "neovim-treesitter/treesitter-parser-registry" },
   build = ":TSUpdate",
-  main = "nvim-treesitter.configs", -- Sets main module to use for opts
+  -- main = "neovim-treesitter.configs", -- Sets main module to use for opts
   -- event = { "BufReadPost", "BufNewFile" }, -- Load only on opening files
   -- lazy = true,
   opts = {
