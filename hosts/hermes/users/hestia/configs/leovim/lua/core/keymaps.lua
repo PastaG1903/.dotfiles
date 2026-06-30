@@ -89,6 +89,9 @@ vim.keymap.set("n", "<leader>ly", '"+yy', { desc = "[Y]ank [L]ine (to clipboard)
 -- flygrep
 vim.keymap.set("n", "<leader>fg", ":FlyGrep<enter>", { desc = "[F]ly[G]rep window" })
 
+-- yazi.nvim
+vim.keymap.set("n", "<leader>ya", ":Yazi<enter>", { desc = "Use [ya]zi inside neovim" })
+
 -- compilation
 vim.keymap.set("n", "<Leader>cc", ":w<CR>:!gcc % -o %:r.out<CR>", { desc = "Compile with gcc (vanilla)", unpack(opts) })
 vim.keymap.set("n", "<leader>mp", function()

@@ -3,6 +3,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   -- dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
   dependencies = { "neovim-treesitter/treesitter-parser-registry" },
+  tag = "v0.10.0",
   build = ":TSUpdate",
   -- main = "neovim-treesitter.configs", -- Sets main module to use for opts
   -- event = { "BufReadPost", "BufNewFile" }, -- Load only on opening files

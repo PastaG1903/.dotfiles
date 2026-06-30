@@ -38,6 +38,8 @@ local plugins = {
   require("plugins.markdown"),
   require("plugins.misc"),
   require("plugins.flygrep"),
+  require("plugins.yazi-nvim"),
+  require("plugins.telescope"),
 }
 
 require("lazy").setup(plugins)
