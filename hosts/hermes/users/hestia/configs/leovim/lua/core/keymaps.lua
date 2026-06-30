@@ -86,6 +86,9 @@ vim.keymap.set("n", "<leader>,", "A,<Esc>", { desc = ", at EOL", unpack(opts) })
 vim.keymap.set("v", "<leader>y", '"+y', { desc = "[Y]ank (to clipboard)", unpack(opts) })
 vim.keymap.set("n", "<leader>ly", '"+yy', { desc = "[Y]ank [L]ine (to clipboard)", unpack(opts) })
 
+-- flygrep
+vim.keymap.set("n", "<leader>fg", ":FlyGrep<enter>", { desc = "[F]ly[G]rep window" })
+
 -- compilation
 vim.keymap.set("n", "<Leader>cc", ":w<CR>:!gcc % -o %:r.out<CR>", { desc = "Compile with gcc (vanilla)", unpack(opts) })
 vim.keymap.set("n", "<leader>mp", function()

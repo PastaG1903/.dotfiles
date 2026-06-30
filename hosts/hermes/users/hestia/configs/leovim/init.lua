@@ -37,6 +37,7 @@ local plugins = {
 
   require("plugins.markdown"),
   require("plugins.misc"),
+  require("plugins.flygrep"),
 }
 
 require("lazy").setup(plugins)

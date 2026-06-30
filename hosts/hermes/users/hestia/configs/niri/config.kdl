@@ -474,8 +474,8 @@ binds {
     Mod+Q repeat=false { close-window; }
 
     Ctrl+Alt+H  { focus-column-left; }
-    //Ctrl+Alt+J  { focus-window-down; }
-    //Ctrl+Alt+K    { focus-window-up; }
+    // Ctrl+Alt+J  { focus-window-down; }
+    // Ctrl+Alt+K    { focus-window-up; }
     Ctrl+Alt+L { focus-column-right; }
 
     Alt+Shift+Left  { move-column-left; }
@@ -489,8 +489,8 @@ binds {
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
-    // Mod+J     { focus-window-or-workspace-down; }
-    // Mod+K     { focus-window-or-workspace-up; }
+    Ctrl+Alt+J     { focus-window-or-workspace-down; }
+    Ctrl+Alt+K     { focus-window-or-workspace-up; }
     Alt+Shift+J     { move-window-down-or-to-workspace-down; }
     Alt+Shift+K     { move-window-up-or-to-workspace-up; }
 
@@ -525,8 +525,8 @@ binds {
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
     // ...
 
-    Ctrl+Alt+J      { focus-workspace-down; }
-    Ctrl+Alt+K        { focus-workspace-up; }
+    // Ctrl+Alt+J      { focus-workspace-down; }
+    // Ctrl+Alt+K        { focus-workspace-up; }
     Mod+U              { focus-workspace-down; }
     Mod+I              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
