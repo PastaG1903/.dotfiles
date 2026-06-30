@@ -145,6 +145,7 @@
 
   services = {
     blueman.enable = true;
+    tumbler.enable = true;
     printing.enable = true;
     gvfs.enable = true;
     flatpak.enable = true;

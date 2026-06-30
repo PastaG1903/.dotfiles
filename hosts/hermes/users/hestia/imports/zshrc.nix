@@ -28,6 +28,7 @@
       flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
       flake-update = "cd ~/.dotfiles && nix flake update && cd -";
       hms = "cd ~/.dotfiles && nh home switch . -c hestia && cd -";
+      sys-update = "cd ~/.dotfiles && nh os switch . -H hermes && cd -";
       fzf = "fzf --preview 'bat --style=numbers --color=always {}'";
       wander = "cd ~/WANDER";
       dots = "cd ~/.dotfiles";

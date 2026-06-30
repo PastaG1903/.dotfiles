@@ -1027,7 +1027,7 @@
         "overviewEnabled": true,
         "overviewTint": 0,
         "panelPosition": "follow_bar",
-        "randomIntervalSec": 120,
+        "randomIntervalSec": 60,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
         "skipStartupTransition": false,
