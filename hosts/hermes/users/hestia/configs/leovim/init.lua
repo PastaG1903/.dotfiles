@@ -24,9 +24,7 @@ local plugins = {
   require("plugins.indent-blankline"),
 
   -- file exploration
-  require("plugins.nvim-tree"),
-  require("plugins.picker"),
-
+  require("plugins.snacks-picker"),
 
   -- general programming utilities
   require("plugins.lsp"),
@@ -40,6 +38,8 @@ local plugins = {
   require("plugins.flygrep"),
   require("plugins.yazi-nvim"),
   require("plugins.telescope"),
+
+  require("plugins.silly-adds")
 }
 
 require("lazy").setup(plugins)

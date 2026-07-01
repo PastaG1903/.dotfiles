@@ -28,6 +28,7 @@
     "zswap.zpool=z3fold"
     "zswap.shrinker_enabled=1"
   ];
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.kernelModules = [ "i2c-dev" "ddcci" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
   boot.resumeDevice = "/dev/disk/by-uuid/a0e43e9e-2f26-4783-affc-970d69d4d4da";
