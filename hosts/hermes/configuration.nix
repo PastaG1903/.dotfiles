@@ -12,8 +12,8 @@
   imports =
     [
     ./hardware-configuration.nix
-    ../../pkgs/essentials.nix
-    ../../pkgs/fonts.nix
+    ../../commons/essentials.nix
+    ../../commons/fonts.nix
     ];
 
 # Bootloader.
@@ -94,22 +94,20 @@
     ddcutil
     ddcutil-service
     easyeffects
-    gnome-boxes
     jdk21_headless
     keyd
     mesa
     mokutil
     nodejs_26
     phodav
+    pipewire
     playerctl
     thinkfan
     tlp
     xdg-desktop-portal
     xdg-desktop-portal-gnome
     zram-generator
-  ] ++ ( with static; [
-    pipewire
-  ]);
+  ];
 
   users.groups.libvirtd.members = [ "hestia" ];
   users.groups.kvm.members = [ "hestia" ];

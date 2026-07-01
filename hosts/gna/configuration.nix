@@ -4,7 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../../pkgs/essentials.nix
+      ../../commons/essentials.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

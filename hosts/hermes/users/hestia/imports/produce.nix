@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     freecad
+    gimp
     librecad
     libreoffice-still
     inkscape-with-extensions

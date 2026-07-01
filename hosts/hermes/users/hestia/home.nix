@@ -9,6 +9,7 @@
     ./imports/music.nix
     ./imports/zshrc.nix
     ./imports/produce.nix
+    ./imports/unstable.nix
   ];
   
   home.username = "hestia";
@@ -26,31 +27,36 @@
   };
 
   home.packages = with pkgs; [
+
     bottles
+    gnome-boxes
+
     brave
-    evince
-    firefox
-    gale
-    gimp
-    localsend
-    miracode
-    mpv
-    nautilus
-    pavucontrol
     qutebrowser
-    ristretto
-    signal-desktop
-    syncthing
-    swaybg
-    teams-for-linux
+    firefox
     tor-browser
+
+    evince
+    ristretto
+    zathura
+
+    localsend
+    nautilus
+    syncthing
+
+    mpv
+    pavucontrol
+
+    gale
+    miracode
+    swaybg
     xwayland-satellite
-    waybar
     wl-clipboard
     wl-gammarelay-applet
     wl-gammarelay-rs
     wl-mirror
-    zathura
+
+    teams-for-linux
     zoom-us
 
     # for screen-toolkit noctalia plugin
@@ -65,13 +71,7 @@
     hyprpicker
     python313
     python313Packages.pygobject3
-
-  ] ++ (with unstable; [
-    beeper
-    noctalia-shell
-    steam
-    vicinae
-  ]);
+  ];
 
   # xdg = {
   #   enable = true;
