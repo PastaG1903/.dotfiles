@@ -23,7 +23,6 @@
   "mini.extra": { "branch": "main", "commit": "e5ecf197f8954d002cb9e85b3715851e2c8d3cd5" },
   "mini.icons": { "branch": "main", "commit": "e56797f90192d81f1fda02e662fc3e8e3d775027" },
   "mini.pairs": { "branch": "main", "commit": "db0fac0a25884183650352ccf92b362a41ed2e9c" },
-  "mini.starter": { "branch": "main", "commit": "a1c26c1c4acd08beb5b0057c663acb6e5f5b7042" },
   "mini.statusline": { "branch": "main", "commit": "6a136236ec93090c820c1d2a6139aa053b2199c9" },
   "mini.surround": { "branch": "main", "commit": "a2f644f3759edd3d3f8b6a6d55378408bfe6d290" },
   "mini.tabline": { "branch": "main", "commit": "7e8584a06b86902c64227e4abd0c39ae74061101" },
@@ -31,10 +30,10 @@
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-cmp": { "branch": "main", "commit": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "a065833f35a3a7cc3ef137ac88b5381da2ba302e" },
-  "nvim-lspconfig": { "branch": "master", "commit": "dd1c9b802c943278179a5d819369cda085b79d45" },
+  "nvim-lspconfig": { "branch": "master", "commit": "292f44408498103c47996ff5c18fd366293840d8" },
   "nvim-notify": { "branch": "master", "commit": "8701bece920b38ea289b457f902e2ad184131a5d" },
   "nvim-treesitter": { "branch": "main", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
-  "nvim-web-devicons": { "branch": "master", "commit": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c" },
+  "nvim-web-devicons": { "branch": "master", "commit": "dad71387de386a946b123079d0e53f23028f3abd" },
   "pastify.nvim": { "branch": "main", "commit": "4a1d1e03c3ae725ee4af796deca8c7c169ef626e" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
   "snacks.nvim": { "branch": "main", "commit": "882c996cf28183f4d63640de0b4c02ec886d01f2" },
@@ -47,5 +46,5 @@
   "vim-tmux-navigator": { "branch": "master", "commit": "e41c431a0c7b7388ae7ba341f01a0d217eb3a432" },
   "vimtex": { "branch": "master", "commit": "5e6a06f5cec5ede3dc6ba045ef6eda13b6dccb1f" },
   "xclip": { "branch": "master", "commit": "2c3b811002b35d3be7f39cc1145dd06bdb32e31c" },
-  "yazi.nvim": { "branch": "main", "commit": "2daf85f329e484a5a5c3c05afb39495f6b3cbdda" }
+  "yazi.nvim": { "branch": "main", "commit": "2314e0eb074996acc30183e3e9dfbfefd82f24aa" }
 }

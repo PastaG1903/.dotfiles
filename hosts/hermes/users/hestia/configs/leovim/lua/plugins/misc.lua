@@ -1,16 +1,5 @@
 --tandalone plugins with less than 10 lines of config go here
 return {
-  -- allow images to be rendered in the terminal
-  -- {
-  --   "folke/snacks.nvim",
-  --   ---@type snacks.Config
-  --   opts = {
-  --     image = {
-  --       doc = { inline = false },
-  --       math = { enabled = false },
-  --     },
-  --   },
-  -- },
   {
     -- basic setup for latex
     "lervag/vimtex",
@@ -56,10 +45,6 @@ return {
   {
     -- Detect tabstop and shiftwidth automatically
     "tpope/vim-sleuth",
-  },
-  {
-    -- Powerful Git integration for Vim
-    "tpope/vim-fugitive",
   },
   {
     -- High-performance color highlighter

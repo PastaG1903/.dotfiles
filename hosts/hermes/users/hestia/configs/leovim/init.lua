@@ -21,7 +21,6 @@ local plugins = {
   require("plugins.colorscheme"),
   require("plugins.mini-ui"),
   require("plugins.noice-classic"),
-  require("plugins.indent-blankline"),
 
   -- file exploration
   require("plugins.snacks-picker"),
