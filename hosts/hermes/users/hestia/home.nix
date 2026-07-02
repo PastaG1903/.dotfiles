@@ -40,6 +40,7 @@
     ristretto
     zathura
 
+    jabref
     localsend
     nautilus
     syncthing

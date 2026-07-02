@@ -16,17 +16,17 @@ return {
       vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>", { desc = "Renders MD in browser" })
     end,
   },
-  {
-    "TobinPalmer/pastify.nvim",
-    ft = { "markdown" },
-    cmd = { "Pastify", "PastifyAfter" },
-    config = function()
-      require("pastify").setup({
-        opts = {
-          apikey = "YOUR API KEY (https://api.imgbb.com/)",
-        },
-      })
-      vim.keymap.set("n", "<leader>pm", ":Pastify<CR>", { desc = "[P]aste [M]arkdown" })
-    end,
-  }, 
+  -- {
+  --   "TobinPalmer/pastify.nvim",
+  --   ft = { "markdown" },
+  --   cmd = { "Pastify", "PastifyAfter" },
+  --   config = function()
+  --     require("pastify").setup({
+  --       opts = {
+  --         apikey = "YOUR API KEY (https://api.imgbb.com/)",
+  --       },
+  --     })
+  --     vim.keymap.set("n", "<leader>pm", ":Pastify<CR>", { desc = "[P]aste [M]arkdown" })
+  --   end,
+  -- }, 
 }

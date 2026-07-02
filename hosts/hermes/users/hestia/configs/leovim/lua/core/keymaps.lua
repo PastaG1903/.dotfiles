@@ -87,10 +87,12 @@ vim.keymap.set("v", "<leader>y", '"+y', { desc = "[Y]ank (to clipboard)", unpack
 vim.keymap.set("n", "<leader>ly", '"+yy', { desc = "[Y]ank [L]ine (to clipboard)", unpack(opts) })
 
 -- flygrep
-vim.keymap.set("n", "<leader>fg", ":FlyGrep<enter>", { desc = "[F]ly[G]rep window" })
+vim.keymap.set("n", "<leader>fy", ":FlyGrep<enter>", { desc = "[F]ly[G]rep window" })
 
 -- yazi.nvim
 vim.keymap.set("n", "<leader>ya", ":Yazi<enter>", { desc = "Use [ya]zi inside neovim" })
+
+vim.keymap.set("n","<leader>cmd", ":LTeXUtils modify_dict<enter>" , { desc = "Modify ltex dictionary" })
 
 -- compilation
 vim.keymap.set("n", "<Leader>cc", ":w<CR>:!gcc % -o %:r.out<CR>", { desc = "Compile with gcc (vanilla)", unpack(opts) })

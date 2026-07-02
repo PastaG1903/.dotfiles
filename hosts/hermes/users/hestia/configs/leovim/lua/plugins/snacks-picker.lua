@@ -48,7 +48,7 @@ return{
     { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
     { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
     { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
-    { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
+    -- { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
     -- gh
     { "<leader>gi", function() Snacks.picker.gh_issue() end, desc = "GitHub Issues (open)" },
     { "<leader>gI", function() Snacks.picker.gh_issue({ state = "all" }) end, desc = "GitHub Issues (all)" },

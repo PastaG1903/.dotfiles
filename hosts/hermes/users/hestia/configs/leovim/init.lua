@@ -1,3 +1,4 @@
+shiftwidth = 2,
 -- load modules
 require("core.options") -- ./core/options.lua
 require("core.keymaps") -- ./core/keypams.lua
@@ -27,6 +28,7 @@ local plugins = {
 
   -- general programming utilities
   require("plugins.lsp"),
+  require("plugins.ltex-ls"),
   require("plugins.autocompletion"),
   require("plugins.autoformatting"),
   require("plugins.mini-nvim"),
@@ -36,7 +38,6 @@ local plugins = {
   require("plugins.misc"),
   require("plugins.flygrep"),
   require("plugins.yazi-nvim"),
-  require("plugins.telescope"),
 
   require("plugins.silly-adds")
 }

@@ -6,6 +6,7 @@
     gum
     kitty
     lsd
+    ltex-ls-plus
     ripdrag
   ];
 
