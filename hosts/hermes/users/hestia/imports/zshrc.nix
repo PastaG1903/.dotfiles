@@ -12,7 +12,7 @@
     initContent = ''
       PROMPT='[%n@%m: %1~]$ '
       fastfetch
-      eval "$(zoxide init zsh)"
+      eval "$(zoxide init zsh --cmd cd)"
       source <(fzf --zsh)
       yazi() {
           local tmp="$(mktemp)"
@@ -28,7 +28,8 @@
       flatpak-add-repo = "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo";
       flake-update = "cd ~/.dotfiles && nix flake update && cd -";
       hms = "cd ~/.dotfiles && nh home switch . -c hestia && cd -";
-      sys-update = "cd ~/.dotfiles && nh os switch . -H hermes && cd -";
+      sys-update-switch = "cd ~/.dotfiles && nh os switch . -H hermes && cd -";
+      sys-update-boot = "cd ~/.dotfiles && nh os boot . -H hermes && cd -";
       fzf = "fzf --preview 'bat --style=numbers --color=always {}'";
       wander = "cd ~/WANDER";
       dots = "cd ~/.dotfiles";

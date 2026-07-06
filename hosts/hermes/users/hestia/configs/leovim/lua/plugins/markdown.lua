@@ -11,7 +11,7 @@ return {
       vim.g.mkdp_auto_start = 0
       vim.g.mkdp_auto_close = 1
       vim.g.mkdp_refresh_slow = 0
-      vim.g.mkdp_browser = "brave"
+      vim.g.mkdp_browser = ""
       vim.g.mkdp_theme = "dark"
       vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>", { desc = "Renders MD in browser" })
     end,

@@ -9,8 +9,8 @@ max_width = 800
 wrap = "yes"
 
 [opener]
-evince = [
-{ run = 'evince "$@"', desc = "Evince" },
+qpdfview = [
+{ run = 'qpdfview "$@"', desc = "QPDFView" },
 ]
 ristretto = [
 { run = 'ristretto "$@"', desc = "Ristretto" },
@@ -21,7 +21,7 @@ thunar = [
 
 [open]
 prepend_rules = [
-{ url = "*.pdf", use = "evince" },
+{ url = "*.pdf", use = "qpdfview" },
 { url = "*.png", use = "ristretto" },
 { url = "*.jpg", use = "ristretto" },
 ]

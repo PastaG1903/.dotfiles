@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     ardour
+    audacity
     hydrogen
     lmms
     spotify

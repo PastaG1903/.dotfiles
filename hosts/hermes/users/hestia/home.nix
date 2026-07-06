@@ -36,7 +36,7 @@
     firefox
     tor-browser
 
-    evince
+    qpdfview
     ristretto
     zathura
 
