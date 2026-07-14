@@ -7,6 +7,7 @@
     librecad
     libreoffice-still
     inkscape-with-extensions
+    obsidian
     onlyoffice-desktopeditors
     openscad
   ] ++ (with unstable; [
@@ -16,6 +17,8 @@
     python314Packages.pandas
     python314Packages.sympy
     python314Packages.notebook
+    julia
+    rustup
   ]) ++ (with static; [
     texliveFull
   ]);

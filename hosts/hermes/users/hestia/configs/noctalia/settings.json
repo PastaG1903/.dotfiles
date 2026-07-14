@@ -941,7 +941,7 @@
         "batteryWarningThreshold": 20,
         "cpuCriticalThreshold": 90,
         "cpuWarningThreshold": 80,
-        "criticalColor": "",
+        "criticalColor": "#fd4663",
         "diskAvailCriticalThreshold": 10,
         "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
@@ -957,7 +957,7 @@
         "tempCriticalThreshold": 80,
         "tempWarningThreshold": 70,
         "useCustomColors": false,
-        "warningColor": ""
+        "warningColor": "#6680cc"
     },
     "templates": {
         "activeTemplates": [
@@ -1027,7 +1027,7 @@
         "overviewEnabled": true,
         "overviewTint": 0,
         "panelPosition": "follow_bar",
-        "randomIntervalSec": 120,
+        "randomIntervalSec": 60,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": false,
         "skipStartupTransition": false,
@@ -1057,6 +1057,6 @@
         "wallhavenResolutionMode": "atleast",
         "wallhavenResolutionWidth": "",
         "wallhavenSorting": "relevance",
-        "wallpaperChangeMode": "alphabetical"
+        "wallpaperChangeMode": "random"
     }
 }

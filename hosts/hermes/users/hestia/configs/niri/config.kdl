@@ -621,6 +621,9 @@ binds {
 
     Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
 
+    Mod+A { spawn-sh "chamel toggle"; }
+    Mod+D { spawn-sh "chamel clear"; }
+
     Super+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }

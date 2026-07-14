@@ -33,6 +33,7 @@ local plugins = {
   require("plugins.autoformatting"),
   require("plugins.mini-nvim"),
   require("plugins.treesitter"),
+  require("plugins.code-runner"),
 
   require("plugins.markdown"),
   require("plugins.misc"),

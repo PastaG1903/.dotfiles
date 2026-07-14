@@ -4,13 +4,14 @@
             "enabled": true,
             "name": "Noctalia Plugins",
             "url": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        {
+            "enabled": false,
+            "name": "legacy-v4-plugins",
+            "url": "https://github.com/noctalia-dev/legacy-v4-plugins"
         }
     ],
     "states": {
-        "activate-linux": {
-            "enabled": false,
-            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
-        },
         "calendar-widget": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"

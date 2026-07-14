@@ -37,6 +37,7 @@
     tor-browser
 
     qpdfview
+    simple-scan
     ristretto
     zathura
 
@@ -48,6 +49,7 @@
     mpv
     pavucontrol
 
+    chameleos #annotations for Niri
     gale
     miracode
     swaybg

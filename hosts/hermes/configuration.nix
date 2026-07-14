@@ -14,36 +14,10 @@
     ./hardware-configuration.nix
     ../../commons/essentials.nix
     ../../commons/fonts.nix
+    ./modules/keyd.nix
+    ./modules/boot-n-fs.nix
     ];
 
-# Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.kernelParams = [ "usbhid.quirks=0x2b89:0x64ec:0x0004" 
-    "resume_offset=61744384" # run "btrfs inspect-internal map-swapfile /swap/swapfile" to get the correct offset
-    "zswap.enabled=1"
-    "zswap.compressor=zstd"
-    "zswap.max_pool_percent=20"
-    "zswap.zpool=z3fold"
-    "zswap.shrinker_enabled=1"
-  ];
-  # boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.kernelModules = [ "i2c-dev" "ddcci" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
-  boot.resumeDevice = "/dev/disk/by-uuid/a0e43e9e-2f26-4783-affc-970d69d4d4da";
-
-  fileSystems = {
-    "/".options = [ "compress=zstd" "noatime" ];
-    "/home".options = [ "compress=zstd" "noatime" ];
-    "/nix".options = [ "compress=zstd" "noatime" ];
-  };
-
-# zramSwap.enable = true;
-  swapDevices = [{
-    device = "/swap/swapfile";
-    size  = 32*1024;
-  }];
 
   networking.hostName = "hermes"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -164,7 +138,10 @@
   services.pipewire = {
     enable = true;
     alsa.enable = true;
+    alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
+    jack.enable = true;
   };
 
   services.avahi = {
@@ -200,144 +177,13 @@
   services.upower.enable = true;
 
 # keyd config
-  services.keyd = {
-    enable = true;
-    keyboards = {
-      default = {
-	ids = [ "*" ];
-	settings = {
-	  main = {
-	    capslock = "lettermod(capslock,esc,150,200)";
-	    leftshift = "layer(sl)";
-	    rightshift = "layer(sr)";
-	    space = "lettermod(vimesque,space,150,200)";
-	    a = "lettermod(control,a,150,200)";
-	    s = "lettermod(shift,s,150,200)";
-	    d = "lettermod(alt,d,150,200)";
-	    f = "lettermod(meta,f,150,200)";
-	    j = "lettermod(meta,j,150,200)";
-	    k = "lettermod(rightalt,k,150,200)";
-	    l = "lettermod(shift,l,150,200)";
-	    ";" = "lettermod(control,;,150,200)";
-	    "leftshift+leftmeta+f23" = "layer(copilot)";
-	  };
-
-	  "rightalt:G" = {};
-
-	  "sl:S" = {
-	    rightshift = "capslock";
-	  };
-
-	  "sr:S" = {
-	    leftshift = "capslock";
-	  };
-
-	  "copilot:C-A-S-M" = {};
-
-	  "capslock:C" = {
-	    ";" = "backspace";
-	    space = "0";
-	    m = "1";
-	    "," = "2";
-	    "." = "3";
-	    j = "4";
-	    k = "5";
-	    l = "6";
-	    u = "7";
-	    i = "8";
-	    o = "9";
-	  };
-
-	  vimesque = {
-	    m = "playpause";
-	    "." = "nextsong";
-	    "," = "previoussong";
-	    h = "left";
-	    j = "down";
-	    k = "up";
-	    l = "right";
-	    i = "home";
-	    a = "end";
-	    e = "C-right";
-	    w = "C-left";
-	    y = "macro(home S-end C-c)";
-	    p = "C-v";
-	    "/" = "C-f";
-	    ";" = "C-A-t";
-	    d = "macro(home S-end C-x backspace)";
-	    enter = "compose";
-	    g = "pageup";
-	    f = "pagedown";
-	    x = "delete";
-	    u = "insert";
-	    o = "macro(end enter)";
-	    v = "macro(home S-end)";
-	  };
-	};
-      };
-      mouse = {
-	ids = [ "32c2:0012" ];
-	settings = {
-	  main = {
-	    "leftmouse+rightmouse" = "middlemouse";
-	    "mouse1+mouse2" = "toggle(zeta)";
-	    mouse1 = "overload(beta,mouse1)";
-	    mouse2 = "overload(alpha,mouse2)";
-	    middlemouse = "toggle(gamma)";
-	  };
-
-	  "alpha:M" = {
-	    leftmouse = "C-insert";
-	    rightmouse = "S-insert";
-	    middlemouse = "M-q";
-	  };
-
-	  "beta:S" = {
-	    leftmouse = "C-A-o";
-	    rightmouse = "M-r";
-	    middlemouse = "C-space";
-	  };
-
-	  "alpha+beta" = {
-	    rightmouse = "M-S-r";
-	  };
-
-	  gamma = {
-	    mouse1 = "overload(delta,mouse1)";
-	    mouse2 = "overload(epsilon,mouse2)";
-	  };
-
-	  "delta:C-S" = {
-	    leftmouse = "previoussong";
-	    rightmouse = "nextsong";
-	    mouse2 = "playpause";
-	  };
-
-	  "epsilon:M-C-A" = {
-	    leftmouse = "mute";
-	    rightmouse = "micmute";
-	  };
-
-	  zeta = {
-	    mouse1 = "overload(eta,mouse1)";
-	    mouse2 = "overload(theta,theta2)";
-	  };
-
-	  "eta:S" = {};
-	  "theta:C" = {};
-	};
-      };
-    };
-  };
+# It has been moved to ./modules/keyd.nix
 
 # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 53317 8888 8384];
   networking.firewall.allowedUDPPorts = [ 53317 8888 8384];
 # Or disable the firewall altogether.
 # networking.firewall.enable = false;
-
-# system.autoUpgrade.enable = true;
-# system.autoUpgrade.allowReboot = true;
 
 # This value determines the NixOS release from which the default
 # settings for stateful data, like file locations and database versions
@@ -346,5 +192,4 @@
 # Before changing this value read the documentation for this option
 # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
-
 }
