@@ -8,8 +8,9 @@
     lmms
     spotify
   ] ++ (with unstable; [
-    musescore
     muse-sounds-manager
+  ]) ++ (with static; [
+    musescore
   ]);
 
   services.easyeffects.enable = true;
