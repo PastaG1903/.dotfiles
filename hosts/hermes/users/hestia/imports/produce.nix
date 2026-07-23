@@ -19,6 +19,7 @@
     python314Packages.notebook
     julia
     rustup
+    mendeley
   ]) ++ (with static; [
     texliveFull
   ]);

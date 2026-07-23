@@ -92,7 +92,7 @@
 	    middlemouse = "M-q";
 	  };
 
-	  "beta:S" = {
+	  "beta:C" = {
 	    leftmouse = "C-A-o";
 	    rightmouse = "M-r";
 	    middlemouse = "C-space";
