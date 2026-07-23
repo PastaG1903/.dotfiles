@@ -66,5 +66,14 @@
         ./hosts/hermes/users/hestia/home.nix
       ];
     };
+    homeConfigurations.shay = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = {
+        inherit inputs unstable static;
+      };
+      modules = [
+        ./hosts/gna/users/shay/home.nix
+      ];
+    };
   };
 }
