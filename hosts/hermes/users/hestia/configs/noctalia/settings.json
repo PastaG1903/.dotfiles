@@ -790,14 +790,14 @@
         "enabled": true,
         "fadeDuration": 10,
         "lockCommand": "",
-        "lockTimeout": 900,
+        "lockTimeout": 600,
         "resumeLockCommand": "",
         "resumeScreenOffCommand": "",
         "resumeSuspendCommand": "",
         "screenOffCommand": "",
-        "screenOffTimeout": 600,
+        "screenOffTimeout": 300,
         "suspendCommand": "",
-        "suspendTimeout": 600
+        "suspendTimeout": 900
     },
     "location": {
         "analogClockInCalendar": false,
@@ -1021,7 +1021,7 @@
         "boxBorderEnabled": false,
         "fontDefault": "Miracode",
         "fontDefaultScale": 1,
-        "fontFixed": "DejaVu Sans Mono",
+        "fontFixed": "Miracode",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,

@@ -14,9 +14,3 @@ italic_font auto
 
 
 include themes/noctalia.conf
-
-
-# BEGIN_KITTY_THEME
-# Noctalia
-include current-theme.conf
-# END_KITTY_THEME

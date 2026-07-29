@@ -2,7 +2,7 @@
 # keyd, tlp, thinkfan
 # The configurations can be accessed easily by searching for "<package> config"
 
-{ config, pkgs, lib, unstable, static, ... }:
+{ inputs, config, pkgs, lib, unstable, static, ... }:
 
 {
   imports =
@@ -76,6 +76,8 @@
     xdg-desktop-portal
     xdg-desktop-portal-gnome
     zram-generator
+
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   users.groups.libvirtd.members = [ "hestia" ];

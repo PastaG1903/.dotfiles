@@ -74,7 +74,9 @@
     hyprpicker
     python313
     python313Packages.pygobject3
-  ];
+  ] ++ (with static; [
+    noctalia-shell
+  ]);
 
   # xdg = {
   #   enable = true;
