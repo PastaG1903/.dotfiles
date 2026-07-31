@@ -435,7 +435,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Ctrl+Alt+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Ctrl+Space hotkey-overlay-title="Run an Application: vicinae" { spawn-sh "vicinae toggle"; }
-    Mod+Space hotkey-overlay-title="Run an Application: noctalia launcher" { spawn-sh "noctalia-shell ipc call launcher toggle"; }
+    Mod+Space hotkey-overlay-title="Run an Application: noctalia launcher" { spawn-sh "noctalia-shell ipc call launcher toggle ; noctalia msg panel-open launcher"; }
     Mod+E hotkey-overlay-title="Run an Application: thunar" { spawn "nautilus"; }
     Super+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -619,7 +619,7 @@ binds {
     // Expel the bottom window from the focused column to the right.
     Mod+Period { expel-window-from-column; }
 
-    Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+    f23 repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
 
     Mod+A { spawn-sh "chamel toggle"; }
     Mod+D { spawn-sh "chamel clear"; }
@@ -699,7 +699,7 @@ spawn-at-startup "xwayland-satellite"
 // spawn-sh-at-startup "swaybg -i ~/Desktop/all-travelers.jpg"
 spawn-sh-at-startup "~/.dotfiles/bashrc/.scripts/tmux-startup.sh"
 // spawn-sh-at-startup "waybar"
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "noctalia"
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "wl-gammarelay-rs run"
 spawn-sh-at-startup "syncthing"
@@ -711,6 +711,10 @@ layer-rule {
 
 layer-rule {
     match namespace="^noctalia-overview*"
+    place-within-backdrop true
+}
+layer-rule {
+    match namespace="^noctalia-backdrop"
     place-within-backdrop true
 }
 

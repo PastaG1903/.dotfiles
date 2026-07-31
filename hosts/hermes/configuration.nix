@@ -12,6 +12,8 @@
     ../../commons/fonts.nix
     ./modules/keyd.nix
     ./modules/boot-n-fs.nix
+
+    inputs.noctalia-greeter.nixosModules.default
     ];
 
 
@@ -29,19 +31,39 @@
     variant = "";
   };
 
-  services.displayManager.ly = {
-    enable = true;
-    settings = {
-      animation = "gameoflife";
-      gameoflife_entropy_interval = 0;
-      bigclock = "en";
-      bigclock_seconds = "true";
-      input_len = 40; # input boxes length
-      show_tty = "true";
-      vi_mode = "true";
-      vi_default_mode = "normal";
+  programs.noctalia-greeter = {
+      enable = true;
+      settings = {
+          cursor = {
+              theme = "Bibata-Original-Classic";
+              size = 24;
+            };
+        };
     };
-  };
+
+  services.greetd = {
+      enable = true;
+      settings = {
+          default_session = {
+              command = "/run/current-system/sw/bin/noctalia-greeter-session";
+              user = "greeter";
+            };
+        };
+    };
+
+  # services.displayManager.ly = {
+  #   enable = true;
+  #   settings = {
+  #     animation = "gameoflife";
+  #     gameoflife_entropy_interval = 0;
+  #     bigclock = "en";
+  #     bigclock_seconds = "true";
+  #     input_len = 40; # input boxes length
+  #     show_tty = "true";
+  #     vi_mode = "true";
+  #     vi_default_mode = "normal";
+  #   };
+  # };
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.hestia = {

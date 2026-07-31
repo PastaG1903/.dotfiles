@@ -45,3 +45,6 @@ local plugins = {
 
 require("lazy").setup(plugins)
 require("colors").setup()
+
+local ok, matugen = pcall(require, 'matugen')
+if ok then matugen.setup() end

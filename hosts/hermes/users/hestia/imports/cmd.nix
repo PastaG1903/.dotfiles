@@ -11,7 +11,7 @@
   ];
 
   home.sessionVariables = {
-    NVIM_APPNAME = "leovim";
+    NVIM_APPNAME = "nvim";
     EDITOR = "nvim";
   };
 

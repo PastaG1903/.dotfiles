@@ -52,6 +52,7 @@
     chameleos #annotations for Niri
     gale
     miracode
+    owmods-gui
     swaybg
     xwayland-satellite
     wl-clipboard
@@ -108,9 +109,13 @@
         source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/kitty;
 	recursive = true;
       };
-      ".config/leovim" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/leovim;
+      ".config/nvim" = {
+        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/nvim;
 	recursive = true;
+      };
+      ".ssh/config" = {
+        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/.ssh/config;
+        recursive = true;
       };
 
   };

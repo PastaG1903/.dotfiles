@@ -14,7 +14,7 @@
   "flygrep.nvim": { "branch": "master", "commit": "8f68dec4c413f5b1e68f130b33493ea92971dbeb" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "job.nvim": { "branch": "master", "commit": "761495af05a242b00a18b8ae926ee41c18da3645" },
-  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
+  "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
   "ltex-ls": { "branch": "develop", "commit": "7c031d792110a824951aa003acd3ada158a515b4" },
   "ltex-utils.nvim": { "branch": "main", "commit": "0f3d2dc24c074e89415a3e056b7c2479dc9191e8" },
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },

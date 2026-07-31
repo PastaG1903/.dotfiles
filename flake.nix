@@ -13,6 +13,10 @@
         url = "github:noctalia-dev/noctalia";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia-greeter = {
+      url = "github:noctalia-dev/noctalia-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-static, home-manager, ... } @ inputs: 

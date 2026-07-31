@@ -20,6 +20,7 @@
 	    l = "lettermod(shift,l,150,200)";
 	    ";" = "lettermod(control,;,150,200)";
 	    "leftshift+leftmeta+f23" = "layer(copilot)";
+	    sysrq = "print";
 	  };
 
 	  "rightalt:G" = {};
