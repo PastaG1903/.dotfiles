@@ -70,7 +70,9 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "hestia";
-    extraGroups = [ "networkmanager" "wheel" "i2c" ];
+    extraGroups = [ "networkmanager" "wheel" "i2c" "dialout" ];
+    subUidRanges = [{ startUid = 100000; count = 65536; }];
+    subGidRanges = [{ startGid = 100000; count = 65536; }];
   };
 
   environment.systemPackages = with pkgs; [
@@ -104,6 +106,16 @@
 
   users.groups.libvirtd.members = [ "hestia" ];
   users.groups.kvm.members = [ "hestia" ];
+
+  virtualisation = {
+    podman = {
+      enable = true;
+    };
+    libvirtd = {
+      enable = true;
+    };
+    spiceUSBRedirection.enable = true;
+  };
 
   programs = {
     niri.enable = true;
@@ -168,6 +180,11 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+
+  services.udev.extraRules = ''
+    SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{serial}=="PRINTER_SERIAL", SYMLINK+="printer0"
+    SUBSYSTEM=="tty", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", ATTRS{serial}=="SERVO_SERIAL", SYMLINK+="servo0"
+  '';
 
 # thinkfan config
   services.thinkfan = {

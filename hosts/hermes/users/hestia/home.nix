@@ -28,7 +28,6 @@
 
   home.packages = with pkgs; [
 
-    bottles
     gnome-boxes
 
     brave
@@ -44,7 +43,6 @@
     jabref
     localsend
     nautilus
-    syncthing
 
     mpv
     pavucontrol

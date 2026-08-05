@@ -20,7 +20,7 @@ return {
       vim.lsp.config('ltex_plus',{
         settings = {
           ltex = {
-            language = "en-US",
+            language = "auto",
             additinalRules = {
               enablePickyRules = true,
             },

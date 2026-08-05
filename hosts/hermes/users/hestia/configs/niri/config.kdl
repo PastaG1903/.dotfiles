@@ -620,6 +620,7 @@ binds {
     Mod+Period { expel-window-from-column; }
 
     f23 repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+    Mod+Shift+C repeat=false { spawn-sh "noctalia msg panel-toggle control-center calendar"; }
 
     Mod+A { spawn-sh "chamel toggle"; }
     Mod+D { spawn-sh "chamel clear"; }
@@ -672,8 +673,8 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Super+Shift+S { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Ctrl+Print repeat=false { screenshot-screen; }
+    Alt+Print repeat=false { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
@@ -702,7 +703,6 @@ spawn-sh-at-startup "~/.dotfiles/bashrc/.scripts/tmux-startup.sh"
 spawn-at-startup "noctalia"
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "wl-gammarelay-rs run"
-spawn-sh-at-startup "syncthing"
 
 layer-rule {
     match namespace="^wallpaper$"
