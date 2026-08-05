@@ -1,50 +1,41 @@
-{ pkgs }:
+{
+  description = "my jupyter environment";
 
-let
-  # use `jupyter lab --generate-config` to check all options
-  jupyter_lab_config = pkgs.writeText "jupyter_lab_config.py" /*python*/''
-    c = get_config()
-    c.ExtensionApp.open_browser = False
-    c.ServerApp.ip = '0.0.0.0'
-    c.ServerApp.root_dir = '/home/david'
-  '';
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  };
 
-  myJupyterLab = pkgs.writeShellScriptBin "myJupyterLab" ''
-    exec ${pkgs.jupyter}/bin/jupyter lab \
-    --config ${jupyter_lab_config}
-  '';
+  outputs = { self, nixpkgs, ... }:
+  let
+    forAllSystems = function:
+      nixpkgs.lib.genAttrs ["x86_64-linux" "aarch64-darwin"]
+      (system: function nixpkgs.legacyPackages.${system});
+    pythonPackages = p: with p; [
+        numpy
+        scipy
+        matplotlib
+        pandas
+        jupyter
+        jupyterlab-vim
+        jupyterlab-lsp
+        python-lsp-server
+      ];
+  in {
+    devShells = forAllSystems (pkgs: {
+      default = pkgs.mkShell {
+      name = "jupyter";
+      packages = [(pkgs.python314.withPackages pythonPackages)];
 
-  pythonPackages = p: with p; [
-    numpy
-    scipy
-    matplotlib
-    pandas
-    jupyterlab-vim
-    jupyterlab-lsp
-    python-lsp-server
-  ];
-in
-pkgs.mkShell {
-  name = "jupyter";
+      shellHook = ''
+        export JUPYTER_CONFIG_DIR="/home/david/.dotfiles/flakes/jupyter/.jupyter"
+        export JUPYTER_DATA_DIR="$JUPYTER_CONFIG_DIR/data"
+        export JUPYTER_RUNTIME_DIR="$JUPYTER_CONFIG_DIR/runtime"
 
-  packages = [
-    (pkgs.python314.withPackages pythonPackages)
-    myJupyterLab
-  ];
+        mkdir -p "$JUPYTER_CONFIG_DIR" "$JUPYTER_DATA_DIR" "$JUPYTER_RUNTIME_DIR"
 
-  shellHook = /*bash*/''
-    export JUPYTER_CONFIG_DIR="$HOME/.dotfiles/shells/jupyter/.jupyter"
-    export JUPYTER_DATA_DIR="$JUPYTER_CONFIG_DIR/data"
-    export JUPYTER_RUNTIME_DIR="$JUPYTER_CONFIG_DIR/runtime"
-
-    mkdir -p \
-      "$JUPYTER_CONFIG_DIR" \
-      "$JUPYTER_DATA_DIR" \
-      "$JUPYTER_RUNTIME_DIR"
-
-    # set DEBUG before `nix develop /path/to/shell#jupyter to avoid executing the jupyter server directly
-    if ! [[ -n $DEBUG ]]; then 
-      exec myJupyterLab
-    fi
-  '';
+        exec jupyter lab --config /home/david/.dotfiles/flakes/jupyter/jupyter_lab_config.py
+      '';
+      };
+    });
+  };
 }
