@@ -31,7 +31,6 @@
     gnome-boxes
 
     brave
-    qutebrowser
     firefox
     tor-browser
 
