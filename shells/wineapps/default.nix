@@ -37,8 +37,6 @@ in
     name = "wineapps";
     buildInputs = [ pkgs.podman launchScript ];
     shellHook = ''
-      echo "Commands available:"
-      echo "  wineapps"
-      wineapps
-      ''
+      wineapps && exit
+      '';
   }
