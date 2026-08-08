@@ -5,13 +5,17 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-static.url = "github:NixOS/nixpkgs/62792026d8b0812da03459aadc5b4163d23e9371";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia = {
-        url = "github:noctalia-dev/noctalia";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
@@ -19,7 +23,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-static, home-manager, ... } @ inputs: 
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-static, home-manager, noctalia, noctalia-greeter, nix-flatpak, ... } @ inputs: 
 
   let
 
@@ -46,7 +50,10 @@
       specialArgs = {
         inherit inputs unstable static;
       };
-      modules = [ ./hosts/hermes/configuration.nix ];
+      modules = [
+        ./hosts/hermes/configuration.nix
+          inputs.nix-flatpak.nixosModules.nix-flatpak
+      ];
     };
 
     nixosConfigurations.gna = nixpkgs.lib.nixosSystem {

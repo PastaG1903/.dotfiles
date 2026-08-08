@@ -152,7 +152,12 @@
     tumbler.enable = true;
     printing.enable = true;
     gvfs.enable = true;
-    flatpak.enable = true;
+    flatpak = {
+      enable = true;
+      overrides = {
+        "app.zen_browser.zen".Context.filesystems = [ "xdg-download" ];
+      };
+    };
     ddccontrol.enable = true;
     fwupd.enable = true;
   };
@@ -164,6 +169,7 @@
       pkgs.xdg-desktop-portal-gnome
     ];
     config.niri.default = [ "gnome" "gtk" ];
+    config.common.default = [ "gnome" "gtk" ];
   };
 
   services.pipewire = {

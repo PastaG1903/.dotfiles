@@ -8,6 +8,7 @@
     libreoffice-still
     inkscape-with-extensions
     obsidian
+    octaveFull
     onlyoffice-desktopeditors
     openscad
   ] ++ (with unstable; [
