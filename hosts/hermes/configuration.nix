@@ -150,7 +150,16 @@
   services = {
     blueman.enable = true;
     tumbler.enable = true;
-    printing.enable = true;
+    printing = {
+      enable = true;
+      drivers = with pkgs; [
+      gutenprint
+      hplip
+      brlaser
+      cups-filters
+      cups-browsed
+      ];
+    };
     gvfs.enable = true;
     flatpak = {
       enable = true;

@@ -162,4 +162,7 @@ return {
       },
     },
   },
+  {
+    "chrisbra/unicode.vim",
+  },
 }

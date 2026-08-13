@@ -12,16 +12,20 @@ wrap = "yes"
 qpdfview = [
 { run = 'qpdfview "$@"', desc = "QPDFView" },
 ]
+zathura = [
+{ run = 'zathura "$@"', desc = "Zathura" },
+]
 ristretto = [
 { run = 'ristretto "$@"', desc = "Ristretto" },
 ]
-thunar = [
-{ run = 'thunar %S', desc = "View in Thunar" },
+nautilus = [
+{ run = 'nautilus %S', desc = "View in Thunar" },
 ]
 
 [open]
 prepend_rules = [
 { url = "*.pdf", use = "qpdfview" },
+{ url = "*.pdf", use = "zathura" },
 { url = "*.png", use = "ristretto" },
 { url = "*.jpg", use = "ristretto" },
 ]
