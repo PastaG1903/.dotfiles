@@ -48,6 +48,7 @@
 
     chameleos #annotations for Niri
     gale
+    r2modman
     miracode
     owmods-gui
     swaybg

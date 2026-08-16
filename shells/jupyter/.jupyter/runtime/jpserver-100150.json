@@ -1,0 +1,13 @@
+{
+  "base_url": "/",
+  "hostname": "0.0.0.0",
+  "password": false,
+  "pid": 100150,
+  "port": 8888,
+  "root_dir": "/home/hestia/Documents",
+  "secure": false,
+  "sock": "",
+  "token": "94ed4804dbfbde31d377888c22e8440280a73c7d2b8327c2",
+  "url": "http://hermes:8888/",
+  "version": "2.17.0"
+}

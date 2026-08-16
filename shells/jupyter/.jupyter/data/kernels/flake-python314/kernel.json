@@ -1,0 +1,15 @@
+{
+ "argv": [
+  "/nix/store/by0fn2bib86kv0ydj9fnpilribsnpj3v-python3-3.14.6-env/bin/python",
+  "-Xfrozen_modules=off",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python 3.14",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ }
+}

@@ -9,12 +9,13 @@ max_width = 800
 wrap = "yes"
 
 [opener]
-qpdfview = [
-{ run = 'qpdfview "$@"', desc = "QPDFView" },
-]
 zathura = [
 { run = 'zathura "$@"', desc = "Zathura" },
 ]
+qpdfview = [
+{ run = 'qpdfview "$@"', desc = "QPDFView" },
+]
+
 ristretto = [
 { run = 'ristretto "$@"', desc = "Ristretto" },
 ]
@@ -24,8 +25,7 @@ nautilus = [
 
 [open]
 prepend_rules = [
-{ url = "*.pdf", use = "qpdfview" },
-{ url = "*.pdf", use = "zathura" },
+{ url = "*.pdf", use = [ "zathura", "qpdfview" ] },
 { url = "*.png", use = "ristretto" },
 { url = "*.jpg", use = "ristretto" },
 ]

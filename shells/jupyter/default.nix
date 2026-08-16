@@ -6,7 +6,7 @@ let
     c = get_config()
     c.ExtensionApp.open_browser = False
     c.ServerApp.ip = '0.0.0.0'
-    c.ServerApp.root_dir = '/home/hestia'
+    c.ServerApp.root_dir = '/home/hestia/Documents/'
   '';
 
   myJupyterLab = pkgs.writeShellScriptBin "myJupyterLab" ''
