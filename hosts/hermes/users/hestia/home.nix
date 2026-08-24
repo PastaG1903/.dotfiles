@@ -42,6 +42,7 @@
     jabref
     localsend
     nautilus
+    scrcpy
 
     mpv
     pavucontrol

@@ -25,6 +25,7 @@ launchScript = pkgs.writeShellApplication {
     --entrypoint bash \
     -e DISPLAY="$DISPLAY" \
     -e PULSE_SERVER="unix:/run/user/$(id -u)/pipewire-0" \
+    -e WINEPREFIX=/home/wineuser/.wine \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
     -v "/run/user/$(id -u)/pipewire-0:/run/user/$(id -u)/pipewire-0:rw" \
     -v "$WINDOWS_APPS_DIR:/home/wineuser/data:rw" \

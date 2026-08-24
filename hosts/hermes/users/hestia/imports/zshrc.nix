@@ -50,6 +50,7 @@
       suspend = "systemctl suspend";
       xwr = "~/.dotfiles/bashrc/.scripts/xwr.sh";
       stirlingpdf = "sudo docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf";
+      jupyter-shell = "cd ~/.dotfiles/shells/ && nix develop ./\#jupyter";
       sysser = "~/.dotfiles/extras/syssertui.sh";
       zdrive-pull = "rsync -azv shay@10.147.17.72:/home/shay/Z-Drive/Drive/ /home/hestia/Z-Drive/";
       zdrive-push = "rsync -azv /home/hestia/Z-Drive/ shay@10.147.17.72:/home/shay/Z-Drive/Drive/";
