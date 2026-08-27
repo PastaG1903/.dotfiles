@@ -46,6 +46,7 @@
 
     mpv
     pavucontrol
+    shotcut
 
     chameleos #annotations for Niri
     gale

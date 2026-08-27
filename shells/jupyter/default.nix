@@ -22,6 +22,7 @@ let
     jupyterlab-vim
     jupyterlab-lsp
     python-lsp-server
+    tkinter
   ];
 in
 pkgs.mkShell {
