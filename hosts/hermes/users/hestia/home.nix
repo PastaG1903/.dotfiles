@@ -1,4 +1,4 @@
-{ config, pkgs, unstable, static, ... }:
+{ config, lib, pkgs, unstable, static, inputs, ... }:
 
 # On the first install of this flake, run:
 # "nix run github:nix-community/home-manager -- switch --flake ~/.dotfiles#username"
@@ -10,6 +10,8 @@
     ./imports/zshrc.nix
     ./imports/produce.nix
     ./imports/unstable.nix
+    ./imports/home-files.nix
+    ./imports/fastfetch-config.nix
   ];
   
   home.username = "hestia";
@@ -31,7 +33,6 @@
     gnome-boxes
 
     brave
-    firefox
     tor-browser
 
     qpdfview
@@ -63,7 +64,7 @@
     teams-for-linux
     zoom-us
 
-    # for screen-toolkit noctalia plugin
+    # for screen-toolkit Noctalia V4 plugin
     grim
     slurp
     tesseract
@@ -88,87 +89,11 @@
   #   };
   # };
 
-  home.file = {
-      ".config/niri" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/niri;
-	recursive = true;
-      };
-      ".config/noctalia" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/noctalia;
-	recursive = true;
-      };
-      ".config/yazi" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/yazi;
-	recursive = true;
-      };
-      ".config/vicinae" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/vicinae;
-	recursive = true;
-      };
-      ".config/kitty" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/kitty;
-	recursive = true;
-      };
-      ".config/nvim" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/nvim;
-	recursive = true;
-      };
-      ".ssh/config" = {
-        source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/.ssh/config;
-        recursive = true;
-      };
-
-  };
 
   programs.zathura = {
       enable = true;
       extraConfig = "set selection-clipboard clipboard";
     };
-
-  programs.fastfetch = {
-    enable = true;
-
-    settings = {
-      "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
-
-      logo = {
-        source = "~/Desktop/full_vaps.png";
-        width = 10;
-      };
-
-      modules = [
-        "title"
-        "separator"
-        "os"
-        "host"
-        "kernel"
-        "uptime"
-        {
-          type = "command";
-          key = "Days alive";
-          text = "echo $(($(date +%s)/86400 - $(stat -c %W /)/86400))";
-        }
-        "packages"
-        "shell"
-        "display"
-        "de"
-        "wm"
-        "terminal"
-        "terminalfont"
-        "cpu"
-        "gpu"
-        "memory"
-        "swap"
-        "disk"
-        "btrfs"
-        "localip"
-        "battery"
-        "poweradapter"
-        "break"
-        "colors"
-      ];
-    };
-  };
 
   programs = { # general programs
       obs-studio.enable = true;
