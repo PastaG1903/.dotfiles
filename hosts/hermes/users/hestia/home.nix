@@ -27,8 +27,12 @@
     package = pkgs.bibata-cursors;
     name = "Bibata-Original-Classic";
   };
+  
+  fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+
+    atkinson-hyperlegible
 
     gnome-boxes
 

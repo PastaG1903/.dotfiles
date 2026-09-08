@@ -29,7 +29,10 @@
       source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/.ssh/config;
       recursive = true;
     };
-
+    ".latexmkrc" = {
+      source = config.lib.file.mkOutOfStoreSymlink /home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/latexmkrc/.latexmkrc;
+      recursive = true;
+    };
   };
 
 }

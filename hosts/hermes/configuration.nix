@@ -69,6 +69,8 @@
     keyd
     mesa
     mokutil
+    noctalia
+    noctalia-greeter
     nodejs_26
     phodav
     pipewire
@@ -79,7 +81,7 @@
     xdg-desktop-portal-gnome
     zram-generator
 
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   users.groups.libvirtd.members = [ "hestia" ];
