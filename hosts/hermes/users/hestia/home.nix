@@ -35,6 +35,7 @@
     atkinson-hyperlegible
 
     gnome-boxes
+    gnome-disk-utility
 
     brave
     tor-browser

@@ -47,6 +47,7 @@
 	    u = "7";
 	    i = "8";
 	    o = "9";
+	    "left" = "right";
 	  };
 
 	  vimesque = {

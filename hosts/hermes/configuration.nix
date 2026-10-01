@@ -33,7 +33,7 @@
     variant = "";
   };
 
-  programs.noctalia-greeter = {
+  services.displayManager.noctalia-greeter = {
       enable = true;
       settings = {
           cursor = {
@@ -61,12 +61,14 @@
     bluez
     bluez-tools
     bluetui
+    bzip2
     cmatrix
     ddcutil
     ddcutil-service
     easyeffects
     jdk21_headless
     keyd
+    libdeflate
     mesa
     mokutil
     noctalia
@@ -111,6 +113,13 @@
     appimage = {
       enable = true;
       binfmt = true;
+      package = pkgs.appimage-run.override {
+          extraPkgs = pkgs: [
+          pkgs.libdeflate
+          pkgs.libsoup_3
+          pkgs.webkitgtk_4_1
+          ];
+      };
     };
   };
 

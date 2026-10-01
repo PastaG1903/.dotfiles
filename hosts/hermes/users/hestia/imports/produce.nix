@@ -10,7 +10,7 @@
     obsidian
     octaveFull
     onlyoffice-desktopeditors
-    openscad
+    orca-slicer
   ] ++ (with unstable; [
     python314Packages.matplotlib
     python314Packages.jupyter
@@ -23,5 +23,6 @@
     mendeley
   ]) ++ (with static; [
     texliveFull
+    openscad
   ]);
 }

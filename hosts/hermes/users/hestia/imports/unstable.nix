@@ -1,8 +1,9 @@
-{ config, unstable, ... }:
+{ config, stable, unstable, ... }:
 {
   home.packages = with unstable; [
-    beeper
     steam
     vicinae
-  ];
+  ] ++ (with pkgs; [
+    beeper
+  ]);
 }
