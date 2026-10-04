@@ -2,22 +2,22 @@
 
 function M.setup()
   require('base16-colorscheme').setup({
-    base00 = '#191e24',
-    base01 = '#2a323c',
-    base02 = '#262d36',
-    base03 = '#616971',
-    base04 = '#afb2b6',
+    base00 = '#03163a',
+    base01 = '#0f2757',
+    base02 = '#0b2350',
+    base03 = '#5f656f',
+    base04 = '#afb1b6',
     base05 = '#f2f2f3',
     base06 = '#f2f2f3',
     base07 = '#f2f2f3',
     base08 = '#fd4663',
-    base09 = '#9e66cc',
-    base0A = '#615cd6',
-    base0B = '#67a0e4',
-    base0C = '#c396e9',
-    base0D = '#93bbec',
-    base0E = '#9996e9',
-    base0F = '#c0bef4',
+    base09 = '#ba33ff',
+    base0A = '#5cd679',
+    base0B = '#4d89ff',
+    base0C = '#d480ff',
+    base0D = '#80aaff',
+    base0E = '#96e9aa',
+    base0F = '#bef4cb',
   })
 
   local hi = function(group, opts)
@@ -25,28 +25,28 @@ function M.setup()
   end
 
   -- telescope.nvim
-  hi('TelescopeNormal',         { fg = '#f2f2f3',          bg = '#191e24' })
-  hi('TelescopeBorder',         { fg = '#616971',             bg = '#191e24' })
-  hi('TelescopePromptNormal',   { fg = '#f2f2f3',          bg = '#191e24' })
-  hi('TelescopePromptBorder',   { fg = '#616971',             bg = '#191e24' })
-  hi('TelescopePromptPrefix',   { fg = '#67a0e4',             bg = '#191e24' })
-  hi('TelescopePromptCounter',  { fg = '#afb2b6',  bg = '#191e24' })
-  hi('TelescopePromptTitle',    { fg = '#191e24',             bg = '#67a0e4' })
-  hi('TelescopePreviewTitle',   { fg = '#191e24',             bg = '#615cd6' })
-  hi('TelescopeResultsTitle',   { fg = '#191e24',             bg = '#9e66cc' })
-  hi('TelescopeSelection',      { fg = '#f2f2f3',          bg = '#262d36' })
-  hi('TelescopeSelectionCaret', { fg = '#67a0e4',             bg = '#262d36' })
-  hi('TelescopeMatching',       { fg = '#67a0e4',             bold = true })
+  hi('TelescopeNormal',         { fg = '#f2f2f3',          bg = '#03163a' })
+  hi('TelescopeBorder',         { fg = '#5f656f',             bg = '#03163a' })
+  hi('TelescopePromptNormal',   { fg = '#f2f2f3',          bg = '#03163a' })
+  hi('TelescopePromptBorder',   { fg = '#5f656f',             bg = '#03163a' })
+  hi('TelescopePromptPrefix',   { fg = '#4d89ff',             bg = '#03163a' })
+  hi('TelescopePromptCounter',  { fg = '#afb1b6',  bg = '#03163a' })
+  hi('TelescopePromptTitle',    { fg = '#03163a',             bg = '#4d89ff' })
+  hi('TelescopePreviewTitle',   { fg = '#03163a',             bg = '#5cd679' })
+  hi('TelescopeResultsTitle',   { fg = '#03163a',             bg = '#ba33ff' })
+  hi('TelescopeSelection',      { fg = '#f2f2f3',          bg = '#0b2350' })
+  hi('TelescopeSelectionCaret', { fg = '#4d89ff',             bg = '#0b2350' })
+  hi('TelescopeMatching',       { fg = '#4d89ff',             bold = true })
 
   -- mini.pick
-  hi('MiniPickNormal',         { fg = '#f2f2f3',          bg = '#191e24' })
-  hi('MiniPickBorder',         { fg = '#616971',             bg = '#191e24' })
-  hi('MiniPickPrompt',   { fg = '#f2f2f3',          bg = '#191e24' })
-  hi('MiniPickPromptPrefix',   { fg = '#67a0e4',             bg = '#191e24' })
-  hi('MiniPickBorderText',    { fg = '#191e24',             bg = '#67a0e4' })
-  hi('MiniPickMatchCurrent',      { fg = '#f2f2f3',          bg = '#262d36' })
-  hi('MiniPickPromptCaret', { fg = '#67a0e4',             bg = '#262d36' })
-  hi('MiniPickMatchRanges',       { fg = '#67a0e4',             bold = true })
+  hi('MiniPickNormal',         { fg = '#f2f2f3',          bg = '#03163a' })
+  hi('MiniPickBorder',         { fg = '#5f656f',             bg = '#03163a' })
+  hi('MiniPickPrompt',   { fg = '#f2f2f3',          bg = '#03163a' })
+  hi('MiniPickPromptPrefix',   { fg = '#4d89ff',             bg = '#03163a' })
+  hi('MiniPickBorderText',    { fg = '#03163a',             bg = '#4d89ff' })
+  hi('MiniPickMatchCurrent',      { fg = '#f2f2f3',          bg = '#0b2350' })
+  hi('MiniPickPromptCaret', { fg = '#4d89ff',             bg = '#0b2350' })
+  hi('MiniPickMatchRanges',       { fg = '#4d89ff',             bold = true })
 end
 
 -- Register a signal handler for SIGUSR1 (matugen updates).
