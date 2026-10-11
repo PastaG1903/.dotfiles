@@ -7,6 +7,7 @@
     librecad
     libreoffice-still
     inkscape-with-extensions
+    pandoc
     obsidian
     octaveFull
     onlyoffice-desktopeditors

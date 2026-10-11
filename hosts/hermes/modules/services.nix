@@ -54,7 +54,7 @@
     flatpak = {
       enable = true;
       overrides = {
-	"app.zen_browser.zen".Context.filesystems = [ "xdg-download" ];
+	global.Context.filesystems = [ "home" ];
       };
     };
     ddccontrol.enable = true;

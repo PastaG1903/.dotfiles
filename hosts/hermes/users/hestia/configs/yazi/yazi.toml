@@ -20,7 +20,7 @@ ristretto = [
 { run = 'ristretto "$@"', desc = "Ristretto" },
 ]
 nautilus = [
-{ run = 'nautilus %S', desc = "View in Thunar" },
+{ run = 'nautilus %S', desc = "View in Nautilus" },
 ]
 
 [open]

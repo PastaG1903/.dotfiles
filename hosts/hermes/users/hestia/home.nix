@@ -12,6 +12,8 @@
     ./imports/unstable.nix
     ./imports/home-files.nix
     ./imports/fastfetch-config.nix
+
+    inputs.zen-browser.homeModules.beta
   ];
   
   home.username = "hestia";
@@ -103,6 +105,10 @@
   programs = { # general programs
       obs-studio.enable = true;
       gh.enable = true;
-    };
+      zen-browser = {
+        enable = true;
+        setAsDefaultBrowser = true;
+      };
+  };
 
 }
