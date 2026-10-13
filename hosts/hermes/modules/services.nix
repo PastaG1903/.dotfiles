@@ -101,5 +101,16 @@
     STOP_CHARGE_THRESH_BAT0=80;
   };
   services.upower.enable = true;
+  services.udisks2 = {
+      enable = true;
+      settings = {
+	  "mount_options.conf" = {
+	      "D3FD-EEEB" = {
+		  vfat_defaults = "uid=$UID,gid=$GID,shortname=mixed,utf8=1,exec";
+		  vfat_allow = "uid=$UID,gid,$GID,shortname,utf8,exec,umask,dmask,fmask";
+		};
+	    };
+	};
+    };
 
 }

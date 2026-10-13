@@ -152,7 +152,6 @@
     SUBSYSTEM=="tty", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", ATTRS{serial}=="SERVO_SERIAL", SYMLINK+="servo0"
   '';
 
-
 # keyd config
 # It has been moved to ./modules/keyd.nix
 

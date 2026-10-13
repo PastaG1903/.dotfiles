@@ -19,6 +19,7 @@
     python314Packages.pandas
     python314Packages.sympy
     python314Packages.notebook
+    python314Packages.tkinter
     julia
     rustup
     mendeley

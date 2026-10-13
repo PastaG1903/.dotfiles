@@ -15,6 +15,8 @@ let
   '';
 
   pythonPackages = p: with p; [
+    jupyterlab
+    ipykernel
     numpy
     scipy
     matplotlib
@@ -24,12 +26,15 @@ let
     python-lsp-server
     tkinter
   ];
+
+  py = pkgs.python314.withPackages pythonPackages;
+
 in
 pkgs.mkShell {
   name = "jupyter";
 
   packages = [
-    (pkgs.python314.withPackages pythonPackages)
+    py
     myJupyterLab
   ];
 
