@@ -11,13 +11,13 @@ function M.setup()
     base06 = '#f2f2f3',
     base07 = '#f2f2f3',
     base08 = '#fd4663',
-    base09 = '#7c38fa',
-    base0A = '#5cd66d',
+    base09 = '#66cc73',
+    base0A = '#97d65c',
     base0B = '#51c0fb',
-    base0C = '#ad83fc',
+    base0C = '#96e9a0',
     base0D = '#82d2fc',
-    base0E = '#96e9a1',
-    base0F = '#bef4c5',
+    base0E = '#bee996',
+    base0F = '#d8f4be',
   })
 
   local hi = function(group, opts)
@@ -32,8 +32,8 @@ function M.setup()
   hi('TelescopePromptPrefix',   { fg = '#51c0fb',             bg = '#03273a' })
   hi('TelescopePromptCounter',  { fg = '#afb4b6',  bg = '#03273a' })
   hi('TelescopePromptTitle',    { fg = '#03273a',             bg = '#51c0fb' })
-  hi('TelescopePreviewTitle',   { fg = '#03273a',             bg = '#5cd66d' })
-  hi('TelescopeResultsTitle',   { fg = '#03273a',             bg = '#7c38fa' })
+  hi('TelescopePreviewTitle',   { fg = '#03273a',             bg = '#97d65c' })
+  hi('TelescopeResultsTitle',   { fg = '#03273a',             bg = '#66cc73' })
   hi('TelescopeSelection',      { fg = '#f2f2f3',          bg = '#0b3850' })
   hi('TelescopeSelectionCaret', { fg = '#51c0fb',             bg = '#0b3850' })
   hi('TelescopeMatching',       { fg = '#51c0fb',             bold = true })

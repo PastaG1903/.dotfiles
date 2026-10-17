@@ -9,11 +9,6 @@ let
     c.ServerApp.root_dir = '/home/hestia/Documents/'
   '';
 
-  myJupyterLab = pkgs.writeShellScriptBin "myJupyterLab" ''
-    exec ${pkgs.jupyter}/bin/jupyter lab \
-    --config ${jupyter_lab_config}
-  '';
-
   pythonPackages = p: with p; [
     jupyterlab
     ipykernel
@@ -28,6 +23,11 @@ let
   ];
 
   py = pkgs.python314.withPackages pythonPackages;
+
+  myJupyterLab = pkgs.writeShellScriptBin "myJupyterLab" ''
+    exec ${py}/bin/jupyter lab \
+    --config ${jupyter_lab_config}
+  '';
 
 in
 pkgs.mkShell {

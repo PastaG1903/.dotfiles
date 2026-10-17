@@ -51,6 +51,7 @@
     localsend
     nautilus
     scrcpy
+    android-tools
 
     mpv
     pavucontrol
