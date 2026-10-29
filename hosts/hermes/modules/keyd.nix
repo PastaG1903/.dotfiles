@@ -7,6 +7,7 @@
 	ids = [ "*" ];
 	settings = {
 	  main = {
+	    esc = "overload(mousy,esc)";
 	    capslock = "lettermod(capslock,esc,150,200)";
 	    leftshift = "layer(sl)";
 	    rightshift = "layer(sr)";
@@ -48,6 +49,11 @@
 	    i = "8";
 	    o = "9";
 	    "left" = "right";
+	  };
+
+	  "mousy" = {
+	    j = "leftmouse";
+	    k = "rightmouse";
 	  };
 
 	  vimesque = {

@@ -12,22 +12,23 @@
     "zswap.zpool=z3fold"
     "zswap.shrinker_enabled=1"
   ];
-  # boot.kernelPackages = pkgs.linuxPackages_zen;
 
-boot.kernelPackages = # Remove when upstream fix is done
-  let
-    patch = p: p.extend(self: super: {
-      ddcci-driver = super.ddcci-driver.overrideAttrs (fin: prev: {
-        src = pkgs.fetchFromGitLab {
-          # https://gitlab.com/dkadioglu/ddcci-driver-linux/-/tree/replace-strncpy-strscpy
-          owner = "dkadioglu";
-          repo = "ddcci-driver-linux";
-          rev = "db5d6b87b2c85ff91a4470c50a4da99534d9917c";
-          hash = "sha256-l8e9J2ZVtH5rJ47toi+A1K0mneQu1W/ik2cQHz7QRwY=";
-        };
-      });
-    });
-  in patch pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
+# boot.kernelPackages = # Remove when upstream fix is done
+#   let
+#     patch = p: p.extend(self: super: {
+#       ddcci-driver = super.ddcci-driver.overrideAttrs (fin: prev: {
+#         src = pkgs.fetchFromGitLab {
+#           # https://gitlab.com/dkadioglu/ddcci-driver-linux/-/tree/replace-strncpy-strscpy
+#           owner = "dkadioglu";
+#           repo = "ddcci-driver-linux";
+#           rev = "db5d6b87b2c85ff91a4470c50a4da99534d9917c";
+#           hash = "sha256-l8e9J2ZVtH5rJ47toi+A1K0mneQu1W/ik2cQHz7QRwY=";
+#         };
+#       });
+#     });
+#   in patch pkgs.linuxPackages_zen;
 
   boot.kernelModules = [ "i2c-dev" "ddcci" "psmouse.synaptics_intertouch=0" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.ddcci-driver ];
