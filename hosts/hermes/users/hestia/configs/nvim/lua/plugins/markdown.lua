@@ -13,6 +13,7 @@ return {
       vim.g.mkdp_refresh_slow = 0
       vim.g.mkdp_browser = ""
       vim.g.mkdp_theme = "dark"
+      vim.g.mkdp_markdown_css = vim.fn.expand("/home/hestia/.dotfiles/hosts/hermes/users/hestia/configs/nvim/lua/custom/markdown-style.css")
       vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>", { desc = "Renders MD in browser" })
     end,
   },

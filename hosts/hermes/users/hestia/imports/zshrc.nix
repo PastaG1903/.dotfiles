@@ -49,6 +49,7 @@
       keymod = "sudo vim /etc/keyd/keyd.conf && sudo keyd reload";
       suspend = "systemctl suspend";
       xwr = "~/.dotfiles/bashrc/.scripts/xwr.sh";
+      dbt = "distrobox-tui";
       stirlingpdf = "sudo docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf";
       jupyter-shell = "cd ~/.dotfiles/shells/ && nix develop ./\#jupyter";
       sysser = "~/.dotfiles/extras/syssertui.sh";

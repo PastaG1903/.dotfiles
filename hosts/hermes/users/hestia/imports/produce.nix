@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    distrobox-tui
     freecad
     gimp
     librecad
@@ -12,6 +13,7 @@
     octaveFull
     onlyoffice-desktopeditors
     orca-slicer
+    ovito
   ] ++ (with unstable; [
     python314Packages.matplotlib
     python314Packages.jupyter
