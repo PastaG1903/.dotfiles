@@ -39,7 +39,6 @@
     gnome-boxes
     gnome-disk-utility
 
-    brave
     tor-browser
 
     qpdfview
@@ -86,6 +85,7 @@
     python313Packages.pygobject3
   ] ++ (with static; [
     noctalia-shell
+    brave
   ]);
 
   # xdg = {

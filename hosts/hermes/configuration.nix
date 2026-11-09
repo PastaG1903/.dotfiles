@@ -13,6 +13,7 @@
     ./modules/keyd.nix
     ./modules/boot-n-fs.nix
     ./modules/services.nix
+    ./modules/noctalia-drive-health-plugin.nix
 
     inputs.noctalia-greeter.nixosModules.default
     ];
@@ -71,7 +72,6 @@
     libdeflate
     mesa
     mokutil
-    noctalia
     noctalia-greeter
     nodejs_26
     phodav
